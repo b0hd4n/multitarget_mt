@@ -1,0 +1,9 @@
+[submodule "scripts/moses-scripts"]
+	path = scripts/moses-scripts
+	url = https://github.com/marian-nmt/moses-scripts.git
+[submodule "scripts/sacreBLEU"]
+	path = scripts/sacreBLEU
+	url = https://github.com/marian-nmt/sacreBLEU.git
+[submodule "scripts/subword-nmt"]
+	path = scripts/subword-nmt
+	url = https://github.com/rsennrich/subword-nmt.git
