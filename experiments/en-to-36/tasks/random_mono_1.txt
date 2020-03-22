@@ -1,0 +1,10 @@
+ is
+ ga
+ sk
+ hu
+ es
+ he
+ no
+ sr
+ ro
+ ru

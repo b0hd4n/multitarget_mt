@@ -1,0 +1,45 @@
+# General options
+workspace: 7000
+seed: 1111
+# Model options
+type: transformer
+layer-normalization: true
+tied-embeddings-all: true
+# Training options
+sync-sgd: true
+cost-type: ce-mean-words
+#disp-freq: 1000
+#save-freq: 1000
+disp-freq: 100
+save-freq: 100
+overwrite: true
+max-length: 500
+devices:
+  - 0
+  - 1
+cpu-threads: 0
+mini-batch-fit: true
+maxi-batch-sort: src
+exponential-smoothing: 0.0001
+learn-rate: 0.0004
+lr-warmup: 4000
+lr-decay-inv-sqrt: 4000
+lr-report: true
+clip-norm: 1
+transformer-dropout: 0.1
+label-smoothing: 0.1
+optimizer-delay: 8
+optimizer-params:
+  - 0.9
+  - 0.98
+  - 1e-09
+# Validation set options
+#valid-freq: 10000
+valid-freq: 1000
+valid-metrics:
+  - ce-mean-words
+  - translation
+early-stopping: 5
+beam-size: 6
+normalize: 0.6
+keep-best: true

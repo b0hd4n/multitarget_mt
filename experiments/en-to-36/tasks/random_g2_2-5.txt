@@ -1,0 +1,52 @@
+bg lv ar az
+sv cs
+da ka
+sv lv cs ar da
+uk ka
+sv bg cs ka
+sv ar ka
+hr ar
+hr bg cs
+lv cs da
+sv uk az
+hr lv cs da ka
+cs uk ar
+lv uk ar da ka
+hr sv ka
+hr sv cs uk da
+bg ar az
+hr lv ar da az
+sv uk
+cs da
+bg lv cs uk
+lv uk ar az
+hr uk ar da ka
+sv bg cs az
+lv uk
+lv da
+sv lv uk
+hr lv da
+bg az
+sv lv az
+hr lv cs ka
+bg cs ka
+uk da az
+bg cs ar ka az
+uk da ka az
+sv ka
+bg cs az
+bg ar
+cs az
+hr cs
+ar az
+bg cs uk az
+hr lv ar ka
+bg uk da ka az
+sv bg
+hr sv cs ka
+sv bg ka
+hr da ka az
+lv az
+hr lv
+hr bg da ka
+sv bg uk da ka

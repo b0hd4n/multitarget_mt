@@ -1,0 +1,10 @@
+ hr
+ sv
+ bg
+ lv
+ cs
+ uk
+ ar
+ da
+ ka
+ az

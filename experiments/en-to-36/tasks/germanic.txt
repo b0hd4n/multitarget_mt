@@ -1,0 +1,6 @@
+sv
+de
+no
+nl
+is
+da
