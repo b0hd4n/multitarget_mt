@@ -2,7 +2,7 @@ SHELL=bash
 SCRIPTDIR=../../scripts
 .PHONY: datasets, test, train, raw_train, vocab, dev, raw_dev, wals
 
-.username:
+.username: .url
 	echo Username for dataset download:;\
 	read USERNAME;\
 	echo $${USERNAME} ;\
@@ -23,24 +23,24 @@ test_username: .username
 datasets: train dev test
 
 train: processed/train.src processed/train.tgt
-processed/train.%: 
+processed/train.%: interim/overlap_test_in_train
 	mkdir -p processed
 	PYTHONIOENCODING=utf-8 ${SCRIPTDIR}/ignore_lines.py \
 		--lines=interim/overlap_test_in_train \
 		--source=raw/train/corpus.multi.bpe.$* \
 		> processed/train.$* \
 	|| rm -f processed/train.$*
-interim/overlap_test_in_train.1:
+interim/overlap_test_in_train.1: test raw_train
 	mkdir -p interim
 	cat $$(find ./raw/test/ -name '*.bpe.en') | ${SCRIPTDIR}/mark_known_sentences \
 		--preproc=droptags,lc,digits raw/train/corpus.multi.bpe.src > interim/overlap_test_in_train.1
 interim/overlap_test_in_train: interim/overlap_test_in_train.1
 	tail -n +2 interim/overlap_test_in_train.1 | sort | uniq | cut -f1 | uniq | sort -n \
 		> interim/overlap_test_in_train
-raw_train: raw/train/corpus.multi.bpe.src, raw/train/corpus.multi.bpe.tgt
+raw_train: raw/train/corpus.multi.bpe.src raw/train/corpus.multi.bpe.tgt
 raw/train/corpus.multi.bpe.src raw/train/corpus.multi.bpe.tgt: .username
 	mkdir -p raw/train && cd raw/train && wget --user=$(username) --ask-password -c \
-		$(url)/uedin-models/en-to-36/exp01/corpus.multi.bpe.src
+		$(url)/uedin-models/en-to-36/exp01/corpus.multi.bpe.src \
 		$(url)/uedin-models/en-to-36/exp01/corpus.multi.bpe.tgt
 raw/train/corpus.multi.bpe.tgt.json raw/train/corpus.multi.bpe.src.json: .username
 	mkdir -p raw/train && cd raw/train && wget --user=$(username) --ask-password -c \
