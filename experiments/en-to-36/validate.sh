@@ -40,6 +40,7 @@ do
     # so let's just past these numbers there also
     # it won't be visible for the validation early stopping, but will be for tensorboard
     echo $valid_log_template lang/bleu-${lang} : ${result} : no effect on early stopping >> valid.log
+    echo $valid_log_template lang/bleu-${lang} : ${result} : no effect on early stopping >> train.log
 done
 
 #####################################
