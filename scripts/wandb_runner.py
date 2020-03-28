@@ -333,7 +333,10 @@ class LogParser:
             log_data = {}
             for line in lines:
                 if translation_ends(line):
+                    log_data['valid/translation_time'] = float(line.strip().split(' ')[-1][:-1])
                     break
+                if not 'Best translation' in line:
+                    return None
                 # cut time
                 line = line[line.find(']')+1:]
                 colon = line.find(':')
@@ -345,7 +348,6 @@ class LogParser:
             log_data['valid/translation_example'] = wandb.Table(
                     data=data, columns=["N","Translation"]
             )
-            log_data['valid/translation_time'] = float(line.strip().split(' ')[-1][:-1])
 
             return log_data
 
@@ -390,10 +392,6 @@ class LogParser:
             last_step = step
 
             yield step, log_data
-
-            # TODO
-            # if trainslation - pass generator into the function to extract more log lines at once
-            # and return wandb.Table (or dict?)
 
     
 if __name__=='__main__':
