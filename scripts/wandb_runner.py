@@ -16,9 +16,12 @@ import yaml
 def main():
     args = parse_args()
     init_wandb(args)
-    log_parser = LogParser(args.experiment_dir)
+    log_parser = LogParser(args.experiment_dir, wait_for_new_lines=args.wait_for_logs)
     for step, log_data in log_parser.main_loop():
         wandb.log(log_data, step=step)
+
+    print('Parser stopped')
+    save_best_models(args.experiment_dir)
 
 
 def parse_args():
@@ -44,6 +47,20 @@ def parse_args():
         default=[],
         help='Tag of the experiment: e.g. random, mono, wals, etc.'
     )
+    parser.add_argument(
+        '--infer-language-tags', '-l',
+        action='store_const',
+        const=True,
+        default=False,
+        help='Infer languages from model name, save as tags'
+    )
+    parser.add_argument(
+        '--wait-for-logs', '-w',
+        action='store_const',
+        const=True,
+        default=False,
+        help='Wait for new lines in logs (use during the training)'
+    )
 
     args = parser.parse_args()
     return args
@@ -53,12 +70,15 @@ def init_wandb(args):
     config = get_config(args.experiment_dir)
     run_id = get_run_id(args.experiment_dir)
     run_name = os.path.basename(os.path.normpath(args.experiment_dir))
+    language_tags = get_language_tags(args)
+    tags = args.tags + language_tags
+    config = add_language_info(config, language_tags)
     wandb.init(
         project=args.project_name,
         name=run_name,
         resume=run_id,
         dir=args.experiment_dir,
-        tags=args.tags,
+        tags=tags,
         config=config,
     )
     save_run_id(args.experiment_dir)
@@ -78,12 +98,41 @@ def save_run_id(experiment_dir):
         f.write(str(wandb.run.id))
 
 
+def get_language_tags(args):
+    if args.infer_language_tags:
+        return extract_langs(args.experiment_dir)
+    else:
+        return []
+
+
+def extract_langs(experiment_dir):
+    """ model_en2fres -> source:en, target:fr, target:es """
+    useful_part = os.path.basename(os.path.normpath(experiment_dir)).split('_')[-1]
+    source, target = useful_part.split('2')
+    get_langs = lambda ls: [ls[i:i + 2] for i in range(0, len(ls), 2)]
+    source_tags = ['source:'+tag for tag in get_langs(source)]
+    target_tags = ['target:'+tag for tag in get_langs(target)]
+    n_tags = [
+        'n_sources:'+str(len(source_tags)),
+        'n_targets:'+str(len(target_tags)),
+    ]
+
+    return source_tags + target_tags + n_tags
+
+
+def add_language_info(config, language_tags):
+    new_config = copy.deepcopy(config)
+    n_targets = sum('target:' in tag for tag in language_tags)
+    new_config['n_targets'] = n_targets if n_targets else None
+
+    return new_config
+
+
 def get_config(path):
     config_path = os.path.join(path, 'model.npz.yml')
     config = get_config_when_created(config_path)
     config = filter_config(config)
     config = fix_config_values(config)
-    # TODO: add --infere-languages parameter
     #config = set_languages(config, path)
 
     return config
@@ -101,6 +150,7 @@ def filter_config(config):
         'train-sets', 'vocabs', 'overwrite', 'no-reload',
         'keep-best', 'valid-sets', 'log', 'valid-log',
         'relative-paths', 'model', 'ignore-model-config',
+        'valid-script-path', 'tempdir',
     }
 
     filtered_config = {
@@ -153,6 +203,7 @@ def read_when_created_gen(path, fn, mode='r', wait=5, stop=None):
         try:
             with open(path, mode, encoding='utf-8') as f:
                 yield from fn(f)
+            break
         except FileNotFoundError:
             time.sleep(wait)
             continue
@@ -160,7 +211,6 @@ def read_when_created_gen(path, fn, mode='r', wait=5, stop=None):
 def follow(thefile, stop=None):
     if stop is None:
         stop = lambda: False
-    #thefile.seek(0, os.SEEK_END) # End-of-file
     while True:
         line = thefile.readline()
         if not line:
@@ -170,30 +220,22 @@ def follow(thefile, stop=None):
             else: continue
         yield line
 
+
+
+def save_best_models(experiment_dir):
+    print('Saving models... ', end='')
+    wandb.save(os.path.join(experiment_dir, 'model.npz.best-*'))
+    wandb.save(os.path.join(experiment_dir, '*.log'))
+    wandb.save(os.path.join(experiment_dir, 'model.npz.yml'))
+    print('Done.')
+
+
 class LogParser:
-    def __init__(self, experiment_dir):
+    def __init__(self, experiment_dir, wait_for_new_lines=False):
         self.experiment_dir = experiment_dir
         self.train_log_path = os.path.join(self.experiment_dir, 'train.log')
-        self._state_path = os.path.join(self.experiment_dir, '.parser_state')
-        self.read_last_log_state()
         self.setup_gracefull_interruptor()
-
-    def read_last_log_state(self):
-        # TODO: remove
-        try:
-            with open(self._state_path) as sp:
-                self._state = json.load(sp)
-        except:
-            self._state = {
-                'valid_log_line': 0,
-                'train_log_line': 0,
-            }
-            self.save_parser_state()
-                
-    def save_parser_state(self):
-        with open(self._state_path, 'w') as sp:
-            print('saving parser state: ', self._state)
-            json.dump(self._state, sp)
+        self.wait_for_new_lines = wait_for_new_lines
 
     # TODO: wandb itself interrupts interruption handling - remove?
     def setup_gracefull_interruptor(self):
@@ -209,12 +251,11 @@ class LogParser:
     def main_loop(self):
         """yields (step, log_dict)"""
 
-        while not self.should_be_stopped:
-            yield from read_when_created_gen(
-                self.train_log_path,
-                fn=lambda f: self._process_train_log_file(f),
-                stop=lambda: self.should_be_stopped,
-            )
+        yield from read_when_created_gen(
+            self.train_log_path,
+            fn=lambda f: self._process_train_log_file(f),
+            stop=lambda: self.should_be_stopped,
+        )
 
     def _process_train_log_file(self, train_log_file):
         # TODO: refactor this monster
@@ -273,33 +314,87 @@ class LogParser:
             log_data = {}
             metric_name = line[2].strip()
             metric_value = float(line[3].strip())
-            log_data['valid/'+metric_name] = metric_value
+            if 'lang/' not in metric_name:
+                metric_name = 'valid/' + metric_name
+            log_data[metric_name] = metric_value
 
             metric_stalled = line[4].strip()
             if 'no effect' not in metric_stalled:
                 if 'stalled' in metric_stalled:
-                    metric_stalled = metric_stalled.split()[1]
+                    metric_stalled = int(metric_stalled.split()[1])
                 else:
                     metric_stalled = 0
-                log_data['valid/'+metric_name+'_stalled'] = metric_stalled
+                log_data[metric_name+'_stalled'] = metric_stalled
 
             return step, log_data
 
-        for line in follow(train_log_file):
-            dtime, line = extract_time(line)
+        def parse_translation(lines):
+            data = []
+            log_data = {}
+            for line in lines:
+                if translation_ends(line):
+                    break
+                # cut time
+                line = line[line.find(']')+1:]
+                colon = line.find(':')
+                n = line[:colon]
+                translation = line[colon+1:]
+                n = int(n.strip().split(' ')[-1])
+                translation = translation.strip()
+                data.append([n, translation])
+            log_data['valid/translation_example'] = wandb.Table(
+                    data=data, columns=["N","Translation"]
+            )
+            log_data['valid/translation_time'] = float(line.strip().split(' ')[-1][:-1])
+
+            return log_data
+
+        def training_finished(line):
+            return "Training finished" in line
+
+        def translation_begins(line):
+            return "Translating" in line
+
+        def translation_ends(line):
+            return "Total translation time" in line
+
+        last_step=0
+        lines = follow(
+            train_log_file,
+            stop=lambda: self.should_be_stopped or not self.wait_for_new_lines
+        )
+        for line in lines:
+
+            try:
+                dtime, line = extract_time(line)
+            except:
+                continue
+
+            if training_finished(line):
+                break
+
             is_validation, line = extract_is_validation(line)
             
             if is_validation:
-                yield parse_val_log(line)
+                step, log_data = parse_val_log(line)
             elif is_training_log(line):
-                yield parse_train_log(line)
+                step, log_data = parse_train_log(line)
+            elif translation_begins(line):
+                # pass generator here to consume all lines with translations
+                log_data = parse_translation(lines)
+                # translation does not have 'step', that is why there is this 'last_step' thing
+                step = last_step
+            else:
+                continue
+
+            last_step = step
+
+            yield step, log_data
 
             # TODO
             # if trainslation - pass generator into the function to extract more log lines at once
             # and return wandb.Table (or dict?)
 
     
-
-
 if __name__=='__main__':
     main()
