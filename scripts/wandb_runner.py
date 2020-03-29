@@ -87,7 +87,7 @@ def init_wandb(args):
 
 def get_run_id(experiment_dir):
     try:
-        with open(os.path.join(experiment_dir, '.run_id')) as f:
+        with open(os.path.join(experiment_dir, '.run_id'), encoding='utf-8') as f:
             run_id = f.readline()
         return run_id
     except FileNotFoundError:
@@ -95,7 +95,7 @@ def get_run_id(experiment_dir):
 
 
 def save_run_id(experiment_dir):
-    with open(os.path.join(experiment_dir, '.run_id'), 'w') as f:
+    with open(os.path.join(experiment_dir, '.run_id'), 'w', encoding='utf-8') as f:
         f.write(str(wandb.run.id))
 
 

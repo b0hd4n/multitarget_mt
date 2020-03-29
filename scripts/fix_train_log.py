@@ -21,15 +21,14 @@ def parse_args():
 
 def fix_train_log(args):
     full_path = lambda x: os.path.join(args.experiment_dir, x)
-    with open(full_path('valid.log')) as valid,\
-         open(full_path('train.log')) as train,\
-         open(full_path('fixed_train.log'), 'w') as fixed_train:
+    with open(full_path('valid.log'), encoding='utf-8') as valid,\
+         open(full_path('train.log'), encoding='utf-8') as train,\
+         open(full_path('fixed_train.log'), 'w', encoding='utf-8') as fixed_train:
         # find valid/translation, append lang/bleu_xx
         train_lines = (line for line in train)
         for step, valid_portion in generate_valid_portion(valid):
             for line in train_lines:
                 line = line.strip()
-                print(line)
                 current_step = get_step(line)
                 if current_step is None:
                     print(line, file=fixed_train)
@@ -76,7 +75,7 @@ def get_step(line):
     if 'Up.' not in line:
         return None
     update = int(line.split('Up.')[1].strip().split(' ')[0])
-    print(line, update, 'update')
+    #print(line, update, 'update')
     return update
 
 
