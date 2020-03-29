@@ -8,8 +8,9 @@ tied-embeddings-all: true
 # Training options
 sync-sgd: true
 cost-type: ce-mean-words
-#disp-freq: 1000
-#save-freq: 1000
+dim-vocabs:
+  - 42671
+  - 42671
 disp-freq: 100
 save-freq: 100
 overwrite: true
