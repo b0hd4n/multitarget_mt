@@ -8,6 +8,7 @@ import json
 import signal
 import types
 from datetime import datetime
+from contextlib import contextmanager
 
 import wandb
 import yaml
@@ -139,7 +140,11 @@ def get_config(path):
 
 
 def get_config_when_created(path):
-    config = read_when_created(path, yaml.safe_load)
+    def safe_load(f):
+        time.sleep(2)
+        return yaml.safe_load(f)
+
+    config = read_when_created(path, safe_load, wait=10)
     print(config)
     return config
 
@@ -168,7 +173,11 @@ def fix_config_values(config):
     fixed_config = copy.deepcopy(config)
     fixed_config['devices'] = len(fixed_config['devices'])
     # save only version, drop hash and compile date
-    fixed_config['version'] = fixed_config['version'].split()[0]
+    if 'version' in fixed_config:
+        # sometimes the last line with the version is not
+        # in the config immediately, but it is not an important
+        # value to be stored
+        fixed_config['version'] = fixed_config['version'].split()[0]
 
     return fixed_config
 
@@ -234,15 +243,8 @@ class LogParser:
     def __init__(self, experiment_dir, wait_for_new_lines=False):
         self.experiment_dir = experiment_dir
         self.train_log_path = os.path.join(self.experiment_dir, 'train.log')
-        self.setup_gracefull_interruptor()
         self.wait_for_new_lines = wait_for_new_lines
-
-    # TODO: wandb itself interrupts interruption handling - remove?
-    def setup_gracefull_interruptor(self):
-        # by https://stackoverflow.com/a/31464349
         self.should_be_stopped = False
-        signal.signal(signal.SIGINT, self.stop)
-        signal.signal(signal.SIGTERM, self.stop)
 
     def stop(self, signum, frame):
         print('Stopping log parser...')
@@ -250,12 +252,13 @@ class LogParser:
 
     def main_loop(self):
         """yields (step, log_dict)"""
-
-        yield from read_when_created_gen(
-            self.train_log_path,
-            fn=lambda f: self._process_train_log_file(f),
-            stop=lambda: self.should_be_stopped,
-        )
+        with signal_handler(signal.SIGINT, self.stop),\
+             signal_handler(signal.SIGTERM, self.stop):
+            yield from read_when_created_gen(
+                self.train_log_path,
+                fn=lambda f: self._process_train_log_file(f),
+                stop=lambda: self.should_be_stopped,
+            )
 
     def _process_train_log_file(self, train_log_file):
         # TODO: refactor this monster
@@ -392,6 +395,16 @@ class LogParser:
             last_step = step
 
             yield step, log_data
+
+
+@contextmanager
+def signal_handler(handled_signal, new_handler):
+    old_handler = signal.getsignal(handled_signal)
+    try:
+        signal.signal(handled_signal, new_handler)
+        yield
+    finally:
+        signal.signal(handled_signal, old_handler)
 
     
 if __name__=='__main__':
