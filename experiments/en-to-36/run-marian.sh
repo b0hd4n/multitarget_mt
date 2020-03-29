@@ -1,11 +1,29 @@
 #!/bin/bash -v
 
+# https://stackoverflow.com/a/17841619
+function join_by { local IFS="$1"; shift; echo "$*"; }
+function wandb_runner {
+    echo Launching wandb runner...
+    WANDB_PYTHON=../../envs/wandb_env/bin/python3
+    WANDB_RUNNER=../../scripts/wandb_runner.py
+    MODEL_DIR=$1
+    [[ ! -z "$CLUSTER_NAME" ]] && TAGS=cluster:$CLUSTER_NAME || TAGS=cluster:undefined
+    [[ ! -z "$EXPERIMENT_SET" ]] && TAGS=$TAGS,experiment:$EXPERIMENT_SET
+    nohup $WANDB_PYTHON $WANDB_RUNNER --tags=$TAGS --infer-language-tags --wait-for-logs -d $MODEL_DIR &
+    # &>/dev/null &
+    RUNNER_PID=$!
+    echo $RUNNER_PID WandD pid
+    echo $TAGS
+    sleep 15
+    trap "echo stopping W&B runner; kill $RUNNER_PID" EXIT
+}
+
 echo CUDA_HOME:${CUDA_HOME}
 nvcc --version
 
 if [ ! $MARIAN ];
 then
-    echo MARIAN variable is not set, trying the default location
+    echo MARIAN variable is not set, trying the default location '~/tools/marian'
     MARIAN=~/tools/marian
 fi
 
@@ -47,6 +65,7 @@ MODEL_NAME=${SOURCE_LANG}2${TARGET_LANGS_STR}
 MODEL=model_${MODEL_NAME}
 mkdir -p $MODEL
 
+wandb_runner $MODEL
 # WARNING! here's a hack to make validation script know about target languages
 # another part is in script itself
 cp ./validate.sh ${MODEL}/validate.sh
