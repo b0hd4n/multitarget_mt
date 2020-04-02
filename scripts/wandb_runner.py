@@ -134,6 +134,7 @@ def get_config(path):
     config = get_config_when_created(config_path)
     config = filter_config(config)
     config = fix_config_values(config)
+    config = convert_config_list_values(config)
     #config = set_languages(config, path)
 
     return config
@@ -178,6 +179,19 @@ def fix_config_values(config):
         # in the config immediately, but it is not an important
         # value to be stored
         fixed_config['version'] = fixed_config['version'].split()[0]
+
+    return fixed_config
+
+
+def convert_config_list_values(config):
+    # replace key:[value1,value2] with key-1:value1, key-2: value2
+    fixed_config = {}
+    for key, value in config.items():
+        if type(value) is list:
+            for i,v in enumerate(value, 1):
+                fixed_config[key+'-'+str(i)] = v
+        else:
+            fixed_config[key] = value
 
     return fixed_config
 
