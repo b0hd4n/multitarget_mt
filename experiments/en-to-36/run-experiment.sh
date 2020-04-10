@@ -52,7 +52,7 @@ TARGET_LANGS_STR=$(printf "%s" "${TARGET_LANGS[@]}")
 # check if model aready converged
 if [ -e ./model_${SOURCE_LANG}2${TARGET_LANGS_STR}/valid.log ]
 then
-    CONVERGED=$(cat ./model_${SOURCE_LANG}2${TARGET_LANGS_STR}/valid.log | grep -m 1 -e 'ce-.*6 times' | wc -l)
+    CONVERGED=$(cat ./model_${SOURCE_LANG}2${TARGET_LANGS_STR}/train.log | grep 'Training finished' | wc -l)
     [[ "${CONVERGED}" !=  "0" ]] && echo "Model ${SOURCE_LANG}2${TARGET_LANGS_STR} has already converged" && exit 0
 fi
 
