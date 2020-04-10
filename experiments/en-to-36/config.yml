@@ -38,9 +38,9 @@ optimizer-params:
 #valid-freq: 10000
 valid-freq: 1000
 valid-metrics:
-  - ce-mean-words
   - translation
-early-stopping: 5
+  - ce-mean-words
+early-stopping: 15
 beam-size: 6
 normalize: 0.6
 keep-best: true
