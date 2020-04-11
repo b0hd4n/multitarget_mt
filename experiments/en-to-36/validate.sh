@@ -7,9 +7,14 @@ langs=($(echo $MODEL_FOLDER | sed 's/model_en2\(.*\)/\1/g' | sed 's/\(..\)/\1 /g
 
 translations=$(basename $1)
 
-# WARNING!
-# let's hope another metrics are already in valid.log
-valid_log_template=$(tail -1 valid.log | cut -d' ' -f -9)
+# find last line from train log that contains epoch and update number
+# and reuse it when constructing the line with bleu score
+
+LAST_TRAIN_LOG_LINE=$(awk '/Ep./{k=$0}END{print k}' train.log )
+update=$(echo $LAST_TRAIN_LOG_LINE | sed 's/.* Up. \([0-9]*\) :.*/\1/')
+epoch=$(echo $LAST_TRAIN_LOG_LINE | sed 's/.* Ep. \([0-9]*\) :.*/\1/')
+
+# find the latest step and epoch in training log
 
 for lang in ${langs[@]};
 do
@@ -35,12 +40,13 @@ do
     rm $pred_file
     rm $gold_file
 
-    # WARNING! hack
-    # I hope at this point previous val scores are allready in valid.log
-    # so let's just past these numbers there also
-    # it won't be visible for the validation early stopping, but will be for tensorboard
-    echo $valid_log_template lang/bleu-${lang} : ${result} : no effect on early stopping >> valid.log
-    echo $valid_log_template lang/bleu-${lang} : ${result} : no effect on early stopping >> train.log
+    current_output = date +"[%Y-%m-%d %T]"
+    current_output = "$current_output [valid] Ep. ${epoch} : Up. ${update} :"
+    current_output = "$current_output lang/bleu-${lang} : ${result} :"
+    current_output = "$current_output no effect on early stopping"
+
+    echo $current_output >> valid.log
+    echo $current_output >> train.log
 done
 
 #####################################
