@@ -121,6 +121,7 @@ qsub -N "${SOURCE_LANG}2${TARGET_LANGS_STR}" -m n -j y -b y -cwd -q gpu* \
     -o $logs_str \
     -v  SOURCE_LANG=$SOURCE_LANG \
     -v MARIAN=$MARIAN \
+    -v EXPERIMENT_SET=$EXPERIMENT_SET \
     $WAIT_FOR_PREP \
     $PRIORITY \
     $SYNC_JOB \
