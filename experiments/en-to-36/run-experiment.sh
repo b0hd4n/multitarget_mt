@@ -32,7 +32,7 @@ then
     then
         lang_arr=( $( $1 $SGE_TASK_ID "${@:2}" ) )
     else
-        EXPERIMENT_SET=$1
+        [[ -z "$EXPERIMENT_SET" ]] && EXPERIMENT_SET=$1
         echo sge $SGE_TASK_ID
         line_no=$(( $SGE_TASK_ID % $(cat $1 | wc -l) +1 ))
         lang_arr=( $( sed "${line_no}q;d" $1 ) )

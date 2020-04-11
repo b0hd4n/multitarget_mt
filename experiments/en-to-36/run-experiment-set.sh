@@ -26,5 +26,6 @@ qsub -b y -cwd -m n -N aj_${1/\//_} \
         -v TIME_LIMIT=$TIME_LIMIT \
         -v LOW_PRIORITY="$LOW_PRIORITY" \
 	-v MARIAN=$MARIAN \
+	-v EXPERIMENT_SET=$EXPERIMENT_SET \
         -tc $CONC_TASKS \
         ./run-experiment.sh "$@"
