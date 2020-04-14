@@ -40,10 +40,10 @@ do
     rm $pred_file
     rm $gold_file
 
-    current_output= date +"[%Y-%m-%d %T]"
-    current_output= "$current_output [valid] Ep. ${epoch} : Up. ${update} :"
-    current_output= "$current_output lang/bleu-${lang} : ${result} :"
-    current_output= "$current_output no effect on early stopping"
+    current_output=$(date +"[%Y-%m-%d %T]")
+    current_output="$current_output [valid] Ep. ${epoch} : Up. ${update} :"
+    current_output="$current_output lang/bleu-${lang} : ${result} :"
+    current_output="$current_output no effect on early stopping"
 
     echo $current_output >> valid.log
     echo $current_output >> train.log
