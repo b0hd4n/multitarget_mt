@@ -20,11 +20,12 @@ function create_lock {
     local TGTS=$2
     mkdir -p locks
     local LOCKFILE=locks/${SRC}2${TGTS}.lock
-    if [ -f "$LOCKFILE" ]
+    local result="$(lockfile -r 0 ${LOCKFILE} || echo Locked )"
+
+    if [ ! -z "${result}" ]
     then
-        echo "Lock file already exists"
+        echo ${result}
     else
-        touch $LOCKFILE
 	trap "rm -f $LOCKFILE" EXIT
     fi
 }
