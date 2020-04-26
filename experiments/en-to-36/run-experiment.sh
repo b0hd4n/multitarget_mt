@@ -17,6 +17,8 @@
 # "es fr ar"
 # script returns space separated list of languages
 
+source ./utils.sh
+
 if [ ! $SOURCE_LANG ];
 then
 	SOURCE_LANG=en;
@@ -50,26 +52,19 @@ unset IFS
 TARGET_LANGS_STR=$(printf "%s" "${TARGET_LANGS[@]}")
 
 # check if model aready converged
-if [ -e ./model_${SOURCE_LANG}2${TARGET_LANGS_STR}/valid.log ]
-then
-    CONVERGED=$(cat ./model_${SOURCE_LANG}2${TARGET_LANGS_STR}/train.log | grep 'Training finished' | wc -l)
-    [[ "${CONVERGED}" !=  "0" ]] && echo "Model ${SOURCE_LANG}2${TARGET_LANGS_STR} has already converged" && exit 0
-fi
+# TODO: get test results on convergence
+CONVERGED="$(model_converged ${SOURCE_LANG} ${TARGET_LANGS_STR})"
+[[ ! -z "${CONVERGED}" ]] && exit 0
 
-# check if such task is already running
-# decrease concurrency for parent array job
-IS_ALREADY_RUNNING=$(./full_jobs_names.sh | grep ${SOURCE_LANG}2{TARGET_LANGS_STR} | wc -l)
-if [ $IS_ALREADY_RUNNING -ne '0' ]
+# try to create a lock for this experiment
+CREATE_LOCK_RESULT="$(create_lock ${SOURCE_LANG} ${TARGET_LANGS_STR})"
+echo lock creation result: $CREATE_LOCK_RESULT ${CREATE_LOCK_RESULT}
+IS_ALREADY_RUNNING="${CREATE_LOCK_RESULT}$(./full_jobs_names.sh | grep ${SOURCE_LANG}2{TARGET_LANGS_STR})"
+echo Is already running: $IS_ALREADY_RUNNING
+if [ ! -z "$IS_ALREADY_RUNNING" ]
 then
-    #decrease parent array job concurency by 1 if possible
-    PARENT_CONCURRENCY=$(qstat -j $SGE_JOB_ID | grep 'concurrency' | sed -e 's/.*\([0-9]\{1,\}\)/\1/g')
-    if [ $PARENT_CONCURRENCY -ne "" ]
-    then
-        echo decreasing parent\'s concurrentcy...
-        qalter -tc $(("$PARENT_CONCURRENCY"-1)) $SGE_JOB_ID
-        echo done.
-    fi
-    echo "Model ${SOURCE_LANG}2${TARGET_LANGS_STR} is already running, current task is to be stopped"
+    decrease_parent_concurrency $JOB_ID
+    echo "Model ${SOURCE_LANG}2${TARGET_LANGS_STR} is already running, current task is aborted"
     exit 0
 fi
 
@@ -114,7 +109,7 @@ echo $PRIORITY priority
 
 mkdir -p run_logs
 logs_str='run_logs/$JOB_NAME.o$JOB_ID'
-[[ ! -z "$SGE_TASK_ID" ]] && logs_str=$logs_str".$SGE_JOB_ID.$SGE_TASK_ID"
+[[ ! -z "$SGE_TASK_ID" ]] && logs_str=$logs_str".$SGE_TASK_ID"
 qsub -N "${SOURCE_LANG}2${TARGET_LANGS_STR}" -m n -j y -b y -cwd -q gpu* \
     -l gpu=${GPU},gpu_ram=8G,mem_free=${MEM}G,act_mem_free=${MEM}G,h_data=${MEM}G$TIME_RESOURCE \
     -pe smp ${CPU} \
