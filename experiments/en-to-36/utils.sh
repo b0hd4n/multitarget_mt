@@ -15,18 +15,20 @@ function decrease_parent_concurrency {
 }
 
 function create_lock {
-    # lock was not created if output is not empty
+    # returns lock file name if created successfully
     local SRC=$1
     local TGTS=$2
     mkdir -p locks
     local LOCKFILE=locks/${SRC}2${TGTS}.lock
-    local result="$(lockfile -r 0 ${LOCKFILE} || echo Locked )"
+    lockfile -r 0 ${LOCKFILE}
+    local result="$?"
 
-    if [ ! -z "${result}" ]
+    if [ "${result}" != "0" ]
     then
-        echo ${result}
+        1>&2 echo non-zero result: ${result};
     else
-	trap "rm -f $LOCKFILE" EXIT
+        1>&2 echo result: ${result}, lock is created;
+        echo $LOCKFILE
     fi
 }
 
@@ -41,3 +43,34 @@ function model_converged {
         [[ "${CONVERGED}" !=  "0" ]] && echo "Model ${SOURCE_LANG}2${TARGET_LANGS_STR} has already converged"
     fi
 }
+
+# trap_add from https://stackoverflow.com/a/7287873`
+# note: printf is used instead of echo to avoid backslash
+# processing and to properly handle values that begin with a '-'.
+log() { printf '%s\n' "$*"; }
+error() { log "ERROR: $*" >&2; }
+fatal() { error "$@"; exit 1; }
+# appends a command to a trap
+#
+# - 1st arg:  code to add
+# - remaining args:  names of traps to modify
+#
+trap_add() {
+    trap_add_cmd=$1; shift || fatal "${FUNCNAME} usage error"
+    for trap_add_name in "$@"; do
+        trap -- "$(
+            # helper fn to get existing trap command from output
+            # of trap -p
+            extract_trap_cmd() { printf '%s\n' "$3"; }
+            # print existing trap command with newline
+            eval "extract_trap_cmd $(trap -p "${trap_add_name}")"
+            # print the new trap command
+            printf '%s\n' "${trap_add_cmd}"
+        )" "${trap_add_name}" \
+            || fatal "unable to add to trap ${trap_add_name}"
+    done
+}
+# set the trace attribute for the above function.  this is
+# required to modify DEBUG or RETURN traps because functions don't
+# inherit them unless the trace attribute is set
+declare -f -t trap_add

@@ -57,9 +57,15 @@ CONVERGED="$(model_converged ${SOURCE_LANG} ${TARGET_LANGS_STR})"
 [[ ! -z "${CONVERGED}" ]] && exit 0
 
 # try to create a lock for this experiment
-CREATE_LOCK_RESULT="$(create_lock ${SOURCE_LANG} ${TARGET_LANGS_STR})"
-echo lock creation result: $CREATE_LOCK_RESULT ${CREATE_LOCK_RESULT}
-IS_ALREADY_RUNNING="${CREATE_LOCK_RESULT}$(./full_jobs_names.sh | grep ${SOURCE_LANG}2{TARGET_LANGS_STR})"
+LOCKFILE="$(create_lock ${SOURCE_LANG} ${TARGET_LANGS_STR})"
+echo lock file: $LOCKFILE
+if [ ! -z "$LOCKFILE" ]
+then
+    trap "echo releasing the lock ${LOCKFILE}; rm -f $LOCKFILE" EXIT SIGINT SIGTERM
+else
+    IS_ALREADY_RUNNING='Already running'
+fi
+
 echo Is already running: $IS_ALREADY_RUNNING
 if [ ! -z "$IS_ALREADY_RUNNING" ]
 then
@@ -88,7 +94,7 @@ echo $WAIT_FOR_PREP
 echo ${TARGET_LANGS[@]}
 
 # corpus creation is quite fast - so let's not occupy all the space
-[[ ! -z "$SGE_TASK_ID" ]] && trap "echo cleaning data; rm -f ./data/interim/${SOURCE_LANG}2${TARGET_LANGS_STR}.*.*" EXIT
+[[ ! -z "$SGE_TASK_ID" ]] && trap_add "echo cleaning data; rm -f ./data/interim/${SOURCE_LANG}2${TARGET_LANGS_STR}.*.*" EXIT
 
 # if it is an array job - wait for a resp. gpu job
 [[ ! -z "$SGE_TASK_ID" ]] && SYNC_JOB="-sync y"
