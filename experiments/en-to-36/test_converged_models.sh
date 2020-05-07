@@ -9,7 +9,6 @@
 
 [[ -z "$RESULT_DIR" ]] && RESULT_DIR=test_results
 [[ -z "$CONC_TASKS" ]] && CONC_TASKS=1
-[[ -z "$NEG_FILTER" ]] && NEG_FILTER='ar'
 
 mkdir -p ${RESULT_DIR}
 if [[ -z "$MODELS" ]]
@@ -23,16 +22,15 @@ fi
 
 
 jobs=$(cat $MODELS | wc -l )
-echo $jobs
+echo jobs $jobs
 
-echo ${MODELS}
+echo MODELS ${MODELS}
 
 mkdir -p test_logs
 qsub -N aj_test_models -m n -j y -b y -cwd -q gpu-*.q \
-    -l gpu=1,gpu_ram=11G,mem_free=25G,act_mem_free=25G,h_data=25G \
+    -l gpu=1,gpu_ram=11G,gpu_cc_min6.1=1,mem_free=25G,act_mem_free=25G,h_data=25G \
     -pe smp 1 \
     -t 1-$jobs \
-    -p -200 \
     -o 'test_logs/$JOB_NAME.$JOB_ID.$TASK_ID' \
     -v RESULT_DIR="${RESULT_DIR}" \
     -v MODELS_LIST="${MODELS}" \

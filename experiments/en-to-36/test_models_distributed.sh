@@ -12,6 +12,8 @@
 MODEL=$(sed "${SGE_TASK_ID}q;d" ${MODELS_LIST})
 langs=($(echo $MODEL | sed 's/model_en2\(.*\)/\1/g' | sed 's/\(..\)/\1 /g'))
 [[ -z "$RESULT_DIR" ]] && RESULT_DIR=test_results
+LOGDIR="$RESULT_DIR/logs"
+mkdir -p $LOGDIR
 # different ports - tasks may be on the same cluster
 PORT=$(("$SGE_TASK_ID" + 8080))
 
@@ -25,7 +27,9 @@ mv -f ${MODEL}/results.tsv ${MODEL}/results_prev.tsv 2>/dev/null || true
 for decoder in $(ls ${MODEL}/*decoder.yml | grep 'best')
 do
     # don't forget to kill server afterwards
-    nohup $MARIAN/build/marian-server --port $PORT -c $decoder --mini-batch 64 --maxi-batch 100 --maxi-batch-sort src -w 9000 &>/dev/null &
+    nohup $MARIAN/build/marian-server --port $PORT -c $decoder \
+        --mini-batch 64 --maxi-batch 50 --maxi-batch-sort src -w 9000 \
+        &>$LOGDIR/${decoder//\//_}.log &
     SERVER_PID=$!
     sleep 15
     trap "echo stopping marian server; kill $SERVER_PID" EXIT
