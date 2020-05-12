@@ -1,0 +1,191 @@
+authors: false
+cite: false
+build-info: ""
+workspace: 7000
+log: model_en2isno/train.log
+log-level: info
+log-time-zone: ""
+quiet: false
+quiet-translation: false
+seed: 1111
+clip-gemm: 0
+interpolate-env-vars: false
+relative-paths: false
+dump-config: ""
+model: model_en2isno/model.npz
+pretrained-model: ""
+ignore-model-config: false
+type: transformer
+dim-vocabs:
+  - 42671
+  - 42671
+dim-emb: 512
+lemma-dim-emb: 0
+dim-rnn: 1024
+enc-type: bidirectional
+enc-cell: gru
+enc-cell-depth: 1
+enc-depth: 1
+dec-cell: gru
+dec-cell-base-depth: 2
+dec-cell-high-depth: 1
+dec-depth: 1
+skip: false
+layer-normalization: true
+right-left: false
+input-types: []
+tied-embeddings: false
+tied-embeddings-src: false
+tied-embeddings-all: true
+transformer-heads: 8
+transformer-no-projection: false
+transformer-dim-ffn: 2048
+transformer-ffn-depth: 2
+transformer-ffn-activation: swish
+transformer-dim-aan: 2048
+transformer-aan-depth: 2
+transformer-aan-activation: swish
+transformer-aan-nogate: false
+transformer-decoder-autoreg: self-attention
+transformer-tied-layers: []
+transformer-guided-alignment-layer: last
+transformer-preprocess: ""
+transformer-postprocess-emb: d
+transformer-postprocess: dan
+transformer-train-position-embeddings: false
+transformer-depth-scaling: false
+bert-mask-symbol: "[MASK]"
+bert-sep-symbol: "[SEP]"
+bert-class-symbol: "[CLS]"
+bert-masking-fraction: 0.15
+bert-train-type-embeddings: true
+bert-type-vocab-size: 2
+dropout-rnn: 0
+dropout-src: 0
+dropout-trg: 0
+grad-dropping-rate: 0
+grad-dropping-momentum: 0
+grad-dropping-warmup: 100
+transformer-dropout: 0.1
+transformer-dropout-attention: 0
+transformer-dropout-ffn: 0
+cost-type: ce-mean-words
+multi-loss-type: sum
+unlikelihood-loss: false
+overwrite: true
+no-reload: false
+train-sets:
+  - model_en2isno/train.source
+  - model_en2isno/train.target
+vocabs:
+  - data/raw/vocab.multi.yml
+  - data/raw/vocab.multi.yml
+after-epochs: 0
+after-batches: 0
+disp-freq: 100
+disp-first: 0
+disp-label-counts: false
+save-freq: 100
+max-length: 500
+max-length-crop: false
+shuffle: data
+no-restore-corpus: false
+tempdir: model_en2isno
+sqlite: ""
+sqlite-drop: false
+devices:
+  - 0
+  - 1
+num-devices: 0
+no-nccl: false
+cpu-threads: 0
+mini-batch: 64
+mini-batch-words: 0
+mini-batch-fit: true
+mini-batch-fit-step: 10
+gradient-checkpointing: false
+maxi-batch: 100
+maxi-batch-sort: src
+shuffle-in-ram: false
+all-caps-every: 0
+english-title-case-every: 0
+mini-batch-words-ref: 0
+mini-batch-warmup: 0
+mini-batch-track-lr: false
+optimizer: adam
+optimizer-params:
+  - 0.9
+  - 0.98
+  - 1e-09
+optimizer-delay: 8
+sync-sgd: true
+learn-rate: 0.0004
+lr-report: true
+lr-decay: 0
+lr-decay-strategy: epoch+stalled
+lr-decay-start:
+  - 10
+  - 1
+lr-decay-freq: 50000
+lr-decay-reset-optimizer: false
+lr-decay-repeat-warmup: false
+lr-decay-inv-sqrt:
+  - 4000
+lr-warmup: 4000
+lr-warmup-start-rate: 0
+lr-warmup-cycle: false
+lr-warmup-at-reload: false
+label-smoothing: 0.1
+factor-weight: 1
+clip-norm: 1
+exponential-smoothing: 0.0001
+guided-alignment: none
+guided-alignment-cost: mse
+guided-alignment-weight: 0.1
+data-weighting: ""
+data-weighting-type: sentence
+embedding-vectors:
+  []
+embedding-normalization: false
+embedding-fix-src: false
+embedding-fix-trg: false
+precision:
+  - float32
+  - float32
+  - float32
+cost-scaling:
+  []
+normalize-gradient: false
+multi-node: false
+multi-node-overlap: true
+ulr: false
+ulr-query-vectors: ""
+ulr-keys-vectors: ""
+ulr-trainable-transformation: false
+ulr-dim-emb: 0
+ulr-dropout: 0
+ulr-softmax-temperature: 1
+valid-sets:
+  - model_en2isno/val.source
+  - model_en2isno/val.target
+valid-freq: 1000
+valid-metrics:
+  - translation
+  - ce-mean-words
+valid-reset-stalled: false
+early-stopping: 15
+beam-size: 6
+normalize: 0.6
+max-length-factor: 3
+word-penalty: 0
+allow-unk: false
+n-best: false
+word-scores: false
+valid-mini-batch: 32
+valid-max-length: 1000
+valid-script-path: model_en2isno/validate.sh
+valid-script-args:
+  []
+valid-translation-output: ""
+keep-best: true
+valid-log: model_en2isno/valid.log

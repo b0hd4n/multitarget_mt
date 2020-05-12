@@ -1,0 +1,16 @@
+model_en2isno	is	ce-mean-words	data/raw/test/en2is/OpenSubtitles/v2016	25.20
+model_en2isno	is	ce-mean-words	data/raw/test/en2is/OpenSubtitles/v2018	23.60
+model_en2isno	is	ce-mean-words	data/raw/test/en2is/KDE4/v2	4.80
+model_en2isno	is	ce-mean-words	data/raw/test/en2is/GNOME/v1	3.30
+model_en2isno	no	ce-mean-words	data/raw/test/en2no/Tanzil/v1	6.50
+model_en2isno	no	ce-mean-words	data/raw/test/en2no/OpenSubtitles/v2016	27.40
+model_en2isno	no	ce-mean-words	data/raw/test/en2no/OpenSubtitles/v2018	30.00
+model_en2isno	no	ce-mean-words	data/raw/test/en2no/OpenSubtitles/v1	24.40
+model_en2isno	is	translation	data/raw/test/en2is/OpenSubtitles/v2016	24.60
+model_en2isno	is	translation	data/raw/test/en2is/OpenSubtitles/v2018	23.40
+model_en2isno	is	translation	data/raw/test/en2is/KDE4/v2	4.60
+model_en2isno	is	translation	data/raw/test/en2is/GNOME/v1	3.50
+model_en2isno	no	translation	data/raw/test/en2no/Tanzil/v1	6.70
+model_en2isno	no	translation	data/raw/test/en2no/OpenSubtitles/v2016	27.50
+model_en2isno	no	translation	data/raw/test/en2no/OpenSubtitles/v2018	30.00
+model_en2isno	no	translation	data/raw/test/en2no/OpenSubtitles/v1	24.20
