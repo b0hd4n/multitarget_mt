@@ -1,0 +1,528 @@
+[2020-04-24 10:02:45] [valid] Ep. 1 : Up. 1000 : lang/bleu-fr : 0.4 : no effect on early stopping
+[2020-04-24 10:02:47] [valid] Ep. 1 : Up. 1000 : lang/bleu-ga : 0.0 : no effect on early stopping
+[2020-04-24 10:02:48] [valid] Ep. 1 : Up. 1000 : lang/bleu-ka : 0.2 : no effect on early stopping
+[2020-04-24 10:02:49] [valid] Ep. 1 : Up. 1000 : lang/bleu-mk : 0.1 : no effect on early stopping
+[2020-04-24 10:02:50] [valid] Ep. 1 : Up. 1000 : translation : 0 : new best
+[2020-04-24 10:02:51] [valid] Ep. 1 : Up. 1000 : ce-mean-words : 5.78937 : new best
+[2020-04-24 10:33:15] [valid] Ep. 1 : Up. 2000 : lang/bleu-fr : 7.0 : no effect on early stopping
+[2020-04-24 10:33:16] [valid] Ep. 1 : Up. 2000 : lang/bleu-ga : 5.6 : no effect on early stopping
+[2020-04-24 10:33:17] [valid] Ep. 1 : Up. 2000 : lang/bleu-ka : 1.9 : no effect on early stopping
+[2020-04-24 10:33:18] [valid] Ep. 1 : Up. 2000 : lang/bleu-mk : 2.1 : no effect on early stopping
+[2020-04-24 10:33:19] [valid] Ep. 1 : Up. 2000 : translation : 3.53643 : new best
+[2020-04-24 10:33:20] [valid] Ep. 1 : Up. 2000 : ce-mean-words : 3.93088 : new best
+[2020-04-24 11:03:57] [valid] Ep. 2 : Up. 3000 : lang/bleu-fr : 17.0 : no effect on early stopping
+[2020-04-24 11:03:59] [valid] Ep. 2 : Up. 3000 : lang/bleu-ga : 19.6 : no effect on early stopping
+[2020-04-24 11:04:00] [valid] Ep. 2 : Up. 3000 : lang/bleu-ka : 7.2 : no effect on early stopping
+[2020-04-24 11:04:01] [valid] Ep. 2 : Up. 3000 : lang/bleu-mk : 9.2 : no effect on early stopping
+[2020-04-24 11:04:02] [valid] Ep. 2 : Up. 3000 : translation : 12.1887 : new best
+[2020-04-24 11:04:03] [valid] Ep. 2 : Up. 3000 : ce-mean-words : 2.83805 : new best
+[2020-04-24 11:34:36] [valid] Ep. 2 : Up. 4000 : lang/bleu-fr : 23.9 : no effect on early stopping
+[2020-04-24 11:34:37] [valid] Ep. 2 : Up. 4000 : lang/bleu-ga : 27.5 : no effect on early stopping
+[2020-04-24 11:34:39] [valid] Ep. 2 : Up. 4000 : lang/bleu-ka : 9.4 : no effect on early stopping
+[2020-04-24 11:34:40] [valid] Ep. 2 : Up. 4000 : lang/bleu-mk : 12.8 : no effect on early stopping
+[2020-04-24 11:34:41] [valid] Ep. 2 : Up. 4000 : translation : 16.7694 : new best
+[2020-04-24 11:34:41] [valid] Ep. 2 : Up. 4000 : ce-mean-words : 2.29975 : new best
+[2020-04-24 12:05:09] [valid] Ep. 3 : Up. 5000 : lang/bleu-fr : 25.6 : no effect on early stopping
+[2020-04-24 12:05:11] [valid] Ep. 3 : Up. 5000 : lang/bleu-ga : 32.2 : no effect on early stopping
+[2020-04-24 12:05:12] [valid] Ep. 3 : Up. 5000 : lang/bleu-ka : 11.3 : no effect on early stopping
+[2020-04-24 12:05:13] [valid] Ep. 3 : Up. 5000 : lang/bleu-mk : 15.7 : no effect on early stopping
+[2020-04-24 12:05:14] [valid] Ep. 3 : Up. 5000 : translation : 19.5555 : new best
+[2020-04-24 12:05:14] [valid] Ep. 3 : Up. 5000 : ce-mean-words : 2.02354 : new best
+[2020-04-24 12:35:28] [valid] Ep. 3 : Up. 6000 : lang/bleu-fr : 26.8 : no effect on early stopping
+[2020-04-24 12:35:30] [valid] Ep. 3 : Up. 6000 : lang/bleu-ga : 36.2 : no effect on early stopping
+[2020-04-24 12:35:31] [valid] Ep. 3 : Up. 6000 : lang/bleu-ka : 11.5 : no effect on early stopping
+[2020-04-24 12:35:32] [valid] Ep. 3 : Up. 6000 : lang/bleu-mk : 17.4 : no effect on early stopping
+[2020-04-24 12:35:33] [valid] Ep. 3 : Up. 6000 : translation : 20.9905 : new best
+[2020-04-24 12:35:34] [valid] Ep. 3 : Up. 6000 : ce-mean-words : 1.87976 : new best
+[2020-04-24 13:05:43] [valid] Ep. 3 : Up. 7000 : lang/bleu-fr : 27.4 : no effect on early stopping
+[2020-04-24 13:05:44] [valid] Ep. 3 : Up. 7000 : lang/bleu-ga : 38.3 : no effect on early stopping
+[2020-04-24 13:05:45] [valid] Ep. 3 : Up. 7000 : lang/bleu-ka : 11.2 : no effect on early stopping
+[2020-04-24 13:05:47] [valid] Ep. 3 : Up. 7000 : lang/bleu-mk : 18.3 : no effect on early stopping
+[2020-04-24 13:05:47] [valid] Ep. 3 : Up. 7000 : translation : 21.5355 : new best
+[2020-04-24 13:05:48] [valid] Ep. 3 : Up. 7000 : ce-mean-words : 1.79152 : new best
+[2020-04-24 13:36:11] [valid] Ep. 4 : Up. 8000 : lang/bleu-fr : 28.4 : no effect on early stopping
+[2020-04-24 13:36:12] [valid] Ep. 4 : Up. 8000 : lang/bleu-ga : 40.0 : no effect on early stopping
+[2020-04-24 13:36:13] [valid] Ep. 4 : Up. 8000 : lang/bleu-ka : 12.9 : no effect on early stopping
+[2020-04-24 13:36:15] [valid] Ep. 4 : Up. 8000 : lang/bleu-mk : 19.0 : no effect on early stopping
+[2020-04-24 13:36:15] [valid] Ep. 4 : Up. 8000 : translation : 22.971 : new best
+[2020-04-24 13:36:16] [valid] Ep. 4 : Up. 8000 : ce-mean-words : 1.73274 : new best
+[2020-04-24 14:06:28] [valid] Ep. 4 : Up. 9000 : lang/bleu-fr : 29.6 : no effect on early stopping
+[2020-04-24 14:06:29] [valid] Ep. 4 : Up. 9000 : lang/bleu-ga : 41.2 : no effect on early stopping
+[2020-04-24 14:06:30] [valid] Ep. 4 : Up. 9000 : lang/bleu-ka : 14.2 : no effect on early stopping
+[2020-04-24 14:06:32] [valid] Ep. 4 : Up. 9000 : lang/bleu-mk : 19.1 : no effect on early stopping
+[2020-04-24 14:06:32] [valid] Ep. 4 : Up. 9000 : translation : 23.9816 : new best
+[2020-04-24 14:06:33] [valid] Ep. 4 : Up. 9000 : ce-mean-words : 1.68722 : new best
+[2020-04-24 14:37:11] [valid] Ep. 5 : Up. 10000 : lang/bleu-fr : 29.9 : no effect on early stopping
+[2020-04-24 14:37:12] [valid] Ep. 5 : Up. 10000 : lang/bleu-ga : 42.2 : no effect on early stopping
+[2020-04-24 14:37:13] [valid] Ep. 5 : Up. 10000 : lang/bleu-ka : 14.5 : no effect on early stopping
+[2020-04-24 14:37:15] [valid] Ep. 5 : Up. 10000 : lang/bleu-mk : 19.5 : no effect on early stopping
+[2020-04-24 14:37:15] [valid] Ep. 5 : Up. 10000 : translation : 24.4397 : new best
+[2020-04-24 14:37:16] [valid] Ep. 5 : Up. 10000 : ce-mean-words : 1.65035 : new best
+[2020-04-24 15:07:34] [valid] Ep. 5 : Up. 11000 : lang/bleu-fr : 30.5 : no effect on early stopping
+[2020-04-24 15:07:35] [valid] Ep. 5 : Up. 11000 : lang/bleu-ga : 43.3 : no effect on early stopping
+[2020-04-24 15:07:36] [valid] Ep. 5 : Up. 11000 : lang/bleu-ka : 14.8 : no effect on early stopping
+[2020-04-24 15:07:38] [valid] Ep. 5 : Up. 11000 : lang/bleu-mk : 19.7 : no effect on early stopping
+[2020-04-24 15:07:39] [valid] Ep. 5 : Up. 11000 : translation : 24.9103 : new best
+[2020-04-24 15:07:39] [valid] Ep. 5 : Up. 11000 : ce-mean-words : 1.62145 : new best
+[2020-04-24 15:37:43] [valid] Ep. 5 : Up. 12000 : lang/bleu-fr : 29.9 : no effect on early stopping
+[2020-04-24 15:37:44] [valid] Ep. 5 : Up. 12000 : lang/bleu-ga : 44.4 : no effect on early stopping
+[2020-04-24 15:37:45] [valid] Ep. 5 : Up. 12000 : lang/bleu-ka : 15.2 : no effect on early stopping
+[2020-04-24 15:37:46] [valid] Ep. 5 : Up. 12000 : lang/bleu-mk : 19.9 : no effect on early stopping
+[2020-04-24 15:37:47] [valid] Ep. 5 : Up. 12000 : translation : 25.1732 : new best
+[2020-04-24 15:37:47] [valid] Ep. 5 : Up. 12000 : ce-mean-words : 1.5994 : new best
+[2020-04-24 16:08:05] [valid] Ep. 6 : Up. 13000 : lang/bleu-fr : 30.5 : no effect on early stopping
+[2020-04-24 16:08:06] [valid] Ep. 6 : Up. 13000 : lang/bleu-ga : 45.2 : no effect on early stopping
+[2020-04-24 16:08:07] [valid] Ep. 6 : Up. 13000 : lang/bleu-ka : 15.7 : no effect on early stopping
+[2020-04-24 16:08:08] [valid] Ep. 6 : Up. 13000 : lang/bleu-mk : 19.5 : no effect on early stopping
+[2020-04-24 16:08:09] [valid] Ep. 6 : Up. 13000 : translation : 25.4884 : new best
+[2020-04-24 16:08:09] [valid] Ep. 6 : Up. 13000 : ce-mean-words : 1.58032 : new best
+[2020-04-24 16:38:14] [valid] Ep. 6 : Up. 14000 : lang/bleu-fr : 30.1 : no effect on early stopping
+[2020-04-24 16:38:15] [valid] Ep. 6 : Up. 14000 : lang/bleu-ga : 46.1 : no effect on early stopping
+[2020-04-24 16:38:16] [valid] Ep. 6 : Up. 14000 : lang/bleu-ka : 15.5 : no effect on early stopping
+[2020-04-24 16:38:17] [valid] Ep. 6 : Up. 14000 : lang/bleu-mk : 20.5 : no effect on early stopping
+[2020-04-24 16:38:17] [valid] Ep. 6 : Up. 14000 : translation : 25.7684 : new best
+[2020-04-24 16:38:18] [valid] Ep. 6 : Up. 14000 : ce-mean-words : 1.56287 : new best
+[2020-04-24 17:08:23] [valid] Ep. 7 : Up. 15000 : lang/bleu-fr : 30.3 : no effect on early stopping
+[2020-04-24 17:08:24] [valid] Ep. 7 : Up. 15000 : lang/bleu-ga : 47.2 : no effect on early stopping
+[2020-04-24 17:08:25] [valid] Ep. 7 : Up. 15000 : lang/bleu-ka : 16.8 : no effect on early stopping
+[2020-04-24 17:08:26] [valid] Ep. 7 : Up. 15000 : lang/bleu-mk : 21.1 : no effect on early stopping
+[2020-04-24 17:08:26] [valid] Ep. 7 : Up. 15000 : translation : 26.6836 : new best
+[2020-04-24 17:08:27] [valid] Ep. 7 : Up. 15000 : ce-mean-words : 1.5464 : new best
+[2020-04-24 17:38:43] [valid] Ep. 7 : Up. 16000 : lang/bleu-fr : 30.8 : no effect on early stopping
+[2020-04-24 17:38:44] [valid] Ep. 7 : Up. 16000 : lang/bleu-ga : 47.5 : no effect on early stopping
+[2020-04-24 17:38:45] [valid] Ep. 7 : Up. 16000 : lang/bleu-ka : 16.6 : no effect on early stopping
+[2020-04-24 17:38:46] [valid] Ep. 7 : Up. 16000 : lang/bleu-mk : 19.6 : no effect on early stopping
+[2020-04-24 17:38:46] [valid] Ep. 7 : Up. 16000 : translation : 26.2665 : stalled 1 times
+[2020-04-24 17:38:46] [valid] Ep. 7 : Up. 16000 : ce-mean-words : 1.53284 : new best
+[2020-04-24 18:09:15] [valid] Ep. 8 : Up. 17000 : lang/bleu-fr : 30.9 : no effect on early stopping
+[2020-04-24 18:09:15] [valid] Ep. 8 : Up. 17000 : lang/bleu-ga : 47.7 : no effect on early stopping
+[2020-04-24 18:09:16] [valid] Ep. 8 : Up. 17000 : lang/bleu-ka : 16.6 : no effect on early stopping
+[2020-04-24 18:09:17] [valid] Ep. 8 : Up. 17000 : lang/bleu-mk : 19.7 : no effect on early stopping
+[2020-04-24 18:09:17] [valid] Ep. 8 : Up. 17000 : translation : 26.3489 : stalled 2 times
+[2020-04-24 18:09:18] [valid] Ep. 8 : Up. 17000 : ce-mean-words : 1.52137 : new best
+[2020-04-24 18:39:11] [valid] Ep. 8 : Up. 18000 : lang/bleu-fr : 31.4 : no effect on early stopping
+[2020-04-24 18:39:12] [valid] Ep. 8 : Up. 18000 : lang/bleu-ga : 48.8 : no effect on early stopping
+[2020-04-24 18:39:13] [valid] Ep. 8 : Up. 18000 : lang/bleu-ka : 16.9 : no effect on early stopping
+[2020-04-24 18:39:13] [valid] Ep. 8 : Up. 18000 : lang/bleu-mk : 20.4 : no effect on early stopping
+[2020-04-24 18:39:14] [valid] Ep. 8 : Up. 18000 : translation : 26.9598 : new best
+[2020-04-24 18:39:15] [valid] Ep. 8 : Up. 18000 : ce-mean-words : 1.51152 : new best
+[2020-04-24 19:09:22] [valid] Ep. 8 : Up. 19000 : lang/bleu-fr : 31.5 : no effect on early stopping
+[2020-04-24 19:09:23] [valid] Ep. 8 : Up. 19000 : lang/bleu-ga : 48.7 : no effect on early stopping
+[2020-04-24 19:09:24] [valid] Ep. 8 : Up. 19000 : lang/bleu-ka : 16.8 : no effect on early stopping
+[2020-04-24 19:09:24] [valid] Ep. 8 : Up. 19000 : lang/bleu-mk : 20.1 : no effect on early stopping
+[2020-04-24 19:09:24] [valid] Ep. 8 : Up. 19000 : translation : 26.8279 : stalled 1 times
+[2020-04-24 19:09:25] [valid] Ep. 8 : Up. 19000 : ce-mean-words : 1.50205 : new best
+[2020-04-24 19:40:01] [valid] Ep. 9 : Up. 20000 : lang/bleu-fr : 31.5 : no effect on early stopping
+[2020-04-24 19:40:02] [valid] Ep. 9 : Up. 20000 : lang/bleu-ga : 48.8 : no effect on early stopping
+[2020-04-24 19:40:03] [valid] Ep. 9 : Up. 20000 : lang/bleu-ka : 16.9 : no effect on early stopping
+[2020-04-24 19:40:04] [valid] Ep. 9 : Up. 20000 : lang/bleu-mk : 19.7 : no effect on early stopping
+[2020-04-24 19:40:04] [valid] Ep. 9 : Up. 20000 : translation : 26.7467 : stalled 2 times
+[2020-04-24 19:40:05] [valid] Ep. 9 : Up. 20000 : ce-mean-words : 1.49484 : new best
+[2020-04-24 20:09:59] [valid] Ep. 9 : Up. 21000 : lang/bleu-fr : 31.7 : no effect on early stopping
+[2020-04-24 20:10:00] [valid] Ep. 9 : Up. 21000 : lang/bleu-ga : 49.0 : no effect on early stopping
+[2020-04-24 20:10:01] [valid] Ep. 9 : Up. 21000 : lang/bleu-ka : 17.2 : no effect on early stopping
+[2020-04-24 20:10:02] [valid] Ep. 9 : Up. 21000 : lang/bleu-mk : 20.3 : no effect on early stopping
+[2020-04-24 20:10:03] [valid] Ep. 9 : Up. 21000 : translation : 27.1375 : new best
+[2020-04-24 20:10:03] [valid] Ep. 9 : Up. 21000 : ce-mean-words : 1.48951 : new best
+[2020-04-24 20:40:34] [valid] Ep. 10 : Up. 22000 : lang/bleu-fr : 31.4 : no effect on early stopping
+[2020-04-24 20:40:35] [valid] Ep. 10 : Up. 22000 : lang/bleu-ga : 50.4 : no effect on early stopping
+[2020-04-24 20:40:36] [valid] Ep. 10 : Up. 22000 : lang/bleu-ka : 18.2 : no effect on early stopping
+[2020-04-24 20:40:37] [valid] Ep. 10 : Up. 22000 : lang/bleu-mk : 20.4 : no effect on early stopping
+[2020-04-24 20:40:38] [valid] Ep. 10 : Up. 22000 : translation : 27.6863 : new best
+[2020-04-24 20:40:39] [valid] Ep. 10 : Up. 22000 : ce-mean-words : 1.4834 : new best
+[2020-04-24 21:10:54] [valid] Ep. 10 : Up. 23000 : lang/bleu-fr : 31.9 : no effect on early stopping
+[2020-04-24 21:10:55] [valid] Ep. 10 : Up. 23000 : lang/bleu-ga : 50.4 : no effect on early stopping
+[2020-04-24 21:10:56] [valid] Ep. 10 : Up. 23000 : lang/bleu-ka : 18.2 : no effect on early stopping
+[2020-04-24 21:10:57] [valid] Ep. 10 : Up. 23000 : lang/bleu-mk : 20.4 : no effect on early stopping
+[2020-04-24 21:10:57] [valid] Ep. 10 : Up. 23000 : translation : 27.7959 : new best
+[2020-04-24 21:10:58] [valid] Ep. 10 : Up. 23000 : ce-mean-words : 1.47891 : new best
+[2020-04-24 21:41:05] [valid] Ep. 10 : Up. 24000 : lang/bleu-fr : 31.9 : no effect on early stopping
+[2020-04-24 21:41:06] [valid] Ep. 10 : Up. 24000 : lang/bleu-ga : 50.1 : no effect on early stopping
+[2020-04-24 21:41:07] [valid] Ep. 10 : Up. 24000 : lang/bleu-ka : 17.8 : no effect on early stopping
+[2020-04-24 21:41:08] [valid] Ep. 10 : Up. 24000 : lang/bleu-mk : 20.9 : no effect on early stopping
+[2020-04-24 21:41:08] [valid] Ep. 10 : Up. 24000 : translation : 27.7683 : stalled 1 times
+[2020-04-24 21:41:09] [valid] Ep. 10 : Up. 24000 : ce-mean-words : 1.47366 : new best
+[2020-04-24 22:11:42] [valid] Ep. 11 : Up. 25000 : lang/bleu-fr : 31.9 : no effect on early stopping
+[2020-04-24 22:11:43] [valid] Ep. 11 : Up. 25000 : lang/bleu-ga : 50.8 : no effect on early stopping
+[2020-04-24 22:11:44] [valid] Ep. 11 : Up. 25000 : lang/bleu-ka : 18.6 : no effect on early stopping
+[2020-04-24 22:11:44] [valid] Ep. 11 : Up. 25000 : lang/bleu-mk : 20.9 : no effect on early stopping
+[2020-04-24 22:11:45] [valid] Ep. 11 : Up. 25000 : translation : 28.1727 : new best
+[2020-04-24 22:11:46] [valid] Ep. 11 : Up. 25000 : ce-mean-words : 1.4679 : new best
+[2020-04-24 22:41:51] [valid] Ep. 11 : Up. 26000 : lang/bleu-fr : 32.2 : no effect on early stopping
+[2020-04-24 22:41:52] [valid] Ep. 11 : Up. 26000 : lang/bleu-ga : 51.1 : no effect on early stopping
+[2020-04-24 22:41:53] [valid] Ep. 11 : Up. 26000 : lang/bleu-ka : 18.6 : no effect on early stopping
+[2020-04-24 22:41:54] [valid] Ep. 11 : Up. 26000 : lang/bleu-mk : 21.6 : no effect on early stopping
+[2020-04-24 22:41:55] [valid] Ep. 11 : Up. 26000 : translation : 28.5142 : new best
+[2020-04-24 22:41:55] [valid] Ep. 11 : Up. 26000 : ce-mean-words : 1.46246 : new best
+[2020-04-24 23:12:33] [valid] Ep. 12 : Up. 27000 : lang/bleu-fr : 32.1 : no effect on early stopping
+[2020-04-24 23:12:34] [valid] Ep. 12 : Up. 27000 : lang/bleu-ga : 50.9 : no effect on early stopping
+[2020-04-24 23:12:35] [valid] Ep. 12 : Up. 27000 : lang/bleu-ka : 18.7 : no effect on early stopping
+[2020-04-24 23:12:36] [valid] Ep. 12 : Up. 27000 : lang/bleu-mk : 21.4 : no effect on early stopping
+[2020-04-24 23:12:36] [valid] Ep. 12 : Up. 27000 : translation : 28.4361 : stalled 1 times
+[2020-04-24 23:12:37] [valid] Ep. 12 : Up. 27000 : ce-mean-words : 1.45771 : new best
+[2020-04-24 23:42:42] [valid] Ep. 12 : Up. 28000 : lang/bleu-fr : 32.3 : no effect on early stopping
+[2020-04-24 23:42:43] [valid] Ep. 12 : Up. 28000 : lang/bleu-ga : 51.6 : no effect on early stopping
+[2020-04-24 23:42:44] [valid] Ep. 12 : Up. 28000 : lang/bleu-ka : 19.4 : no effect on early stopping
+[2020-04-24 23:42:45] [valid] Ep. 12 : Up. 28000 : lang/bleu-mk : 21.3 : no effect on early stopping
+[2020-04-24 23:42:46] [valid] Ep. 12 : Up. 28000 : translation : 28.8077 : new best
+[2020-04-24 23:42:47] [valid] Ep. 12 : Up. 28000 : ce-mean-words : 1.45381 : new best
+[2020-04-25 00:13:20] [valid] Ep. 13 : Up. 29000 : lang/bleu-fr : 32.6 : no effect on early stopping
+[2020-04-25 00:13:21] [valid] Ep. 13 : Up. 29000 : lang/bleu-ga : 51.6 : no effect on early stopping
+[2020-04-25 00:13:22] [valid] Ep. 13 : Up. 29000 : lang/bleu-ka : 19.6 : no effect on early stopping
+[2020-04-25 00:13:23] [valid] Ep. 13 : Up. 29000 : lang/bleu-mk : 21.7 : no effect on early stopping
+[2020-04-25 00:13:24] [valid] Ep. 13 : Up. 29000 : translation : 29.0834 : new best
+[2020-04-25 00:13:25] [valid] Ep. 13 : Up. 29000 : ce-mean-words : 1.45016 : new best
+[2020-04-25 00:43:42] [valid] Ep. 13 : Up. 30000 : lang/bleu-fr : 32.8 : no effect on early stopping
+[2020-04-25 00:43:43] [valid] Ep. 13 : Up. 30000 : lang/bleu-ga : 51.0 : no effect on early stopping
+[2020-04-25 00:43:44] [valid] Ep. 13 : Up. 30000 : lang/bleu-ka : 19.3 : no effect on early stopping
+[2020-04-25 00:43:45] [valid] Ep. 13 : Up. 30000 : lang/bleu-mk : 22.0 : no effect on early stopping
+[2020-04-25 00:43:45] [valid] Ep. 13 : Up. 30000 : translation : 29.0306 : stalled 1 times
+[2020-04-25 00:43:46] [valid] Ep. 13 : Up. 30000 : ce-mean-words : 1.44716 : new best
+[2020-04-25 01:13:57] [valid] Ep. 13 : Up. 31000 : lang/bleu-fr : 32.7 : no effect on early stopping
+[2020-04-25 01:13:58] [valid] Ep. 13 : Up. 31000 : lang/bleu-ga : 50.9 : no effect on early stopping
+[2020-04-25 01:13:59] [valid] Ep. 13 : Up. 31000 : lang/bleu-ka : 19.3 : no effect on early stopping
+[2020-04-25 01:14:00] [valid] Ep. 13 : Up. 31000 : lang/bleu-mk : 21.8 : no effect on early stopping
+[2020-04-25 01:14:00] [valid] Ep. 13 : Up. 31000 : translation : 28.9281 : stalled 2 times
+[2020-04-25 01:14:01] [valid] Ep. 13 : Up. 31000 : ce-mean-words : 1.44431 : new best
+[2020-04-25 01:44:44] [valid] Ep. 14 : Up. 32000 : lang/bleu-fr : 33.0 : no effect on early stopping
+[2020-04-25 01:44:45] [valid] Ep. 14 : Up. 32000 : lang/bleu-ga : 51.0 : no effect on early stopping
+[2020-04-25 01:44:47] [valid] Ep. 14 : Up. 32000 : lang/bleu-ka : 19.6 : no effect on early stopping
+[2020-04-25 01:44:48] [valid] Ep. 14 : Up. 32000 : lang/bleu-mk : 21.9 : no effect on early stopping
+[2020-04-25 01:44:49] [valid] Ep. 14 : Up. 32000 : translation : 29.1539 : new best
+[2020-04-25 01:44:50] [valid] Ep. 14 : Up. 32000 : ce-mean-words : 1.44161 : new best
+[2020-04-25 02:15:38] [valid] Ep. 14 : Up. 33000 : lang/bleu-fr : 33.1 : no effect on early stopping
+[2020-04-25 02:15:39] [valid] Ep. 14 : Up. 33000 : lang/bleu-ga : 51.0 : no effect on early stopping
+[2020-04-25 02:15:41] [valid] Ep. 14 : Up. 33000 : lang/bleu-ka : 18.6 : no effect on early stopping
+[2020-04-25 02:15:42] [valid] Ep. 14 : Up. 33000 : lang/bleu-mk : 21.8 : no effect on early stopping
+[2020-04-25 02:15:42] [valid] Ep. 14 : Up. 33000 : translation : 28.7635 : stalled 1 times
+[2020-04-25 02:15:43] [valid] Ep. 14 : Up. 33000 : ce-mean-words : 1.43924 : new best
+[2020-04-25 02:46:40] [valid] Ep. 15 : Up. 34000 : lang/bleu-fr : 33.1 : no effect on early stopping
+[2020-04-25 02:46:41] [valid] Ep. 15 : Up. 34000 : lang/bleu-ga : 50.8 : no effect on early stopping
+[2020-04-25 02:46:42] [valid] Ep. 15 : Up. 34000 : lang/bleu-ka : 18.7 : no effect on early stopping
+[2020-04-25 02:46:44] [valid] Ep. 15 : Up. 34000 : lang/bleu-mk : 21.9 : no effect on early stopping
+[2020-04-25 02:46:44] [valid] Ep. 15 : Up. 34000 : translation : 28.8068 : stalled 2 times
+[2020-04-25 02:46:45] [valid] Ep. 15 : Up. 34000 : ce-mean-words : 1.43659 : new best
+[2020-04-25 03:17:33] [valid] Ep. 15 : Up. 35000 : lang/bleu-fr : 33.2 : no effect on early stopping
+[2020-04-25 03:17:34] [valid] Ep. 15 : Up. 35000 : lang/bleu-ga : 50.5 : no effect on early stopping
+[2020-04-25 03:17:35] [valid] Ep. 15 : Up. 35000 : lang/bleu-ka : 19.7 : no effect on early stopping
+[2020-04-25 03:17:36] [valid] Ep. 15 : Up. 35000 : lang/bleu-mk : 21.9 : no effect on early stopping
+[2020-04-25 03:17:37] [valid] Ep. 15 : Up. 35000 : translation : 29.1632 : new best
+[2020-04-25 03:17:39] [valid] Ep. 15 : Up. 35000 : ce-mean-words : 1.43407 : new best
+[2020-04-25 03:48:10] [valid] Ep. 15 : Up. 36000 : lang/bleu-fr : 33.2 : no effect on early stopping
+[2020-04-25 03:48:11] [valid] Ep. 15 : Up. 36000 : lang/bleu-ga : 50.3 : no effect on early stopping
+[2020-04-25 03:48:12] [valid] Ep. 15 : Up. 36000 : lang/bleu-ka : 18.7 : no effect on early stopping
+[2020-04-25 03:48:12] [valid] Ep. 15 : Up. 36000 : lang/bleu-mk : 22.1 : no effect on early stopping
+[2020-04-25 03:48:12] [valid] Ep. 15 : Up. 36000 : translation : 28.8227 : stalled 1 times
+[2020-04-25 03:48:14] [valid] Ep. 15 : Up. 36000 : ce-mean-words : 1.4314 : new best
+[2020-04-25 04:18:55] [valid] Ep. 16 : Up. 37000 : lang/bleu-fr : 33.2 : no effect on early stopping
+[2020-04-25 04:18:56] [valid] Ep. 16 : Up. 37000 : lang/bleu-ga : 50.8 : no effect on early stopping
+[2020-04-25 04:18:57] [valid] Ep. 16 : Up. 37000 : lang/bleu-ka : 18.9 : no effect on early stopping
+[2020-04-25 04:18:58] [valid] Ep. 16 : Up. 37000 : lang/bleu-mk : 21.8 : no effect on early stopping
+[2020-04-25 04:18:58] [valid] Ep. 16 : Up. 37000 : translation : 28.8722 : stalled 2 times
+[2020-04-25 04:18:59] [valid] Ep. 16 : Up. 37000 : ce-mean-words : 1.42911 : new best
+[2020-04-25 04:49:39] [valid] Ep. 16 : Up. 38000 : lang/bleu-fr : 33.1 : no effect on early stopping
+[2020-04-25 04:49:40] [valid] Ep. 16 : Up. 38000 : lang/bleu-ga : 50.7 : no effect on early stopping
+[2020-04-25 04:49:41] [valid] Ep. 16 : Up. 38000 : lang/bleu-ka : 18.9 : no effect on early stopping
+[2020-04-25 04:49:42] [valid] Ep. 16 : Up. 38000 : lang/bleu-mk : 22.0 : no effect on early stopping
+[2020-04-25 04:49:42] [valid] Ep. 16 : Up. 38000 : translation : 28.9021 : stalled 3 times
+[2020-04-25 04:49:43] [valid] Ep. 16 : Up. 38000 : ce-mean-words : 1.42705 : new best
+[2020-04-25 05:19:45] [valid] Ep. 17 : Up. 39000 : lang/bleu-fr : 33.1 : no effect on early stopping
+[2020-04-25 05:19:46] [valid] Ep. 17 : Up. 39000 : lang/bleu-ga : 50.8 : no effect on early stopping
+[2020-04-25 05:19:47] [valid] Ep. 17 : Up. 39000 : lang/bleu-ka : 18.5 : no effect on early stopping
+[2020-04-25 05:19:48] [valid] Ep. 17 : Up. 39000 : lang/bleu-mk : 22.1 : no effect on early stopping
+[2020-04-25 05:19:48] [valid] Ep. 17 : Up. 39000 : translation : 28.7948 : stalled 4 times
+[2020-04-25 05:19:49] [valid] Ep. 17 : Up. 39000 : ce-mean-words : 1.42456 : new best
+[2020-04-25 05:50:14] [valid] Ep. 17 : Up. 40000 : lang/bleu-fr : 33.2 : no effect on early stopping
+[2020-04-25 05:50:15] [valid] Ep. 17 : Up. 40000 : lang/bleu-ga : 51.0 : no effect on early stopping
+[2020-04-25 05:50:16] [valid] Ep. 17 : Up. 40000 : lang/bleu-ka : 18.8 : no effect on early stopping
+[2020-04-25 05:50:17] [valid] Ep. 17 : Up. 40000 : lang/bleu-mk : 22.1 : no effect on early stopping
+[2020-04-25 05:50:17] [valid] Ep. 17 : Up. 40000 : translation : 28.9611 : stalled 5 times
+[2020-04-25 05:50:18] [valid] Ep. 17 : Up. 40000 : ce-mean-words : 1.42282 : new best
+[2020-04-25 06:21:09] [valid] Ep. 18 : Up. 41000 : lang/bleu-fr : 33.3 : no effect on early stopping
+[2020-04-25 06:21:10] [valid] Ep. 18 : Up. 41000 : lang/bleu-ga : 51.5 : no effect on early stopping
+[2020-04-25 06:21:11] [valid] Ep. 18 : Up. 41000 : lang/bleu-ka : 18.9 : no effect on early stopping
+[2020-04-25 06:21:12] [valid] Ep. 18 : Up. 41000 : lang/bleu-mk : 22.3 : no effect on early stopping
+[2020-04-25 06:21:12] [valid] Ep. 18 : Up. 41000 : translation : 29.1578 : stalled 6 times
+[2020-04-25 06:21:13] [valid] Ep. 18 : Up. 41000 : ce-mean-words : 1.42118 : new best
+[2020-04-25 06:51:27] [valid] Ep. 18 : Up. 42000 : lang/bleu-fr : 33.2 : no effect on early stopping
+[2020-04-25 06:51:28] [valid] Ep. 18 : Up. 42000 : lang/bleu-ga : 51.5 : no effect on early stopping
+[2020-04-25 06:51:29] [valid] Ep. 18 : Up. 42000 : lang/bleu-ka : 18.9 : no effect on early stopping
+[2020-04-25 06:51:30] [valid] Ep. 18 : Up. 42000 : lang/bleu-mk : 22.2 : no effect on early stopping
+[2020-04-25 06:51:30] [valid] Ep. 18 : Up. 42000 : translation : 29.1032 : stalled 7 times
+[2020-04-25 06:51:31] [valid] Ep. 18 : Up. 42000 : ce-mean-words : 1.41945 : new best
+[2020-04-25 07:21:46] [valid] Ep. 18 : Up. 43000 : lang/bleu-fr : 33.0 : no effect on early stopping
+[2020-04-25 07:21:47] [valid] Ep. 18 : Up. 43000 : lang/bleu-ga : 51.4 : no effect on early stopping
+[2020-04-25 07:21:48] [valid] Ep. 18 : Up. 43000 : lang/bleu-ka : 19.2 : no effect on early stopping
+[2020-04-25 07:21:49] [valid] Ep. 18 : Up. 43000 : lang/bleu-mk : 22.3 : no effect on early stopping
+[2020-04-25 07:21:50] [valid] Ep. 18 : Up. 43000 : translation : 29.1925 : new best
+[2020-04-25 07:21:51] [valid] Ep. 18 : Up. 43000 : ce-mean-words : 1.41732 : new best
+[2020-04-25 07:52:16] [valid] Ep. 19 : Up. 44000 : lang/bleu-fr : 33.3 : no effect on early stopping
+[2020-04-25 07:52:17] [valid] Ep. 19 : Up. 44000 : lang/bleu-ga : 51.2 : no effect on early stopping
+[2020-04-25 07:52:18] [valid] Ep. 19 : Up. 44000 : lang/bleu-ka : 19.0 : no effect on early stopping
+[2020-04-25 07:52:19] [valid] Ep. 19 : Up. 44000 : lang/bleu-mk : 22.5 : no effect on early stopping
+[2020-04-25 07:52:20] [valid] Ep. 19 : Up. 44000 : translation : 29.2188 : new best
+[2020-04-25 07:52:22] [valid] Ep. 19 : Up. 44000 : ce-mean-words : 1.41539 : new best
+[2020-04-25 08:22:41] [valid] Ep. 19 : Up. 45000 : lang/bleu-fr : 33.3 : no effect on early stopping
+[2020-04-25 08:22:43] [valid] Ep. 19 : Up. 45000 : lang/bleu-ga : 51.3 : no effect on early stopping
+[2020-04-25 08:22:43] [valid] Ep. 19 : Up. 45000 : lang/bleu-ka : 18.5 : no effect on early stopping
+[2020-04-25 08:22:44] [valid] Ep. 19 : Up. 45000 : lang/bleu-mk : 22.3 : no effect on early stopping
+[2020-04-25 08:22:44] [valid] Ep. 19 : Up. 45000 : translation : 28.9741 : stalled 1 times
+[2020-04-25 08:22:45] [valid] Ep. 19 : Up. 45000 : ce-mean-words : 1.41384 : new best
+[2020-04-25 08:53:26] [valid] Ep. 20 : Up. 46000 : lang/bleu-fr : 33.2 : no effect on early stopping
+[2020-04-25 08:53:27] [valid] Ep. 20 : Up. 46000 : lang/bleu-ga : 52.0 : no effect on early stopping
+[2020-04-25 08:53:28] [valid] Ep. 20 : Up. 46000 : lang/bleu-ka : 19.8 : no effect on early stopping
+[2020-04-25 08:53:29] [valid] Ep. 20 : Up. 46000 : lang/bleu-mk : 22.4 : no effect on early stopping
+[2020-04-25 08:53:30] [valid] Ep. 20 : Up. 46000 : translation : 29.5811 : new best
+[2020-04-25 08:53:31] [valid] Ep. 20 : Up. 46000 : ce-mean-words : 1.41201 : new best
+[2020-04-25 09:23:45] [valid] Ep. 20 : Up. 47000 : lang/bleu-fr : 33.5 : no effect on early stopping
+[2020-04-25 09:23:46] [valid] Ep. 20 : Up. 47000 : lang/bleu-ga : 52.0 : no effect on early stopping
+[2020-04-25 09:23:47] [valid] Ep. 20 : Up. 47000 : lang/bleu-ka : 20.0 : no effect on early stopping
+[2020-04-25 09:23:48] [valid] Ep. 20 : Up. 47000 : lang/bleu-mk : 22.8 : no effect on early stopping
+[2020-04-25 09:23:49] [valid] Ep. 20 : Up. 47000 : translation : 29.854 : new best
+[2020-04-25 09:23:50] [valid] Ep. 20 : Up. 47000 : ce-mean-words : 1.41032 : new best
+[2020-04-27 22:14:54] [valid] Ep. 20 : Up. 48000 : lang/bleu-fr : 33.0 : no effect on early stopping
+[2020-04-27 22:14:55] [valid] Ep. 20 : Up. 48000 : lang/bleu-ga : 52.3 : no effect on early stopping
+[2020-04-27 22:14:56] [valid] Ep. 20 : Up. 48000 : lang/bleu-ka : 20.5 : no effect on early stopping
+[2020-04-27 22:14:58] [valid] Ep. 20 : Up. 48000 : lang/bleu-mk : 22.5 : no effect on early stopping
+[2020-04-27 22:14:58] [valid] Ep. 20 : Up. 48000 : translation : 29.8702 : new best
+[2020-04-27 22:14:59] [valid] Ep. 20 : Up. 48000 : ce-mean-words : 1.40884 : new best
+[2020-04-27 22:45:32] [valid] Ep. 21 : Up. 49000 : lang/bleu-fr : 32.9 : no effect on early stopping
+[2020-04-27 22:45:33] [valid] Ep. 21 : Up. 49000 : lang/bleu-ga : 52.3 : no effect on early stopping
+[2020-04-27 22:45:35] [valid] Ep. 21 : Up. 49000 : lang/bleu-ka : 20.3 : no effect on early stopping
+[2020-04-27 22:45:36] [valid] Ep. 21 : Up. 49000 : lang/bleu-mk : 22.3 : no effect on early stopping
+[2020-04-27 22:45:36] [valid] Ep. 21 : Up. 49000 : translation : 29.7081 : stalled 1 times
+[2020-04-27 22:45:37] [valid] Ep. 21 : Up. 49000 : ce-mean-words : 1.40749 : new best
+[2020-04-27 23:16:01] [valid] Ep. 21 : Up. 50000 : lang/bleu-fr : 32.9 : no effect on early stopping
+[2020-04-27 23:16:02] [valid] Ep. 21 : Up. 50000 : lang/bleu-ga : 52.1 : no effect on early stopping
+[2020-04-27 23:16:04] [valid] Ep. 21 : Up. 50000 : lang/bleu-ka : 20.4 : no effect on early stopping
+[2020-04-27 23:16:05] [valid] Ep. 21 : Up. 50000 : lang/bleu-mk : 22.2 : no effect on early stopping
+[2020-04-27 23:16:05] [valid] Ep. 21 : Up. 50000 : translation : 29.6828 : stalled 2 times
+[2020-04-27 23:16:06] [valid] Ep. 21 : Up. 50000 : ce-mean-words : 1.40612 : new best
+[2020-04-27 23:46:29] [valid] Ep. 22 : Up. 51000 : lang/bleu-fr : 32.6 : no effect on early stopping
+[2020-04-27 23:46:31] [valid] Ep. 22 : Up. 51000 : lang/bleu-ga : 52.6 : no effect on early stopping
+[2020-04-27 23:46:32] [valid] Ep. 22 : Up. 51000 : lang/bleu-ka : 20.4 : no effect on early stopping
+[2020-04-27 23:46:33] [valid] Ep. 22 : Up. 51000 : lang/bleu-mk : 22.3 : no effect on early stopping
+[2020-04-27 23:46:34] [valid] Ep. 22 : Up. 51000 : translation : 29.719 : stalled 3 times
+[2020-04-27 23:46:34] [valid] Ep. 22 : Up. 51000 : ce-mean-words : 1.40448 : new best
+[2020-04-28 00:17:08] [valid] Ep. 22 : Up. 52000 : lang/bleu-fr : 32.6 : no effect on early stopping
+[2020-04-28 00:17:09] [valid] Ep. 22 : Up. 52000 : lang/bleu-ga : 52.2 : no effect on early stopping
+[2020-04-28 00:17:11] [valid] Ep. 22 : Up. 52000 : lang/bleu-ka : 21.0 : no effect on early stopping
+[2020-04-28 00:17:12] [valid] Ep. 22 : Up. 52000 : lang/bleu-mk : 21.9 : no effect on early stopping
+[2020-04-28 00:17:12] [valid] Ep. 22 : Up. 52000 : translation : 29.7432 : stalled 4 times
+[2020-04-28 00:17:13] [valid] Ep. 22 : Up. 52000 : ce-mean-words : 1.403 : new best
+[2020-04-28 00:47:43] [valid] Ep. 22 : Up. 53000 : lang/bleu-fr : 32.9 : no effect on early stopping
+[2020-04-28 00:47:45] [valid] Ep. 22 : Up. 53000 : lang/bleu-ga : 52.9 : no effect on early stopping
+[2020-04-28 00:47:46] [valid] Ep. 22 : Up. 53000 : lang/bleu-ka : 20.9 : no effect on early stopping
+[2020-04-28 00:47:47] [valid] Ep. 22 : Up. 53000 : lang/bleu-mk : 22.0 : no effect on early stopping
+[2020-04-28 00:47:48] [valid] Ep. 22 : Up. 53000 : translation : 29.9092 : new best
+[2020-04-28 00:47:49] [valid] Ep. 22 : Up. 53000 : ce-mean-words : 1.40176 : new best
+[2020-04-28 01:18:34] [valid] Ep. 23 : Up. 54000 : lang/bleu-fr : 32.8 : no effect on early stopping
+[2020-04-28 01:18:36] [valid] Ep. 23 : Up. 54000 : lang/bleu-ga : 52.8 : no effect on early stopping
+[2020-04-28 01:18:37] [valid] Ep. 23 : Up. 54000 : lang/bleu-ka : 21.0 : no effect on early stopping
+[2020-04-28 01:18:38] [valid] Ep. 23 : Up. 54000 : lang/bleu-mk : 22.4 : no effect on early stopping
+[2020-04-28 01:18:39] [valid] Ep. 23 : Up. 54000 : translation : 30.043 : new best
+[2020-04-28 01:18:40] [valid] Ep. 23 : Up. 54000 : ce-mean-words : 1.40051 : new best
+[2020-04-28 01:48:56] [valid] Ep. 23 : Up. 55000 : lang/bleu-fr : 32.7 : no effect on early stopping
+[2020-04-28 01:48:57] [valid] Ep. 23 : Up. 55000 : lang/bleu-ga : 53.2 : no effect on early stopping
+[2020-04-28 01:48:59] [valid] Ep. 23 : Up. 55000 : lang/bleu-ka : 20.8 : no effect on early stopping
+[2020-04-28 01:49:00] [valid] Ep. 23 : Up. 55000 : lang/bleu-mk : 22.5 : no effect on early stopping
+[2020-04-28 01:49:00] [valid] Ep. 23 : Up. 55000 : translation : 30.0384 : stalled 1 times
+[2020-04-28 01:49:01] [valid] Ep. 23 : Up. 55000 : ce-mean-words : 1.39906 : new best
+[2020-04-28 02:19:29] [valid] Ep. 24 : Up. 56000 : lang/bleu-fr : 32.7 : no effect on early stopping
+[2020-04-28 02:19:30] [valid] Ep. 24 : Up. 56000 : lang/bleu-ga : 53.1 : no effect on early stopping
+[2020-04-28 02:19:31] [valid] Ep. 24 : Up. 56000 : lang/bleu-ka : 21.3 : no effect on early stopping
+[2020-04-28 02:19:32] [valid] Ep. 24 : Up. 56000 : lang/bleu-mk : 22.5 : no effect on early stopping
+[2020-04-28 02:19:33] [valid] Ep. 24 : Up. 56000 : translation : 30.2031 : new best
+[2020-04-28 02:19:34] [valid] Ep. 24 : Up. 56000 : ce-mean-words : 1.39784 : new best
+[2020-04-28 02:49:54] [valid] Ep. 24 : Up. 57000 : lang/bleu-fr : 32.7 : no effect on early stopping
+[2020-04-28 02:49:55] [valid] Ep. 24 : Up. 57000 : lang/bleu-ga : 53.0 : no effect on early stopping
+[2020-04-28 02:49:56] [valid] Ep. 24 : Up. 57000 : lang/bleu-ka : 21.3 : no effect on early stopping
+[2020-04-28 02:49:57] [valid] Ep. 24 : Up. 57000 : lang/bleu-mk : 22.5 : no effect on early stopping
+[2020-04-28 02:49:57] [valid] Ep. 24 : Up. 57000 : translation : 30.1888 : stalled 1 times
+[2020-04-28 02:49:58] [valid] Ep. 24 : Up. 57000 : ce-mean-words : 1.39659 : new best
+[2020-04-28 03:20:18] [valid] Ep. 25 : Up. 58000 : lang/bleu-fr : 32.7 : no effect on early stopping
+[2020-04-28 03:20:19] [valid] Ep. 25 : Up. 58000 : lang/bleu-ga : 53.2 : no effect on early stopping
+[2020-04-28 03:20:21] [valid] Ep. 25 : Up. 58000 : lang/bleu-ka : 21.3 : no effect on early stopping
+[2020-04-28 03:20:22] [valid] Ep. 25 : Up. 58000 : lang/bleu-mk : 22.5 : no effect on early stopping
+[2020-04-28 03:20:22] [valid] Ep. 25 : Up. 58000 : translation : 30.2173 : new best
+[2020-04-28 03:20:24] [valid] Ep. 25 : Up. 58000 : ce-mean-words : 1.39575 : new best
+[2020-04-28 03:50:54] [valid] Ep. 25 : Up. 59000 : lang/bleu-fr : 32.5 : no effect on early stopping
+[2020-04-28 03:50:56] [valid] Ep. 25 : Up. 59000 : lang/bleu-ga : 53.3 : no effect on early stopping
+[2020-04-28 03:50:57] [valid] Ep. 25 : Up. 59000 : lang/bleu-ka : 21.2 : no effect on early stopping
+[2020-04-28 03:50:58] [valid] Ep. 25 : Up. 59000 : lang/bleu-mk : 22.9 : no effect on early stopping
+[2020-04-28 03:50:59] [valid] Ep. 25 : Up. 59000 : translation : 30.2828 : new best
+[2020-04-28 03:51:00] [valid] Ep. 25 : Up. 59000 : ce-mean-words : 1.39488 : new best
+[2020-04-28 04:21:29] [valid] Ep. 25 : Up. 60000 : lang/bleu-fr : 32.9 : no effect on early stopping
+[2020-04-28 04:21:30] [valid] Ep. 25 : Up. 60000 : lang/bleu-ga : 53.4 : no effect on early stopping
+[2020-04-28 04:21:31] [valid] Ep. 25 : Up. 60000 : lang/bleu-ka : 21.2 : no effect on early stopping
+[2020-04-28 04:21:33] [valid] Ep. 25 : Up. 60000 : lang/bleu-mk : 22.9 : no effect on early stopping
+[2020-04-28 04:21:33] [valid] Ep. 25 : Up. 60000 : translation : 30.3897 : new best
+[2020-04-28 04:21:34] [valid] Ep. 25 : Up. 60000 : ce-mean-words : 1.39396 : new best
+[2020-04-28 04:52:16] [valid] Ep. 26 : Up. 61000 : lang/bleu-fr : 33.1 : no effect on early stopping
+[2020-04-28 04:52:17] [valid] Ep. 26 : Up. 61000 : lang/bleu-ga : 53.3 : no effect on early stopping
+[2020-04-28 04:52:19] [valid] Ep. 26 : Up. 61000 : lang/bleu-ka : 21.1 : no effect on early stopping
+[2020-04-28 04:52:20] [valid] Ep. 26 : Up. 61000 : lang/bleu-mk : 22.9 : no effect on early stopping
+[2020-04-28 04:52:20] [valid] Ep. 26 : Up. 61000 : translation : 30.3856 : stalled 1 times
+[2020-04-28 04:52:21] [valid] Ep. 26 : Up. 61000 : ce-mean-words : 1.39339 : new best
+[2020-04-28 05:22:47] [valid] Ep. 26 : Up. 62000 : lang/bleu-fr : 32.9 : no effect on early stopping
+[2020-04-28 05:22:49] [valid] Ep. 26 : Up. 62000 : lang/bleu-ga : 52.9 : no effect on early stopping
+[2020-04-28 05:22:50] [valid] Ep. 26 : Up. 62000 : lang/bleu-ka : 21.0 : no effect on early stopping
+[2020-04-28 05:22:52] [valid] Ep. 26 : Up. 62000 : lang/bleu-mk : 22.6 : no effect on early stopping
+[2020-04-28 05:22:52] [valid] Ep. 26 : Up. 62000 : translation : 30.1471 : stalled 2 times
+[2020-04-28 05:22:53] [valid] Ep. 26 : Up. 62000 : ce-mean-words : 1.39269 : new best
+[2020-04-28 05:53:40] [valid] Ep. 27 : Up. 63000 : lang/bleu-fr : 33.3 : no effect on early stopping
+[2020-04-28 05:53:41] [valid] Ep. 27 : Up. 63000 : lang/bleu-ga : 53.3 : no effect on early stopping
+[2020-04-28 05:53:43] [valid] Ep. 27 : Up. 63000 : lang/bleu-ka : 21.1 : no effect on early stopping
+[2020-04-28 05:53:44] [valid] Ep. 27 : Up. 63000 : lang/bleu-mk : 23.0 : no effect on early stopping
+[2020-04-28 05:53:45] [valid] Ep. 27 : Up. 63000 : translation : 30.4646 : new best
+[2020-04-28 05:53:46] [valid] Ep. 27 : Up. 63000 : ce-mean-words : 1.39178 : new best
+[2020-04-28 06:24:15] [valid] Ep. 27 : Up. 64000 : lang/bleu-fr : 33.5 : no effect on early stopping
+[2020-04-28 06:24:16] [valid] Ep. 27 : Up. 64000 : lang/bleu-ga : 53.2 : no effect on early stopping
+[2020-04-28 06:24:18] [valid] Ep. 27 : Up. 64000 : lang/bleu-ka : 21.3 : no effect on early stopping
+[2020-04-28 06:24:19] [valid] Ep. 27 : Up. 64000 : lang/bleu-mk : 22.9 : no effect on early stopping
+[2020-04-28 06:24:20] [valid] Ep. 27 : Up. 64000 : translation : 30.5346 : new best
+[2020-04-28 06:24:21] [valid] Ep. 27 : Up. 64000 : ce-mean-words : 1.39097 : new best
+[2020-04-28 06:54:53] [valid] Ep. 27 : Up. 65000 : lang/bleu-fr : 33.4 : no effect on early stopping
+[2020-04-28 06:54:54] [valid] Ep. 27 : Up. 65000 : lang/bleu-ga : 52.8 : no effect on early stopping
+[2020-04-28 06:54:56] [valid] Ep. 27 : Up. 65000 : lang/bleu-ka : 21.5 : no effect on early stopping
+[2020-04-28 06:54:57] [valid] Ep. 27 : Up. 65000 : lang/bleu-mk : 22.9 : no effect on early stopping
+[2020-04-28 06:54:57] [valid] Ep. 27 : Up. 65000 : translation : 30.5256 : stalled 1 times
+[2020-04-28 06:54:58] [valid] Ep. 27 : Up. 65000 : ce-mean-words : 1.38986 : new best
+[2020-04-28 07:26:18] [valid] Ep. 28 : Up. 66000 : lang/bleu-fr : 33.4 : no effect on early stopping
+[2020-04-28 07:26:19] [valid] Ep. 28 : Up. 66000 : lang/bleu-ga : 52.7 : no effect on early stopping
+[2020-04-28 07:26:20] [valid] Ep. 28 : Up. 66000 : lang/bleu-ka : 21.5 : no effect on early stopping
+[2020-04-28 07:26:22] [valid] Ep. 28 : Up. 66000 : lang/bleu-mk : 22.9 : no effect on early stopping
+[2020-04-28 07:26:22] [valid] Ep. 28 : Up. 66000 : translation : 30.5111 : stalled 2 times
+[2020-04-28 07:26:23] [valid] Ep. 28 : Up. 66000 : ce-mean-words : 1.38889 : new best
+[2020-04-28 07:56:56] [valid] Ep. 28 : Up. 67000 : lang/bleu-fr : 33.4 : no effect on early stopping
+[2020-04-28 07:56:58] [valid] Ep. 28 : Up. 67000 : lang/bleu-ga : 52.8 : no effect on early stopping
+[2020-04-28 07:56:59] [valid] Ep. 28 : Up. 67000 : lang/bleu-ka : 21.7 : no effect on early stopping
+[2020-04-28 07:57:00] [valid] Ep. 28 : Up. 67000 : lang/bleu-mk : 23.0 : no effect on early stopping
+[2020-04-28 07:57:01] [valid] Ep. 28 : Up. 67000 : translation : 30.6296 : new best
+[2020-04-28 07:57:02] [valid] Ep. 28 : Up. 67000 : ce-mean-words : 1.38789 : new best
+[2020-04-28 08:27:30] [valid] Ep. 29 : Up. 68000 : lang/bleu-fr : 32.9 : no effect on early stopping
+[2020-04-28 08:27:31] [valid] Ep. 29 : Up. 68000 : lang/bleu-ga : 53.2 : no effect on early stopping
+[2020-04-28 08:27:33] [valid] Ep. 29 : Up. 68000 : lang/bleu-ka : 21.6 : no effect on early stopping
+[2020-04-28 08:27:34] [valid] Ep. 29 : Up. 68000 : lang/bleu-mk : 22.9 : no effect on early stopping
+[2020-04-28 08:27:34] [valid] Ep. 29 : Up. 68000 : translation : 30.5035 : stalled 1 times
+[2020-04-28 08:27:35] [valid] Ep. 29 : Up. 68000 : ce-mean-words : 1.38693 : new best
+[2020-04-28 08:57:56] [valid] Ep. 29 : Up. 69000 : lang/bleu-fr : 33.0 : no effect on early stopping
+[2020-04-28 08:57:58] [valid] Ep. 29 : Up. 69000 : lang/bleu-ga : 52.9 : no effect on early stopping
+[2020-04-28 08:57:59] [valid] Ep. 29 : Up. 69000 : lang/bleu-ka : 21.4 : no effect on early stopping
+[2020-04-28 08:58:01] [valid] Ep. 29 : Up. 69000 : lang/bleu-mk : 22.9 : no effect on early stopping
+[2020-04-28 08:58:01] [valid] Ep. 29 : Up. 69000 : translation : 30.4127 : stalled 2 times
+[2020-04-28 08:58:02] [valid] Ep. 29 : Up. 69000 : ce-mean-words : 1.38604 : new best
+[2020-04-28 09:29:05] [valid] Ep. 30 : Up. 70000 : lang/bleu-fr : 33.2 : no effect on early stopping
+[2020-04-28 09:29:06] [valid] Ep. 30 : Up. 70000 : lang/bleu-ga : 52.9 : no effect on early stopping
+[2020-04-28 09:29:08] [valid] Ep. 30 : Up. 70000 : lang/bleu-ka : 21.2 : no effect on early stopping
+[2020-04-28 09:29:09] [valid] Ep. 30 : Up. 70000 : lang/bleu-mk : 23.0 : no effect on early stopping
+[2020-04-28 09:29:09] [valid] Ep. 30 : Up. 70000 : translation : 30.4204 : stalled 3 times
+[2020-04-28 09:29:10] [valid] Ep. 30 : Up. 70000 : ce-mean-words : 1.38536 : new best
+[2020-04-28 09:59:30] [valid] Ep. 30 : Up. 71000 : lang/bleu-fr : 33.1 : no effect on early stopping
+[2020-04-28 09:59:31] [valid] Ep. 30 : Up. 71000 : lang/bleu-ga : 53.1 : no effect on early stopping
+[2020-04-28 09:59:32] [valid] Ep. 30 : Up. 71000 : lang/bleu-ka : 21.4 : no effect on early stopping
+[2020-04-28 09:59:34] [valid] Ep. 30 : Up. 71000 : lang/bleu-mk : 23.0 : no effect on early stopping
+[2020-04-28 09:59:34] [valid] Ep. 30 : Up. 71000 : translation : 30.4976 : stalled 4 times
+[2020-04-28 09:59:35] [valid] Ep. 30 : Up. 71000 : ce-mean-words : 1.38506 : new best
+[2020-04-28 10:29:51] [valid] Ep. 30 : Up. 72000 : lang/bleu-fr : 32.7 : no effect on early stopping
+[2020-04-28 10:29:52] [valid] Ep. 30 : Up. 72000 : lang/bleu-ga : 53.2 : no effect on early stopping
+[2020-04-28 10:29:53] [valid] Ep. 30 : Up. 72000 : lang/bleu-ka : 22.2 : no effect on early stopping
+[2020-04-28 10:29:55] [valid] Ep. 30 : Up. 72000 : lang/bleu-mk : 23.0 : no effect on early stopping
+[2020-04-28 10:29:55] [valid] Ep. 30 : Up. 72000 : translation : 30.6998 : new best
+[2020-04-28 10:29:57] [valid] Ep. 30 : Up. 72000 : ce-mean-words : 1.38457 : new best
+[2020-04-28 11:00:45] [valid] Ep. 31 : Up. 73000 : lang/bleu-fr : 32.8 : no effect on early stopping
+[2020-04-28 11:00:47] [valid] Ep. 31 : Up. 73000 : lang/bleu-ga : 53.2 : no effect on early stopping
+[2020-04-28 11:00:48] [valid] Ep. 31 : Up. 73000 : lang/bleu-ka : 22.5 : no effect on early stopping
+[2020-04-28 11:00:49] [valid] Ep. 31 : Up. 73000 : lang/bleu-mk : 22.9 : no effect on early stopping
+[2020-04-28 11:00:50] [valid] Ep. 31 : Up. 73000 : translation : 30.7929 : new best
+[2020-04-28 11:00:51] [valid] Ep. 31 : Up. 73000 : ce-mean-words : 1.38396 : new best
+[2020-04-28 11:31:07] [valid] Ep. 31 : Up. 74000 : lang/bleu-fr : 33.2 : no effect on early stopping
+[2020-04-28 11:31:08] [valid] Ep. 31 : Up. 74000 : lang/bleu-ga : 53.4 : no effect on early stopping
+[2020-04-28 11:31:09] [valid] Ep. 31 : Up. 74000 : lang/bleu-ka : 22.1 : no effect on early stopping
+[2020-04-28 11:31:11] [valid] Ep. 31 : Up. 74000 : lang/bleu-mk : 22.9 : no effect on early stopping
+[2020-04-28 11:31:11] [valid] Ep. 31 : Up. 74000 : translation : 30.777 : stalled 1 times
+[2020-04-28 11:31:12] [valid] Ep. 31 : Up. 74000 : ce-mean-words : 1.38321 : new best
+[2020-04-28 12:01:56] [valid] Ep. 32 : Up. 75000 : lang/bleu-fr : 33.3 : no effect on early stopping
+[2020-04-28 12:01:57] [valid] Ep. 32 : Up. 75000 : lang/bleu-ga : 53.3 : no effect on early stopping
+[2020-04-28 12:01:59] [valid] Ep. 32 : Up. 75000 : lang/bleu-ka : 22.0 : no effect on early stopping
+[2020-04-28 12:02:00] [valid] Ep. 32 : Up. 75000 : lang/bleu-mk : 22.5 : no effect on early stopping
+[2020-04-28 12:02:00] [valid] Ep. 32 : Up. 75000 : translation : 30.6157 : stalled 2 times
+[2020-04-28 12:02:01] [valid] Ep. 32 : Up. 75000 : ce-mean-words : 1.38258 : new best
+[2020-04-28 12:32:20] [valid] Ep. 32 : Up. 76000 : lang/bleu-fr : 33.2 : no effect on early stopping
+[2020-04-28 12:32:22] [valid] Ep. 32 : Up. 76000 : lang/bleu-ga : 53.2 : no effect on early stopping
+[2020-04-28 12:32:23] [valid] Ep. 32 : Up. 76000 : lang/bleu-ka : 22.1 : no effect on early stopping
+[2020-04-28 12:32:24] [valid] Ep. 32 : Up. 76000 : lang/bleu-mk : 22.6 : no effect on early stopping
+[2020-04-28 12:32:24] [valid] Ep. 32 : Up. 76000 : translation : 30.647 : stalled 3 times
+[2020-04-28 12:32:25] [valid] Ep. 32 : Up. 76000 : ce-mean-words : 1.38211 : new best
+[2020-04-28 13:02:51] [valid] Ep. 32 : Up. 77000 : lang/bleu-fr : 33.1 : no effect on early stopping
+[2020-04-28 13:02:53] [valid] Ep. 32 : Up. 77000 : lang/bleu-ga : 53.9 : no effect on early stopping
+[2020-04-28 13:02:54] [valid] Ep. 32 : Up. 77000 : lang/bleu-ka : 21.5 : no effect on early stopping
+[2020-04-28 13:02:55] [valid] Ep. 32 : Up. 77000 : lang/bleu-mk : 22.0 : no effect on early stopping
+[2020-04-28 13:02:55] [valid] Ep. 32 : Up. 77000 : translation : 30.3089 : stalled 4 times
+[2020-04-28 13:02:56] [valid] Ep. 32 : Up. 77000 : ce-mean-words : 1.38139 : new best
+[2020-04-28 13:33:50] [valid] Ep. 33 : Up. 78000 : lang/bleu-fr : 32.8 : no effect on early stopping
+[2020-04-28 13:33:52] [valid] Ep. 33 : Up. 78000 : lang/bleu-ga : 53.6 : no effect on early stopping
+[2020-04-28 13:33:53] [valid] Ep. 33 : Up. 78000 : lang/bleu-ka : 21.5 : no effect on early stopping
+[2020-04-28 13:33:54] [valid] Ep. 33 : Up. 78000 : lang/bleu-mk : 22.0 : no effect on early stopping
+[2020-04-28 13:33:54] [valid] Ep. 33 : Up. 78000 : translation : 30.1978 : stalled 5 times
+[2020-04-28 13:33:55] [valid] Ep. 33 : Up. 78000 : ce-mean-words : 1.38064 : new best
+[2020-04-28 14:04:06] [valid] Ep. 33 : Up. 79000 : lang/bleu-fr : 33.0 : no effect on early stopping
+[2020-04-28 14:04:07] [valid] Ep. 33 : Up. 79000 : lang/bleu-ga : 53.5 : no effect on early stopping
+[2020-04-28 14:04:08] [valid] Ep. 33 : Up. 79000 : lang/bleu-ka : 22.0 : no effect on early stopping
+[2020-04-28 14:04:10] [valid] Ep. 33 : Up. 79000 : lang/bleu-mk : 22.1 : no effect on early stopping
+[2020-04-28 14:04:10] [valid] Ep. 33 : Up. 79000 : translation : 30.4383 : stalled 6 times
+[2020-04-28 14:04:11] [valid] Ep. 33 : Up. 79000 : ce-mean-words : 1.38006 : new best
+[2020-04-28 14:34:53] [valid] Ep. 34 : Up. 80000 : lang/bleu-fr : 33.1 : no effect on early stopping
+[2020-04-28 14:34:55] [valid] Ep. 34 : Up. 80000 : lang/bleu-ga : 53.8 : no effect on early stopping
+[2020-04-28 14:34:56] [valid] Ep. 34 : Up. 80000 : lang/bleu-ka : 22.4 : no effect on early stopping
+[2020-04-28 14:34:57] [valid] Ep. 34 : Up. 80000 : lang/bleu-mk : 22.0 : no effect on early stopping
+[2020-04-28 14:34:57] [valid] Ep. 34 : Up. 80000 : translation : 30.607 : stalled 7 times
+[2020-04-28 14:34:58] [valid] Ep. 34 : Up. 80000 : ce-mean-words : 1.37955 : new best
+[2020-04-28 15:05:34] [valid] Ep. 34 : Up. 81000 : lang/bleu-fr : 33.3 : no effect on early stopping
+[2020-04-28 15:05:36] [valid] Ep. 34 : Up. 81000 : lang/bleu-ga : 53.9 : no effect on early stopping
+[2020-04-28 15:05:37] [valid] Ep. 34 : Up. 81000 : lang/bleu-ka : 22.0 : no effect on early stopping
+[2020-04-28 15:05:38] [valid] Ep. 34 : Up. 81000 : lang/bleu-mk : 22.2 : no effect on early stopping
+[2020-04-28 15:05:38] [valid] Ep. 34 : Up. 81000 : translation : 30.5986 : stalled 8 times
+[2020-04-28 15:05:39] [valid] Ep. 34 : Up. 81000 : ce-mean-words : 1.37915 : new best
+[2020-04-28 15:36:08] [valid] Ep. 35 : Up. 82000 : lang/bleu-fr : 33.0 : no effect on early stopping
+[2020-04-28 15:36:09] [valid] Ep. 35 : Up. 82000 : lang/bleu-ga : 53.8 : no effect on early stopping
+[2020-04-28 15:36:10] [valid] Ep. 35 : Up. 82000 : lang/bleu-ka : 22.2 : no effect on early stopping
+[2020-04-28 15:36:12] [valid] Ep. 35 : Up. 82000 : lang/bleu-mk : 22.1 : no effect on early stopping
+[2020-04-28 15:36:12] [valid] Ep. 35 : Up. 82000 : translation : 30.5499 : stalled 9 times
+[2020-04-28 15:36:13] [valid] Ep. 35 : Up. 82000 : ce-mean-words : 1.37883 : new best
+[2020-04-28 16:07:06] [valid] Ep. 35 : Up. 83000 : lang/bleu-fr : 33.1 : no effect on early stopping
+[2020-04-28 16:07:07] [valid] Ep. 35 : Up. 83000 : lang/bleu-ga : 53.9 : no effect on early stopping
+[2020-04-28 16:07:08] [valid] Ep. 35 : Up. 83000 : lang/bleu-ka : 21.7 : no effect on early stopping
+[2020-04-28 16:07:09] [valid] Ep. 35 : Up. 83000 : lang/bleu-mk : 22.6 : no effect on early stopping
+[2020-04-28 16:07:09] [valid] Ep. 35 : Up. 83000 : translation : 30.5841 : stalled 10 times
+[2020-04-28 16:07:10] [valid] Ep. 35 : Up. 83000 : ce-mean-words : 1.37847 : new best
+[2020-04-28 16:37:20] [valid] Ep. 35 : Up. 84000 : lang/bleu-fr : 33.1 : no effect on early stopping
+[2020-04-28 16:37:21] [valid] Ep. 35 : Up. 84000 : lang/bleu-ga : 54.2 : no effect on early stopping
+[2020-04-28 16:37:23] [valid] Ep. 35 : Up. 84000 : lang/bleu-ka : 21.6 : no effect on early stopping
+[2020-04-28 16:37:24] [valid] Ep. 35 : Up. 84000 : lang/bleu-mk : 22.3 : no effect on early stopping
+[2020-04-28 16:37:24] [valid] Ep. 35 : Up. 84000 : translation : 30.4892 : stalled 11 times
+[2020-04-28 16:37:25] [valid] Ep. 35 : Up. 84000 : ce-mean-words : 1.37793 : new best
+[2020-04-28 17:07:44] [valid] Ep. 36 : Up. 85000 : lang/bleu-fr : 33.1 : no effect on early stopping
+[2020-04-28 17:07:45] [valid] Ep. 36 : Up. 85000 : lang/bleu-ga : 53.9 : no effect on early stopping
+[2020-04-28 17:07:47] [valid] Ep. 36 : Up. 85000 : lang/bleu-ka : 21.5 : no effect on early stopping
+[2020-04-28 17:07:48] [valid] Ep. 36 : Up. 85000 : lang/bleu-mk : 22.4 : no effect on early stopping
+[2020-04-28 17:07:48] [valid] Ep. 36 : Up. 85000 : translation : 30.4457 : stalled 12 times
+[2020-04-28 17:07:49] [valid] Ep. 36 : Up. 85000 : ce-mean-words : 1.37731 : new best
+[2020-04-28 17:38:22] [valid] Ep. 36 : Up. 86000 : lang/bleu-fr : 33.1 : no effect on early stopping
+[2020-04-28 17:38:24] [valid] Ep. 36 : Up. 86000 : lang/bleu-ga : 54.2 : no effect on early stopping
+[2020-04-28 17:38:25] [valid] Ep. 36 : Up. 86000 : lang/bleu-ka : 21.8 : no effect on early stopping
+[2020-04-28 17:38:26] [valid] Ep. 36 : Up. 86000 : lang/bleu-mk : 22.3 : no effect on early stopping
+[2020-04-28 17:38:26] [valid] Ep. 36 : Up. 86000 : translation : 30.5596 : stalled 13 times
+[2020-04-28 17:38:27] [valid] Ep. 36 : Up. 86000 : ce-mean-words : 1.37676 : new best
+[2020-04-28 18:09:20] [valid] Ep. 37 : Up. 87000 : lang/bleu-fr : 33.1 : no effect on early stopping
+[2020-04-28 18:09:21] [valid] Ep. 37 : Up. 87000 : lang/bleu-ga : 54.1 : no effect on early stopping
+[2020-04-28 18:09:22] [valid] Ep. 37 : Up. 87000 : lang/bleu-ka : 21.9 : no effect on early stopping
+[2020-04-28 18:09:23] [valid] Ep. 37 : Up. 87000 : lang/bleu-mk : 22.2 : no effect on early stopping
+[2020-04-28 18:09:23] [valid] Ep. 37 : Up. 87000 : translation : 30.5461 : stalled 14 times
+[2020-04-28 18:09:24] [valid] Ep. 37 : Up. 87000 : ce-mean-words : 1.3761 : new best
+[2020-04-28 18:39:49] [valid] Ep. 37 : Up. 88000 : lang/bleu-fr : 33.2 : no effect on early stopping
+[2020-04-28 18:39:50] [valid] Ep. 37 : Up. 88000 : lang/bleu-ga : 54.2 : no effect on early stopping
+[2020-04-28 18:39:51] [valid] Ep. 37 : Up. 88000 : lang/bleu-ka : 21.8 : no effect on early stopping
+[2020-04-28 18:39:53] [valid] Ep. 37 : Up. 88000 : lang/bleu-mk : 22.2 : no effect on early stopping
+[2020-04-28 18:39:53] [valid] Ep. 37 : Up. 88000 : translation : 30.5483 : stalled 15 times
+[2020-04-28 18:39:54] [valid] Ep. 37 : Up. 88000 : ce-mean-words : 1.37567 : new best
