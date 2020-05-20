@@ -1,0 +1,14 @@
+model_en2mk	mk	ce-mean-words	data/raw/test/en2mk/OpenSubtitles/v2018	24.90
+model_en2mk	mk	ce-mean-words	data/raw/test/en2mk/OpenSubtitles/v2016	23.90
+model_en2mk	mk	ce-mean-words	data/raw/test/en2mk/KDE4/v2	4.60
+model_en2mk	mk	ce-mean-words	data/raw/test/en2mk/GlobalVoices/v2017q3	11.00
+model_en2mk	mk	ce-mean-words	data/raw/test/en2mk/GlobalVoices/v2015	10.90
+model_en2mk	mk	ce-mean-words	data/raw/test/en2mk/SETIMES/v1	6.60
+model_en2mk	mk	ce-mean-words	data/raw/test/en2mk/SETIMES/v2	11.00
+model_en2mk	mk	translation	data/raw/test/en2mk/OpenSubtitles/v2018	24.60
+model_en2mk	mk	translation	data/raw/test/en2mk/OpenSubtitles/v2016	24.30
+model_en2mk	mk	translation	data/raw/test/en2mk/KDE4/v2	4.80
+model_en2mk	mk	translation	data/raw/test/en2mk/GlobalVoices/v2017q3	10.70
+model_en2mk	mk	translation	data/raw/test/en2mk/GlobalVoices/v2015	10.60
+model_en2mk	mk	translation	data/raw/test/en2mk/SETIMES/v1	6.40
+model_en2mk	mk	translation	data/raw/test/en2mk/SETIMES/v2	10.40

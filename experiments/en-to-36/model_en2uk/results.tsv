@@ -1,0 +1,8 @@
+model_en2uk	uk	ce-mean-words	data/raw/test/en2uk/OpenSubtitles/v2018	13.10
+model_en2uk	uk	ce-mean-words	data/raw/test/en2uk/OpenSubtitles/v2016	11.90
+model_en2uk	uk	ce-mean-words	data/raw/test/en2uk/Tatoeba/v2	14.40
+model_en2uk	uk	ce-mean-words	data/raw/test/en2uk/KDE4/v2	1.30
+model_en2uk	uk	translation	data/raw/test/en2uk/OpenSubtitles/v2018	12.20
+model_en2uk	uk	translation	data/raw/test/en2uk/OpenSubtitles/v2016	11.20
+model_en2uk	uk	translation	data/raw/test/en2uk/Tatoeba/v2	13.30
+model_en2uk	uk	translation	data/raw/test/en2uk/KDE4/v2	1.30

@@ -1,0 +1,1725 @@
+[2020-05-14 16:52:01] [marian] Marian v1.7.6 02f4af4e 2018-12-12 18:51:10 -0800
+[2020-05-14 16:52:01] [marian] Running on dll4 as process 10036 with command line:
+[2020-05-14 16:52:01] [marian] /home/ihnatchenko/personal_work_ms/tools/marian/build/marian -c config.yml --model model_en2uk/model.npz --train-sets model_en2uk/train.source model_en2uk/train.target --vocabs data/raw/vocab.multi.yml data/raw/vocab.multi.yml --valid-sets model_en2uk/val.source model_en2uk/val.target --valid-script-path model_en2uk/validate.sh --log model_en2uk/train.log --valid-log model_en2uk/valid.log --tempdir model_en2uk
+[2020-05-14 16:52:01] [config] after-batches: 0
+[2020-05-14 16:52:01] [config] after-epochs: 0
+[2020-05-14 16:52:01] [config] allow-unk: false
+[2020-05-14 16:52:01] [config] beam-size: 6
+[2020-05-14 16:52:01] [config] best-deep: false
+[2020-05-14 16:52:01] [config] clip-gemm: 0
+[2020-05-14 16:52:01] [config] clip-norm: 1
+[2020-05-14 16:52:01] [config] cost-type: ce-mean-words
+[2020-05-14 16:52:01] [config] cpu-threads: 0
+[2020-05-14 16:52:01] [config] data-weighting-type: sentence
+[2020-05-14 16:52:01] [config] dec-cell: gru
+[2020-05-14 16:52:01] [config] dec-cell-base-depth: 2
+[2020-05-14 16:52:01] [config] dec-cell-high-depth: 1
+[2020-05-14 16:52:01] [config] dec-depth: 1
+[2020-05-14 16:52:01] [config] devices:
+[2020-05-14 16:52:01] [config]   - 0
+[2020-05-14 16:52:01] [config]   - 1
+[2020-05-14 16:52:01] [config] dim-emb: 512
+[2020-05-14 16:52:01] [config] dim-rnn: 1024
+[2020-05-14 16:52:01] [config] dim-vocabs:
+[2020-05-14 16:52:01] [config]   - 42671
+[2020-05-14 16:52:01] [config]   - 42671
+[2020-05-14 16:52:01] [config] disp-first: 0
+[2020-05-14 16:52:01] [config] disp-freq: 100
+[2020-05-14 16:52:01] [config] disp-label-counts: false
+[2020-05-14 16:52:01] [config] dropout-rnn: 0
+[2020-05-14 16:52:01] [config] dropout-src: 0
+[2020-05-14 16:52:01] [config] dropout-trg: 0
+[2020-05-14 16:52:01] [config] early-stopping: 15
+[2020-05-14 16:52:01] [config] embedding-fix-src: false
+[2020-05-14 16:52:01] [config] embedding-fix-trg: false
+[2020-05-14 16:52:01] [config] embedding-normalization: false
+[2020-05-14 16:52:01] [config] enc-cell: gru
+[2020-05-14 16:52:01] [config] enc-cell-depth: 1
+[2020-05-14 16:52:01] [config] enc-depth: 1
+[2020-05-14 16:52:01] [config] enc-type: bidirectional
+[2020-05-14 16:52:01] [config] exponential-smoothing: 0.0001
+[2020-05-14 16:52:01] [config] grad-dropping-momentum: 0
+[2020-05-14 16:52:01] [config] grad-dropping-rate: 0
+[2020-05-14 16:52:01] [config] grad-dropping-warmup: 100
+[2020-05-14 16:52:01] [config] guided-alignment: none
+[2020-05-14 16:52:01] [config] guided-alignment-cost: mse
+[2020-05-14 16:52:01] [config] guided-alignment-weight: 0.1
+[2020-05-14 16:52:01] [config] ignore-model-config: false
+[2020-05-14 16:52:01] [config] interpolate-env-vars: false
+[2020-05-14 16:52:01] [config] keep-best: true
+[2020-05-14 16:52:01] [config] label-smoothing: 0.1
+[2020-05-14 16:52:01] [config] layer-normalization: true
+[2020-05-14 16:52:01] [config] learn-rate: 0.0004
+[2020-05-14 16:52:01] [config] log: model_en2uk/train.log
+[2020-05-14 16:52:01] [config] log-level: info
+[2020-05-14 16:52:01] [config] lr-decay: 0
+[2020-05-14 16:52:01] [config] lr-decay-freq: 50000
+[2020-05-14 16:52:01] [config] lr-decay-inv-sqrt: 4000
+[2020-05-14 16:52:01] [config] lr-decay-repeat-warmup: false
+[2020-05-14 16:52:01] [config] lr-decay-reset-optimizer: false
+[2020-05-14 16:52:01] [config] lr-decay-start:
+[2020-05-14 16:52:01] [config]   - 10
+[2020-05-14 16:52:01] [config]   - 1
+[2020-05-14 16:52:01] [config] lr-decay-strategy: epoch+stalled
+[2020-05-14 16:52:01] [config] lr-report: true
+[2020-05-14 16:52:01] [config] lr-warmup: 4000
+[2020-05-14 16:52:01] [config] lr-warmup-at-reload: false
+[2020-05-14 16:52:01] [config] lr-warmup-cycle: false
+[2020-05-14 16:52:01] [config] lr-warmup-start-rate: 0
+[2020-05-14 16:52:01] [config] max-length: 500
+[2020-05-14 16:52:01] [config] max-length-crop: false
+[2020-05-14 16:52:01] [config] max-length-factor: 3
+[2020-05-14 16:52:01] [config] maxi-batch: 100
+[2020-05-14 16:52:01] [config] maxi-batch-sort: src
+[2020-05-14 16:52:01] [config] mini-batch: 64
+[2020-05-14 16:52:01] [config] mini-batch-fit: true
+[2020-05-14 16:52:01] [config] mini-batch-fit-step: 10
+[2020-05-14 16:52:01] [config] mini-batch-words: 0
+[2020-05-14 16:52:01] [config] model: model_en2uk/model.npz
+[2020-05-14 16:52:01] [config] multi-node: false
+[2020-05-14 16:52:01] [config] multi-node-overlap: true
+[2020-05-14 16:52:01] [config] n-best: false
+[2020-05-14 16:52:01] [config] no-nccl: false
+[2020-05-14 16:52:01] [config] no-reload: false
+[2020-05-14 16:52:01] [config] no-restore-corpus: false
+[2020-05-14 16:52:01] [config] no-shuffle: false
+[2020-05-14 16:52:01] [config] normalize: 0.6
+[2020-05-14 16:52:01] [config] optimizer: adam
+[2020-05-14 16:52:01] [config] optimizer-delay: 6
+[2020-05-14 16:52:01] [config] optimizer-params:
+[2020-05-14 16:52:01] [config]   - 0.9
+[2020-05-14 16:52:01] [config]   - 0.98
+[2020-05-14 16:52:01] [config]   - 1e-09
+[2020-05-14 16:52:01] [config] overwrite: true
+[2020-05-14 16:52:01] [config] quiet: false
+[2020-05-14 16:52:01] [config] quiet-translation: false
+[2020-05-14 16:52:01] [config] relative-paths: false
+[2020-05-14 16:52:01] [config] right-left: false
+[2020-05-14 16:52:01] [config] save-freq: 100
+[2020-05-14 16:52:01] [config] seed: 1111
+[2020-05-14 16:52:01] [config] sentencepiece-alphas:
+[2020-05-14 16:52:01] [config]   []
+[2020-05-14 16:52:01] [config] sentencepiece-max-lines: 10000000
+[2020-05-14 16:52:01] [config] sentencepiece-options: ""
+[2020-05-14 16:52:01] [config] shuffle-in-ram: false
+[2020-05-14 16:52:01] [config] skip: false
+[2020-05-14 16:52:01] [config] sqlite: ""
+[2020-05-14 16:52:01] [config] sqlite-drop: false
+[2020-05-14 16:52:01] [config] sync-sgd: true
+[2020-05-14 16:52:01] [config] tempdir: model_en2uk
+[2020-05-14 16:52:01] [config] tied-embeddings: false
+[2020-05-14 16:52:01] [config] tied-embeddings-all: true
+[2020-05-14 16:52:01] [config] tied-embeddings-src: false
+[2020-05-14 16:52:01] [config] train-sets:
+[2020-05-14 16:52:01] [config]   - model_en2uk/train.source
+[2020-05-14 16:52:01] [config]   - model_en2uk/train.target
+[2020-05-14 16:52:01] [config] transformer-aan-activation: swish
+[2020-05-14 16:52:01] [config] transformer-aan-depth: 2
+[2020-05-14 16:52:01] [config] transformer-aan-nogate: false
+[2020-05-14 16:52:01] [config] transformer-decoder-autoreg: self-attention
+[2020-05-14 16:52:01] [config] transformer-dim-aan: 2048
+[2020-05-14 16:52:01] [config] transformer-dim-ffn: 2048
+[2020-05-14 16:52:01] [config] transformer-dropout: 0.1
+[2020-05-14 16:52:01] [config] transformer-dropout-attention: 0
+[2020-05-14 16:52:01] [config] transformer-dropout-ffn: 0
+[2020-05-14 16:52:01] [config] transformer-ffn-activation: swish
+[2020-05-14 16:52:01] [config] transformer-ffn-depth: 2
+[2020-05-14 16:52:01] [config] transformer-guided-alignment-layer: last
+[2020-05-14 16:52:01] [config] transformer-heads: 8
+[2020-05-14 16:52:01] [config] transformer-no-projection: false
+[2020-05-14 16:52:01] [config] transformer-postprocess: dan
+[2020-05-14 16:52:01] [config] transformer-postprocess-emb: d
+[2020-05-14 16:52:01] [config] transformer-preprocess: ""
+[2020-05-14 16:52:01] [config] transformer-tied-layers:
+[2020-05-14 16:52:01] [config]   []
+[2020-05-14 16:52:01] [config] type: transformer
+[2020-05-14 16:52:01] [config] ulr: false
+[2020-05-14 16:52:01] [config] ulr-dim-emb: 0
+[2020-05-14 16:52:01] [config] ulr-dropout: 0
+[2020-05-14 16:52:01] [config] ulr-keys-vectors: ""
+[2020-05-14 16:52:01] [config] ulr-query-vectors: ""
+[2020-05-14 16:52:01] [config] ulr-softmax-temperature: 1
+[2020-05-14 16:52:01] [config] ulr-trainable-transformation: false
+[2020-05-14 16:52:01] [config] valid-freq: 1000
+[2020-05-14 16:52:01] [config] valid-log: model_en2uk/valid.log
+[2020-05-14 16:52:01] [config] valid-max-length: 1000
+[2020-05-14 16:52:01] [config] valid-metrics:
+[2020-05-14 16:52:01] [config]   - translation
+[2020-05-14 16:52:01] [config]   - ce-mean-words
+[2020-05-14 16:52:01] [config] valid-mini-batch: 32
+[2020-05-14 16:52:01] [config] valid-script-path: model_en2uk/validate.sh
+[2020-05-14 16:52:01] [config] valid-sets:
+[2020-05-14 16:52:01] [config]   - model_en2uk/val.source
+[2020-05-14 16:52:01] [config]   - model_en2uk/val.target
+[2020-05-14 16:52:01] [config] vocabs:
+[2020-05-14 16:52:01] [config]   - data/raw/vocab.multi.yml
+[2020-05-14 16:52:01] [config]   - data/raw/vocab.multi.yml
+[2020-05-14 16:52:01] [config] word-penalty: 0
+[2020-05-14 16:52:01] [config] workspace: 9000
+[2020-05-14 16:52:01] [config] Model is being created with Marian v1.7.6 02f4af4e 2018-12-12 18:51:10 -0800
+[2020-05-14 16:52:01] Using synchronous training
+[2020-05-14 16:52:01] [data] Loading vocabulary from JSON/Yaml file data/raw/vocab.multi.yml
+[2020-05-14 16:52:01] [data] Setting vocabulary size for input 0 to 42671
+[2020-05-14 16:52:01] [data] Loading vocabulary from JSON/Yaml file data/raw/vocab.multi.yml
+[2020-05-14 16:52:02] [data] Setting vocabulary size for input 1 to 42671
+[2020-05-14 16:52:02] [batching] Collecting statistics for batch fitting with step size 10
+[2020-05-14 16:52:02] Compiled without MPI support. Falling back to FakeMPIWrapper
+[2020-05-14 16:52:04] [memory] Extending reserved space to 9088 MB (device gpu0)
+[2020-05-14 16:52:05] [memory] Extending reserved space to 9088 MB (device gpu1)
+[2020-05-14 16:52:05] [comm] Using NCCL 2.3.7 for GPU communication
+[2020-05-14 16:52:06] [memory] Reserving 111 MB, device gpu0
+[2020-05-14 16:52:06] [memory] Reserving 111 MB, device gpu0
+[2020-05-14 16:52:31] [batching] Done
+[2020-05-14 16:52:32] [memory] Extending reserved space to 9088 MB (device gpu0)
+[2020-05-14 16:52:32] [memory] Extending reserved space to 9088 MB (device gpu1)
+[2020-05-14 16:52:32] [comm] Using NCCL 2.3.7 for GPU communication
+[2020-05-14 16:52:32] Training started
+[2020-05-14 16:52:32] [data] Shuffling files
+[2020-05-14 16:52:34] [data] Done reading 836180 sentences
+[2020-05-14 16:52:37] [data] Done shuffling 836180 sentences to temp files
+[2020-05-14 16:52:37] [memory] Reserving 111 MB, device gpu0
+[2020-05-14 16:52:37] [memory] Reserving 111 MB, device gpu1
+[2020-05-14 16:52:37] [memory] Reserving 55 MB, device gpu0
+[2020-05-14 16:52:37] [memory] Reserving 55 MB, device gpu1
+[2020-05-14 16:52:37] [memory] Reserving 111 MB, device gpu1
+[2020-05-14 16:52:37] [memory] Reserving 111 MB, device gpu0
+[2020-05-14 16:52:39] [memory] Reserving 111 MB, device gpu1
+[2020-05-14 16:52:39] [memory] Reserving 111 MB, device gpu0
+[2020-05-14 16:54:33] Ep. 1 : Up. 100 : Sen. 165,964 : Cost 10.47854614 : Time 121.39s : 20077.16 words/s : L.r. 1.0000e-05
+[2020-05-14 16:54:33] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 16:54:35] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 16:54:37] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 16:56:29] Ep. 1 : Up. 200 : Sen. 320,696 : Cost 9.62884045 : Time 116.31s : 19602.85 words/s : L.r. 2.0000e-05
+[2020-05-14 16:56:29] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 16:56:31] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 16:56:34] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 16:58:25] Ep. 1 : Up. 300 : Sen. 477,708 : Cost 8.31954956 : Time 115.44s : 19817.82 words/s : L.r. 3.0000e-05
+[2020-05-14 16:58:25] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 16:58:27] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 16:58:29] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 17:00:20] Ep. 1 : Up. 400 : Sen. 631,812 : Cost 7.17505932 : Time 115.29s : 19664.76 words/s : L.r. 4.0000e-05
+[2020-05-14 17:00:20] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 17:00:22] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 17:00:24] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 17:02:18] Ep. 1 : Up. 500 : Sen. 790,380 : Cost 6.67129707 : Time 118.58s : 19674.80 words/s : L.r. 5.0000e-05
+[2020-05-14 17:02:18] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 17:02:21] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 17:02:23] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 17:02:59] Seen 836180 samples
+[2020-05-14 17:02:59] Starting epoch 2
+[2020-05-14 17:02:59] [data] Shuffling files
+[2020-05-14 17:02:59] [data] Done reading 836180 sentences
+[2020-05-14 17:03:03] [data] Done shuffling 836180 sentences to temp files
+[2020-05-14 17:04:22] Ep. 2 : Up. 600 : Sen. 112,392 : Cost 6.42383337 : Time 123.77s : 18632.66 words/s : L.r. 6.0000e-05
+[2020-05-14 17:04:22] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 17:04:24] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 17:04:27] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 17:06:24] Ep. 2 : Up. 700 : Sen. 273,952 : Cost 6.27843857 : Time 121.40s : 19437.20 words/s : L.r. 7.0000e-05
+[2020-05-14 17:06:24] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 17:06:26] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 17:06:28] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 17:08:23] Ep. 2 : Up. 800 : Sen. 432,608 : Cost 6.04152250 : Time 118.94s : 19784.94 words/s : L.r. 8.0000e-05
+[2020-05-14 17:08:23] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 17:08:25] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 17:08:27] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 17:10:25] Ep. 2 : Up. 900 : Sen. 595,200 : Cost 5.83390856 : Time 121.91s : 19531.16 words/s : L.r. 9.0000e-05
+[2020-05-14 17:10:25] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 17:10:27] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 17:10:29] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 17:12:24] Ep. 2 : Up. 1000 : Sen. 752,772 : Cost 5.67262602 : Time 119.54s : 19507.35 words/s : L.r. 1.0000e-04
+[2020-05-14 17:12:24] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 17:12:26] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 17:12:28] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 17:12:33] Translating validation set...
+[2020-05-14 17:12:33] Best translation 0 : - - Т@@ і@@ і@@ і@@ і@@ і@@ і@@ і@@ і@@ і@@ і@@ і@@ і@@ і@@ і@@ і@@ і .
+[2020-05-14 17:12:34] Best translation 1 : я знаю !
+[2020-05-14 17:12:34] Best translation 2 : що що ти ?
+[2020-05-14 17:12:34] Best translation 3 : ?
+[2020-05-14 17:12:34] Best translation 4 : ти , что что что что что что что что что что что что что что что что ты .
+[2020-05-14 17:12:34] Best translation 5 : 
+[2020-05-14 17:12:34] Best translation 10 : да , - ...
+[2020-05-14 17:12:34] Best translation 20 : - - - - - - - - - - - - - - - .
+[2020-05-14 17:12:34] Best translation 40 : я по@@ ві@@ й , що я по@@ ві@@ й , що я не не не не не не не не не не не не не не не не не не не не не не не не не не не не не не не не не не не не не не не не не не не не не не не не не не .
+[2020-05-14 17:12:34] Best translation 80 : так .
+[2020-05-14 17:12:34] Best translation 160 : .
+[2020-05-14 17:12:34] Total translation time: 1.52046s
+[2020-05-14 17:12:36] [valid] Ep. 2 : Up. 1000 : lang/bleu-uk : 0.3 : no effect on early stopping
+[2020-05-14 17:12:36] Saving model weights and runtime parameters to model_en2uk/model.npz.best-translation.npz
+[2020-05-14 17:12:37] [valid] Ep. 2 : Up. 1000 : translation : 0.3 : new best
+[2020-05-14 17:12:37] Saving model weights and runtime parameters to model_en2uk/model.npz.best-ce-mean-words.npz
+[2020-05-14 17:12:39] [valid] Ep. 2 : Up. 1000 : ce-mean-words : 5.09551 : new best
+[2020-05-14 17:13:36] Seen 836180 samples
+[2020-05-14 17:13:36] Starting epoch 3
+[2020-05-14 17:13:36] [data] Shuffling files
+[2020-05-14 17:13:36] [data] Done reading 836180 sentences
+[2020-05-14 17:13:40] [data] Done shuffling 836180 sentences to temp files
+[2020-05-14 17:14:27] Ep. 3 : Up. 1100 : Sen. 69,152 : Cost 5.48111486 : Time 123.39s : 17867.55 words/s : L.r. 1.1000e-04
+[2020-05-14 17:14:27] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 17:14:30] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 17:14:32] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 17:16:27] Ep. 3 : Up. 1200 : Sen. 228,608 : Cost 5.32720947 : Time 119.78s : 19752.61 words/s : L.r. 1.2000e-04
+[2020-05-14 17:16:27] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 17:16:29] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 17:16:32] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 17:18:27] Ep. 3 : Up. 1300 : Sen. 388,980 : Cost 5.15547991 : Time 119.54s : 19681.29 words/s : L.r. 1.3000e-04
+[2020-05-14 17:18:27] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 17:18:29] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 17:18:31] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 17:20:25] Ep. 3 : Up. 1400 : Sen. 547,696 : Cost 4.99306059 : Time 117.94s : 19640.50 words/s : L.r. 1.4000e-04
+[2020-05-14 17:20:25] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 17:20:27] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 17:20:29] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 17:22:23] Ep. 3 : Up. 1500 : Sen. 704,984 : Cost 4.86072063 : Time 118.76s : 19551.51 words/s : L.r. 1.5000e-04
+[2020-05-14 17:22:23] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 17:22:26] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 17:22:28] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 17:24:03] Seen 836180 samples
+[2020-05-14 17:24:03] Starting epoch 4
+[2020-05-14 17:24:03] [data] Shuffling files
+[2020-05-14 17:24:03] [data] Done reading 836180 sentences
+[2020-05-14 17:24:07] [data] Done shuffling 836180 sentences to temp files
+[2020-05-14 17:24:27] Ep. 4 : Up. 1600 : Sen. 29,356 : Cost 4.71210909 : Time 123.51s : 18842.61 words/s : L.r. 1.6000e-04
+[2020-05-14 17:24:27] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 17:24:29] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 17:24:31] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 17:26:25] Ep. 4 : Up. 1700 : Sen. 186,704 : Cost 4.60251474 : Time 118.13s : 19830.49 words/s : L.r. 1.7000e-04
+[2020-05-14 17:26:25] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 17:26:27] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 17:26:30] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 17:28:28] Ep. 4 : Up. 1800 : Sen. 350,484 : Cost 4.48687792 : Time 122.66s : 19618.84 words/s : L.r. 1.8000e-04
+[2020-05-14 17:28:28] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 17:28:30] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 17:28:32] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 17:30:27] Ep. 4 : Up. 1900 : Sen. 510,388 : Cost 4.37678099 : Time 119.43s : 19494.39 words/s : L.r. 1.9000e-04
+[2020-05-14 17:30:27] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 17:30:29] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 17:30:32] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 17:32:24] Ep. 4 : Up. 2000 : Sen. 665,600 : Cost 4.27796316 : Time 116.41s : 19598.30 words/s : L.r. 2.0000e-04
+[2020-05-14 17:32:24] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 17:32:26] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 17:32:28] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 17:32:32] Translating validation set...
+[2020-05-14 17:32:33] Best translation 0 : Т@@ і@@ ні , х@@ ло@@ п@@ ці .
+[2020-05-14 17:32:33] Best translation 1 : я в@@ би@@ в тебе !
+[2020-05-14 17:32:33] Best translation 2 : як ти з@@ роби@@ ш ?
+[2020-05-14 17:32:33] Best translation 3 : що ?
+[2020-05-14 17:32:33] Best translation 4 : у вас є м@@ м@@ м@@ м@@ м@@ і , будь ла@@ ска , будь ла@@ ска , будь ла@@ ска .
+[2020-05-14 17:32:33] Best translation 5 : - В@@ они в@@ би@@ ли пер@@ вый се@@ ст@@ ра ?
+[2020-05-14 17:32:33] Best translation 10 : да , Э@@ н@@ ка ...
+[2020-05-14 17:32:33] Best translation 20 : він с@@ ві@@ т .
+[2020-05-14 17:32:33] Best translation 40 : ми за@@ к@@ ин@@ у@@ ли за@@ ли@@ ли@@ ли@@ ли@@ ли@@ ся , що я на@@ писа@@ ла , що я на@@ писа@@ в ць@@ ого .
+[2020-05-14 17:32:33] Best translation 80 : це чу@@ до@@ во ...
+[2020-05-14 17:32:33] Best translation 160 : нет .
+[2020-05-14 17:32:33] Total translation time: 0.97816s
+[2020-05-14 17:32:34] [valid] Ep. 4 : Up. 2000 : lang/bleu-uk : 6.1 : no effect on early stopping
+[2020-05-14 17:32:35] Saving model weights and runtime parameters to model_en2uk/model.npz.best-translation.npz
+[2020-05-14 17:32:36] [valid] Ep. 4 : Up. 2000 : translation : 6.1 : new best
+[2020-05-14 17:32:36] Saving model weights and runtime parameters to model_en2uk/model.npz.best-ce-mean-words.npz
+[2020-05-14 17:32:38] [valid] Ep. 4 : Up. 2000 : ce-mean-words : 3.5471 : new best
+[2020-05-14 17:34:27] Ep. 4 : Up. 2100 : Sen. 820,076 : Cost 4.20450974 : Time 123.56s : 18426.62 words/s : L.r. 2.1000e-04
+[2020-05-14 17:34:27] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 17:34:29] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 17:34:32] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 17:34:46] Seen 836180 samples
+[2020-05-14 17:34:46] Starting epoch 5
+[2020-05-14 17:34:46] [data] Shuffling files
+[2020-05-14 17:34:46] [data] Done reading 836180 sentences
+[2020-05-14 17:34:50] [data] Done shuffling 836180 sentences to temp files
+[2020-05-14 17:36:27] Ep. 5 : Up. 2200 : Sen. 140,800 : Cost 4.09053564 : Time 120.26s : 19034.87 words/s : L.r. 2.2000e-04
+[2020-05-14 17:36:27] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 17:36:30] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 17:36:32] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 17:38:30] Ep. 5 : Up. 2300 : Sen. 301,784 : Cost 4.03468800 : Time 122.64s : 19410.33 words/s : L.r. 2.3000e-04
+[2020-05-14 17:38:30] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 17:38:32] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 17:38:35] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 17:40:27] Ep. 5 : Up. 2400 : Sen. 458,096 : Cost 3.98884082 : Time 117.32s : 19540.38 words/s : L.r. 2.4000e-04
+[2020-05-14 17:40:27] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 17:40:30] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 17:40:32] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 17:42:25] Ep. 5 : Up. 2500 : Sen. 616,992 : Cost 3.91397786 : Time 117.96s : 19541.70 words/s : L.r. 2.5000e-04
+[2020-05-14 17:42:25] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 17:42:28] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 17:42:30] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 17:44:21] Ep. 5 : Up. 2600 : Sen. 772,204 : Cost 3.87181330 : Time 115.84s : 19745.70 words/s : L.r. 2.6000e-04
+[2020-05-14 17:44:21] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 17:44:23] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 17:44:26] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 17:45:14] Seen 836180 samples
+[2020-05-14 17:45:14] Starting epoch 6
+[2020-05-14 17:45:14] [data] Shuffling files
+[2020-05-14 17:45:14] [data] Done reading 836180 sentences
+[2020-05-14 17:45:18] [data] Done shuffling 836180 sentences to temp files
+[2020-05-14 17:46:27] Ep. 6 : Up. 2700 : Sen. 99,192 : Cost 3.81309986 : Time 125.91s : 19032.08 words/s : L.r. 2.7000e-04
+[2020-05-14 17:46:27] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 17:46:29] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 17:46:32] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 17:48:26] Ep. 6 : Up. 2800 : Sen. 260,788 : Cost 3.74576068 : Time 119.02s : 19733.77 words/s : L.r. 2.8000e-04
+[2020-05-14 17:48:26] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 17:48:28] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 17:48:31] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 17:50:20] Ep. 6 : Up. 2900 : Sen. 412,195 : Cost 3.73278356 : Time 113.71s : 19715.62 words/s : L.r. 2.9000e-04
+[2020-05-14 17:50:20] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 17:50:22] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 17:50:24] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 17:52:20] Ep. 6 : Up. 3000 : Sen. 573,440 : Cost 3.69268727 : Time 119.98s : 19843.66 words/s : L.r. 3.0000e-04
+[2020-05-14 17:52:20] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 17:52:22] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 17:52:24] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 17:52:29] Translating validation set...
+[2020-05-14 17:52:29] Best translation 0 : Т@@ он@@ к за@@ бира@@ є@@ ш@@ ся з во@@ го@@ нь .
+[2020-05-14 17:52:30] Best translation 1 : я на@@ в@@ чу тебе !
+[2020-05-14 17:52:30] Best translation 2 : ск@@ ільки ти з@@ роби@@ ш ?
+[2020-05-14 17:52:30] Best translation 3 : що ?
+[2020-05-14 17:52:30] Best translation 4 : у тебя есть бо@@ м@@ ба или нар@@ ко@@ ти@@ ки ?
+[2020-05-14 17:52:30] Best translation 5 : - В@@ они по@@ й@@ ма@@ ют пер@@ вый ми@@ стер Пар@@ к@@ с ?
+[2020-05-14 17:52:30] Best translation 10 : так , Ан@@ ко ...
+[2020-05-14 17:52:30] Best translation 20 : він с@@ ві@@ т с@@ ві@@ т .
+[2020-05-14 17:52:30] Best translation 40 : ми ви@@ к@@ ин@@ у@@ ли с@@ цен@@ ар@@ і@@ ї і за@@ стре@@ ли@@ ли с@@ цен@@ ар@@ і@@ ї .
+[2020-05-14 17:52:30] Best translation 80 : это прекра@@ сно ...
+[2020-05-14 17:52:30] Best translation 160 : нет .
+[2020-05-14 17:52:30] Total translation time: 0.81826s
+[2020-05-14 17:52:31] [valid] Ep. 6 : Up. 3000 : lang/bleu-uk : 9.0 : no effect on early stopping
+[2020-05-14 17:52:31] Saving model weights and runtime parameters to model_en2uk/model.npz.best-translation.npz
+[2020-05-14 17:52:33] [valid] Ep. 6 : Up. 3000 : translation : 9 : new best
+[2020-05-14 17:52:33] Saving model weights and runtime parameters to model_en2uk/model.npz.best-ce-mean-words.npz
+[2020-05-14 17:52:34] [valid] Ep. 6 : Up. 3000 : ce-mean-words : 2.78441 : new best
+[2020-05-14 17:54:28] Ep. 6 : Up. 3100 : Sen. 733,408 : Cost 3.66654944 : Time 127.72s : 18279.45 words/s : L.r. 3.1000e-04
+[2020-05-14 17:54:28] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 17:54:30] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 17:54:32] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 17:55:47] Seen 836180 samples
+[2020-05-14 17:55:47] Starting epoch 7
+[2020-05-14 17:55:47] [data] Shuffling files
+[2020-05-14 17:55:47] [data] Done reading 836180 sentences
+[2020-05-14 17:55:51] [data] Done shuffling 836180 sentences to temp files
+[2020-05-14 17:56:30] Ep. 7 : Up. 3200 : Sen. 55,496 : Cost 3.62143254 : Time 122.62s : 18914.42 words/s : L.r. 3.2000e-04
+[2020-05-14 17:56:30] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 17:56:32] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 17:56:35] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 17:58:27] Ep. 7 : Up. 3300 : Sen. 212,236 : Cost 3.57403588 : Time 116.93s : 19614.54 words/s : L.r. 3.3000e-04
+[2020-05-14 17:58:27] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 17:58:29] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 17:58:32] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 18:00:26] Ep. 7 : Up. 3400 : Sen. 369,881 : Cost 3.56333208 : Time 118.99s : 19429.03 words/s : L.r. 3.4000e-04
+[2020-05-14 18:00:26] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 18:00:28] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 18:00:31] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 18:02:26] Ep. 7 : Up. 3500 : Sen. 528,640 : Cost 3.55078173 : Time 120.00s : 19658.31 words/s : L.r. 3.5000e-04
+[2020-05-14 18:02:26] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 18:02:28] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 18:02:31] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 18:04:28] Ep. 7 : Up. 3600 : Sen. 691,200 : Cost 3.52026987 : Time 121.58s : 19449.45 words/s : L.r. 3.6000e-04
+[2020-05-14 18:04:28] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 18:04:30] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 18:04:32] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 18:06:19] Seen 836180 samples
+[2020-05-14 18:06:19] Starting epoch 8
+[2020-05-14 18:06:19] [data] Shuffling files
+[2020-05-14 18:06:19] [data] Done reading 836180 sentences
+[2020-05-14 18:06:22] [data] Done shuffling 836180 sentences to temp files
+[2020-05-14 18:06:31] Ep. 8 : Up. 3700 : Sen. 12,800 : Cost 3.50447845 : Time 123.52s : 18756.89 words/s : L.r. 3.7000e-04
+[2020-05-14 18:06:31] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 18:06:33] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 18:06:36] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 18:08:32] Ep. 8 : Up. 3800 : Sen. 172,800 : Cost 3.44846129 : Time 120.66s : 19451.95 words/s : L.r. 3.8000e-04
+[2020-05-14 18:08:32] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 18:08:34] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 18:08:36] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 18:10:33] Ep. 8 : Up. 3900 : Sen. 332,713 : Cost 3.44404387 : Time 120.73s : 19467.47 words/s : L.r. 3.9000e-04
+[2020-05-14 18:10:33] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 18:10:35] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 18:10:37] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 18:12:33] Ep. 8 : Up. 4000 : Sen. 492,800 : Cost 3.43424082 : Time 119.96s : 19585.19 words/s : L.r. 4.0000e-04
+[2020-05-14 18:12:33] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 18:12:35] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 18:12:37] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 18:12:41] Translating validation set...
+[2020-05-14 18:12:42] Best translation 0 : Т@@ он@@ к - бе@@ рі@@ га@@ є з во@@ го@@ нь .
+[2020-05-14 18:12:42] Best translation 1 : я на@@ в@@ чу тебе !
+[2020-05-14 18:12:42] Best translation 2 : ск@@ ільки ти з@@ роби@@ ш ?
+[2020-05-14 18:12:42] Best translation 3 : що ?
+[2020-05-14 18:12:42] Best translation 4 : у тебя есть бо@@ м@@ ба или нар@@ ко@@ ти@@ ки ?
+[2020-05-14 18:12:42] Best translation 5 : - В@@ они по@@ й@@ ма@@ ют пер@@ вый ми@@ стер Пар@@ к@@ с ?
+[2020-05-14 18:12:42] Best translation 10 : так , Ан@@ ко ...
+[2020-05-14 18:12:42] Best translation 20 : він с@@ ві@@ т .
+[2020-05-14 18:12:42] Best translation 40 : ми ви@@ к@@ ин@@ у@@ ли с@@ цен@@ ар@@ і@@ й с@@ цен@@ ар@@ і@@ й і за@@ стре@@ ли@@ ли од@@ ну ран@@ ку .
+[2020-05-14 18:12:42] Best translation 80 : кра@@ си@@ во ...
+[2020-05-14 18:12:42] Best translation 160 : нет .
+[2020-05-14 18:12:42] Total translation time: 0.88354s
+[2020-05-14 18:12:44] [valid] Ep. 8 : Up. 4000 : lang/bleu-uk : 9.1 : no effect on early stopping
+[2020-05-14 18:12:44] Saving model weights and runtime parameters to model_en2uk/model.npz.best-translation.npz
+[2020-05-14 18:12:45] [valid] Ep. 8 : Up. 4000 : translation : 9.1 : new best
+[2020-05-14 18:12:45] Saving model weights and runtime parameters to model_en2uk/model.npz.best-ce-mean-words.npz
+[2020-05-14 18:12:47] [valid] Ep. 8 : Up. 4000 : ce-mean-words : 2.4293 : new best
+[2020-05-14 18:14:38] Ep. 8 : Up. 4100 : Sen. 651,368 : Cost 3.41676331 : Time 125.69s : 18585.85 words/s : L.r. 3.9509e-04
+[2020-05-14 18:14:38] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 18:14:41] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 18:14:43] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 18:16:37] Ep. 8 : Up. 4200 : Sen. 809,224 : Cost 3.39773226 : Time 118.46s : 19409.46 words/s : L.r. 3.9036e-04
+[2020-05-14 18:16:37] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 18:16:39] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 18:16:41] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 18:17:04] Seen 836180 samples
+[2020-05-14 18:17:04] Starting epoch 9
+[2020-05-14 18:17:04] [data] Shuffling files
+[2020-05-14 18:17:04] [data] Done reading 836180 sentences
+[2020-05-14 18:17:07] [data] Done shuffling 836180 sentences to temp files
+[2020-05-14 18:18:38] Ep. 9 : Up. 4300 : Sen. 128,504 : Cost 3.35013270 : Time 120.99s : 18987.20 words/s : L.r. 3.8579e-04
+[2020-05-14 18:18:38] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 18:18:40] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 18:18:42] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 18:20:39] Ep. 9 : Up. 4400 : Sen. 290,196 : Cost 3.33744717 : Time 121.64s : 19481.56 words/s : L.r. 3.8139e-04
+[2020-05-14 18:20:39] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 18:20:42] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 18:20:44] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 18:22:36] Ep. 9 : Up. 4500 : Sen. 445,296 : Cost 3.33960843 : Time 116.67s : 19493.41 words/s : L.r. 3.7712e-04
+[2020-05-14 18:22:36] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 18:22:38] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 18:22:41] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 18:24:37] Ep. 9 : Up. 4600 : Sen. 608,000 : Cost 3.31845951 : Time 120.75s : 19788.07 words/s : L.r. 3.7300e-04
+[2020-05-14 18:24:37] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 18:24:39] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 18:24:41] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 18:26:34] Ep. 9 : Up. 4700 : Sen. 765,720 : Cost 3.31751347 : Time 117.29s : 19522.68 words/s : L.r. 3.6901e-04
+[2020-05-14 18:26:34] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 18:26:36] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 18:26:39] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 18:27:32] Seen 836180 samples
+[2020-05-14 18:27:32] Starting epoch 10
+[2020-05-14 18:27:32] [data] Shuffling files
+[2020-05-14 18:27:32] [data] Done reading 836180 sentences
+[2020-05-14 18:27:35] [data] Done shuffling 836180 sentences to temp files
+[2020-05-14 18:28:33] Ep. 10 : Up. 4800 : Sen. 83,200 : Cost 3.28589821 : Time 119.17s : 19084.04 words/s : L.r. 3.6515e-04
+[2020-05-14 18:28:33] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 18:28:35] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 18:28:38] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 18:30:35] Ep. 10 : Up. 4900 : Sen. 245,396 : Cost 3.25902891 : Time 121.39s : 19624.86 words/s : L.r. 3.6140e-04
+[2020-05-14 18:30:35] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 18:30:37] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 18:30:39] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 18:32:28] Ep. 10 : Up. 5000 : Sen. 396,800 : Cost 3.26412582 : Time 113.37s : 19570.40 words/s : L.r. 3.5777e-04
+[2020-05-14 18:32:28] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 18:32:30] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 18:32:32] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 18:32:37] Translating validation set...
+[2020-05-14 18:32:37] Best translation 0 : То@@ ні .
+[2020-05-14 18:32:38] Best translation 1 : я на@@ в@@ чу тебе !
+[2020-05-14 18:32:38] Best translation 2 : ск@@ ільки ти ва@@ жи@@ ш ?
+[2020-05-14 18:32:38] Best translation 3 : что ?
+[2020-05-14 18:32:38] Best translation 4 : у тебя есть бо@@ м@@ ба или нар@@ ко@@ ти@@ ки ?
+[2020-05-14 18:32:38] Best translation 5 : - Я пер@@ ший па@@ н Пар@@ к@@ с ?
+[2020-05-14 18:32:38] Best translation 10 : так , Ан@@ ко ...
+[2020-05-14 18:32:38] Best translation 20 : він с@@ ві@@ т , що він в@@ би@@ в х@@ ло@@ пе@@ ц@@ ь .
+[2020-05-14 18:32:38] Best translation 40 : ми ви@@ к@@ ин@@ у@@ ли с@@ цен@@ ар@@ і@@ й с@@ цен@@ ар@@ і@@ й і за@@ стре@@ ли@@ ли од@@ ного ран@@ ку .
+[2020-05-14 18:32:38] Best translation 80 : кра@@ си@@ во ...
+[2020-05-14 18:32:38] Best translation 160 : нет .
+[2020-05-14 18:32:38] Total translation time: 0.90336s
+[2020-05-14 18:32:39] [valid] Ep. 10 : Up. 5000 : lang/bleu-uk : 12.4 : no effect on early stopping
+[2020-05-14 18:32:39] Saving model weights and runtime parameters to model_en2uk/model.npz.best-translation.npz
+[2020-05-14 18:32:41] [valid] Ep. 10 : Up. 5000 : translation : 12.4 : new best
+[2020-05-14 18:32:41] Saving model weights and runtime parameters to model_en2uk/model.npz.best-ce-mean-words.npz
+[2020-05-14 18:32:42] [valid] Ep. 10 : Up. 5000 : ce-mean-words : 2.23442 : new best
+[2020-05-14 18:34:34] Ep. 10 : Up. 5100 : Sen. 554,208 : Cost 3.26007009 : Time 126.20s : 18383.31 words/s : L.r. 3.5425e-04
+[2020-05-14 18:34:34] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 18:34:36] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 18:34:39] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 18:36:28] Ep. 10 : Up. 5200 : Sen. 705,984 : Cost 3.25071216 : Time 113.68s : 19434.39 words/s : L.r. 3.5082e-04
+[2020-05-14 18:36:28] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 18:36:30] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 18:36:32] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 18:38:07] Seen 836180 samples
+[2020-05-14 18:38:07] Starting epoch 11
+[2020-05-14 18:38:07] [data] Shuffling files
+[2020-05-14 18:38:07] [data] Done reading 836180 sentences
+[2020-05-14 18:38:10] [data] Done shuffling 836180 sentences to temp files
+[2020-05-14 18:38:33] Ep. 11 : Up. 5300 : Sen. 32,000 : Cost 3.23736143 : Time 125.10s : 19084.69 words/s : L.r. 3.4750e-04
+[2020-05-14 18:38:33] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 18:38:35] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 18:38:37] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 18:40:32] Ep. 11 : Up. 5400 : Sen. 192,000 : Cost 3.19660449 : Time 119.30s : 19679.69 words/s : L.r. 3.4427e-04
+[2020-05-14 18:40:32] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 18:40:34] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 18:40:37] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 18:42:32] Ep. 11 : Up. 5500 : Sen. 352,000 : Cost 3.19473505 : Time 119.68s : 19607.09 words/s : L.r. 3.4112e-04
+[2020-05-14 18:42:32] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 18:42:34] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 18:42:37] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 18:44:26] Ep. 11 : Up. 5600 : Sen. 502,228 : Cost 3.20607138 : Time 114.29s : 19294.26 words/s : L.r. 3.3806e-04
+[2020-05-14 18:44:26] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 18:44:28] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 18:44:31] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 18:46:23] Ep. 11 : Up. 5700 : Sen. 657,222 : Cost 3.20207977 : Time 116.61s : 19523.58 words/s : L.r. 3.3508e-04
+[2020-05-14 18:46:23] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 18:46:25] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 18:46:27] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 18:48:20] Ep. 11 : Up. 5800 : Sen. 812,800 : Cost 3.20682073 : Time 116.90s : 19514.82 words/s : L.r. 3.3218e-04
+[2020-05-14 18:48:20] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 18:48:22] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 18:48:24] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 18:48:44] Seen 836180 samples
+[2020-05-14 18:48:44] Starting epoch 12
+[2020-05-14 18:48:44] [data] Shuffling files
+[2020-05-14 18:48:45] [data] Done reading 836180 sentences
+[2020-05-14 18:48:48] [data] Done shuffling 836180 sentences to temp files
+[2020-05-14 18:50:21] Ep. 12 : Up. 5900 : Sen. 131,808 : Cost 3.15142822 : Time 120.95s : 18923.82 words/s : L.r. 3.2935e-04
+[2020-05-14 18:50:21] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 18:50:23] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 18:50:25] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 18:52:21] Ep. 12 : Up. 6000 : Sen. 291,949 : Cost 3.15396786 : Time 120.45s : 19545.30 words/s : L.r. 3.2660e-04
+[2020-05-14 18:52:21] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 18:52:23] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 18:52:26] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 18:52:30] Translating validation set...
+[2020-05-14 18:52:30] Best translation 0 : То@@ ні .
+[2020-05-14 18:52:31] Best translation 1 : я на@@ в@@ чу тебе !
+[2020-05-14 18:52:31] Best translation 2 : ск@@ ільки ти ва@@ жи@@ ш ?
+[2020-05-14 18:52:31] Best translation 3 : что ?
+[2020-05-14 18:52:31] Best translation 4 : у тебя есть бо@@ м@@ ба или нар@@ ко@@ ти@@ ки ?
+[2020-05-14 18:52:31] Best translation 5 : - Я пер@@ ший па@@ н Пар@@ к@@ с ?
+[2020-05-14 18:52:31] Best translation 10 : так , Ан@@ ко ...
+[2020-05-14 18:52:31] Best translation 20 : он ве@@ л пар@@ ень .
+[2020-05-14 18:52:31] Best translation 40 : ми ви@@ к@@ ин@@ у@@ ли с@@ цен@@ ар@@ і@@ й і за@@ стре@@ ли@@ ли од@@ ного , що я на@@ писа@@ в сь@@ о@@ год@@ ні в@@ ран@@ ці .
+[2020-05-14 18:52:31] Best translation 80 : гар@@ нен@@ ь@@ ка ...
+[2020-05-14 18:52:31] Best translation 160 : нет .
+[2020-05-14 18:52:31] Total translation time: 0.87821s
+[2020-05-14 18:52:32] [valid] Ep. 12 : Up. 6000 : lang/bleu-uk : 14.0 : no effect on early stopping
+[2020-05-14 18:52:32] Saving model weights and runtime parameters to model_en2uk/model.npz.best-translation.npz
+[2020-05-14 18:52:34] [valid] Ep. 12 : Up. 6000 : translation : 14 : new best
+[2020-05-14 18:52:34] Saving model weights and runtime parameters to model_en2uk/model.npz.best-ce-mean-words.npz
+[2020-05-14 18:52:35] [valid] Ep. 12 : Up. 6000 : ce-mean-words : 2.12371 : new best
+[2020-05-14 18:54:23] Ep. 12 : Up. 6100 : Sen. 448,000 : Cost 3.15216613 : Time 122.16s : 18607.13 words/s : L.r. 3.2391e-04
+[2020-05-14 18:54:23] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 18:54:26] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 18:54:28] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 18:56:18] Ep. 12 : Up. 6200 : Sen. 601,600 : Cost 3.16213083 : Time 115.09s : 19547.50 words/s : L.r. 3.2129e-04
+[2020-05-14 18:56:18] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 18:56:21] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 18:56:23] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 18:58:17] Ep. 12 : Up. 6300 : Sen. 758,236 : Cost 3.16369629 : Time 118.67s : 19540.24 words/s : L.r. 3.1873e-04
+[2020-05-14 18:58:17] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 18:58:19] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 18:58:21] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 18:59:20] Seen 836180 samples
+[2020-05-14 18:59:20] Starting epoch 13
+[2020-05-14 18:59:20] [data] Shuffling files
+[2020-05-14 18:59:20] [data] Done reading 836180 sentences
+[2020-05-14 18:59:23] [data] Done shuffling 836180 sentences to temp files
+[2020-05-14 19:00:19] Ep. 13 : Up. 6400 : Sen. 80,512 : Cost 3.12748361 : Time 122.41s : 18794.60 words/s : L.r. 3.1623e-04
+[2020-05-14 19:00:19] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 19:00:22] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 19:00:24] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 19:02:17] Ep. 13 : Up. 6500 : Sen. 237,904 : Cost 3.10528421 : Time 117.86s : 19807.75 words/s : L.r. 3.1379e-04
+[2020-05-14 19:02:17] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 19:02:20] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 19:02:22] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 19:04:11] Ep. 13 : Up. 6600 : Sen. 390,400 : Cost 3.11949301 : Time 113.76s : 19588.41 words/s : L.r. 3.1140e-04
+[2020-05-14 19:04:11] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 19:04:13] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 19:04:15] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 19:06:14] Ep. 13 : Up. 6700 : Sen. 554,780 : Cost 3.12529612 : Time 123.36s : 19468.43 words/s : L.r. 3.0907e-04
+[2020-05-14 19:06:14] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 19:06:17] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 19:06:19] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 19:08:15] Ep. 13 : Up. 6800 : Sen. 712,812 : Cost 3.12401032 : Time 120.20s : 19517.77 words/s : L.r. 3.0679e-04
+[2020-05-14 19:08:15] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 19:08:17] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 19:08:19] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 19:09:49] Seen 836180 samples
+[2020-05-14 19:09:49] Starting epoch 14
+[2020-05-14 19:09:49] [data] Shuffling files
+[2020-05-14 19:09:49] [data] Done reading 836180 sentences
+[2020-05-14 19:09:53] [data] Done shuffling 836180 sentences to temp files
+[2020-05-14 19:10:21] Ep. 14 : Up. 6900 : Sen. 39,340 : Cost 3.10115957 : Time 125.90s : 18755.51 words/s : L.r. 3.0455e-04
+[2020-05-14 19:10:21] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 19:10:23] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 19:10:25] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 19:12:22] Ep. 14 : Up. 7000 : Sen. 198,400 : Cost 3.08028269 : Time 121.38s : 19316.02 words/s : L.r. 3.0237e-04
+[2020-05-14 19:12:22] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 19:12:24] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 19:12:26] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 19:12:31] Translating validation set...
+[2020-05-14 19:12:31] Best translation 0 : То@@ ні .
+[2020-05-14 19:12:31] Best translation 1 : я на@@ в@@ чу тебе !
+[2020-05-14 19:12:31] Best translation 2 : ск@@ ільки ти ва@@ жи@@ ш ?
+[2020-05-14 19:12:32] Best translation 3 : что ?
+[2020-05-14 19:12:32] Best translation 4 : у тебя есть бо@@ м@@ ба или нар@@ ко@@ ти@@ ки ?
+[2020-05-14 19:12:32] Best translation 5 : - Я пер@@ ший па@@ н Пар@@ к@@ с ?
+[2020-05-14 19:12:32] Best translation 10 : так , Ан@@ ко ...
+[2020-05-14 19:12:32] Best translation 20 : он от@@ следи@@ л пар@@ ень .
+[2020-05-14 19:12:32] Best translation 40 : ми ви@@ к@@ ин@@ у@@ ли с@@ цен@@ ар@@ і@@ й с@@ цен@@ ар@@ і@@ й і за@@ стре@@ ли@@ ли один , я@@ кий я на@@ писа@@ в сь@@ о@@ год@@ ні в@@ ран@@ ці .
+[2020-05-14 19:12:32] Best translation 80 : гар@@ нен@@ ь@@ ка ...
+[2020-05-14 19:12:32] Best translation 160 : нет .
+[2020-05-14 19:12:32] Total translation time: 0.91076s
+[2020-05-14 19:12:33] [valid] Ep. 14 : Up. 7000 : lang/bleu-uk : 14.9 : no effect on early stopping
+[2020-05-14 19:12:33] Saving model weights and runtime parameters to model_en2uk/model.npz.best-translation.npz
+[2020-05-14 19:12:35] [valid] Ep. 14 : Up. 7000 : translation : 14.9 : new best
+[2020-05-14 19:12:35] Saving model weights and runtime parameters to model_en2uk/model.npz.best-ce-mean-words.npz
+[2020-05-14 19:12:36] [valid] Ep. 14 : Up. 7000 : ce-mean-words : 2.05982 : new best
+[2020-05-14 19:14:29] Ep. 14 : Up. 7100 : Sen. 360,420 : Cost 3.07888293 : Time 126.92s : 18681.72 words/s : L.r. 3.0023e-04
+[2020-05-14 19:14:29] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 19:14:31] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 19:14:33] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 19:16:31] Ep. 14 : Up. 7200 : Sen. 524,436 : Cost 3.08347678 : Time 121.82s : 19762.70 words/s : L.r. 2.9814e-04
+[2020-05-14 19:16:31] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 19:16:33] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 19:16:35] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 19:18:25] Ep. 14 : Up. 7300 : Sen. 675,808 : Cost 3.09175730 : Time 113.96s : 19559.06 words/s : L.r. 2.9609e-04
+[2020-05-14 19:18:25] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 19:18:27] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 19:18:29] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 19:20:25] Ep. 14 : Up. 7400 : Sen. 834,776 : Cost 3.09128380 : Time 120.82s : 19237.69 words/s : L.r. 2.9409e-04
+[2020-05-14 19:20:25] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 19:20:28] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 19:20:30] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 19:20:35] Seen 836180 samples
+[2020-05-14 19:20:35] Starting epoch 15
+[2020-05-14 19:20:35] [data] Shuffling files
+[2020-05-14 19:20:35] [data] Done reading 836180 sentences
+[2020-05-14 19:20:39] [data] Done shuffling 836180 sentences to temp files
+[2020-05-14 19:22:30] Ep. 15 : Up. 7500 : Sen. 158,880 : Cost 3.04931831 : Time 124.40s : 19012.21 words/s : L.r. 2.9212e-04
+[2020-05-14 19:22:30] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 19:22:32] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 19:22:34] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 19:24:32] Ep. 15 : Up. 7600 : Sen. 321,384 : Cost 3.04467320 : Time 122.03s : 19450.70 words/s : L.r. 2.9019e-04
+[2020-05-14 19:24:32] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 19:24:34] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 19:24:36] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 19:26:33] Ep. 15 : Up. 7700 : Sen. 480,000 : Cost 3.05391216 : Time 120.75s : 19285.38 words/s : L.r. 2.8830e-04
+[2020-05-14 19:26:33] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 19:26:35] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 19:26:37] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 19:28:33] Ep. 15 : Up. 7800 : Sen. 640,000 : Cost 3.06267190 : Time 120.08s : 19586.75 words/s : L.r. 2.8645e-04
+[2020-05-14 19:28:33] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 19:28:35] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 19:28:37] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 19:30:36] Ep. 15 : Up. 7900 : Sen. 803,180 : Cost 3.05935669 : Time 122.83s : 19453.53 words/s : L.r. 2.8463e-04
+[2020-05-14 19:30:36] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 19:30:38] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 19:30:40] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 19:31:07] Seen 836180 samples
+[2020-05-14 19:31:07] Starting epoch 16
+[2020-05-14 19:31:07] [data] Shuffling files
+[2020-05-14 19:31:07] [data] Done reading 836180 sentences
+[2020-05-14 19:31:11] [data] Done shuffling 836180 sentences to temp files
+[2020-05-14 19:32:36] Ep. 16 : Up. 8000 : Sen. 123,452 : Cost 3.01627445 : Time 120.96s : 18924.14 words/s : L.r. 2.8284e-04
+[2020-05-14 19:32:36] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 19:32:39] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 19:32:41] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 19:32:45] Translating validation set...
+[2020-05-14 19:32:46] Best translation 0 : То@@ ні .
+[2020-05-14 19:32:46] Best translation 1 : я на@@ в@@ чу тебе !
+[2020-05-14 19:32:46] Best translation 2 : ск@@ ільки ти ва@@ жи@@ ш ?
+[2020-05-14 19:32:46] Best translation 3 : что ?
+[2020-05-14 19:32:46] Best translation 4 : у тебя есть бо@@ м@@ ба или нар@@ ко@@ ти@@ ки ?
+[2020-05-14 19:32:46] Best translation 5 : - Я пер@@ ший па@@ н Пар@@ к@@ с ?
+[2020-05-14 19:32:46] Best translation 10 : так , Ан@@ ка ...
+[2020-05-14 19:32:46] Best translation 20 : он от@@ следи@@ л пар@@ ень .
+[2020-05-14 19:32:46] Best translation 40 : ми ви@@ к@@ ин@@ у@@ ли с@@ цен@@ ар@@ і@@ й і за@@ стре@@ ли@@ ли од@@ ного , я@@ кий я на@@ писа@@ в сь@@ о@@ год@@ ні в@@ ран@@ ці .
+[2020-05-14 19:32:46] Best translation 80 : гар@@ нен@@ ь@@ ка ...
+[2020-05-14 19:32:46] Best translation 160 : нет .
+[2020-05-14 19:32:46] Total translation time: 0.90725s
+[2020-05-14 19:32:48] [valid] Ep. 16 : Up. 8000 : lang/bleu-uk : 16.2 : no effect on early stopping
+[2020-05-14 19:32:48] Saving model weights and runtime parameters to model_en2uk/model.npz.best-translation.npz
+[2020-05-14 19:32:49] [valid] Ep. 16 : Up. 8000 : translation : 16.2 : new best
+[2020-05-14 19:32:49] Saving model weights and runtime parameters to model_en2uk/model.npz.best-ce-mean-words.npz
+[2020-05-14 19:32:51] [valid] Ep. 16 : Up. 8000 : ce-mean-words : 2.01225 : new best
+[2020-05-14 19:34:41] Ep. 16 : Up. 8100 : Sen. 277,396 : Cost 3.03149390 : Time 124.04s : 18306.08 words/s : L.r. 2.8109e-04
+[2020-05-14 19:34:41] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 19:34:43] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 19:34:45] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 19:36:38] Ep. 16 : Up. 8200 : Sen. 431,980 : Cost 3.03801203 : Time 117.30s : 19465.50 words/s : L.r. 2.7937e-04
+[2020-05-14 19:36:38] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 19:36:40] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 19:36:42] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 19:38:36] Ep. 16 : Up. 8300 : Sen. 593,180 : Cost 3.03087854 : Time 118.32s : 19750.44 words/s : L.r. 2.7768e-04
+[2020-05-14 19:38:36] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 19:38:38] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 19:38:41] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 19:40:31] Ep. 16 : Up. 8400 : Sen. 745,224 : Cost 3.03458405 : Time 114.98s : 19411.60 words/s : L.r. 2.7603e-04
+[2020-05-14 19:40:31] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 19:40:33] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 19:40:36] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 19:41:44] Seen 836180 samples
+[2020-05-14 19:41:44] Starting epoch 17
+[2020-05-14 19:41:44] [data] Shuffling files
+[2020-05-14 19:41:45] [data] Done reading 836180 sentences
+[2020-05-14 19:41:48] [data] Done shuffling 836180 sentences to temp files
+[2020-05-14 19:42:39] Ep. 17 : Up. 8500 : Sen. 72,177 : Cost 3.02399063 : Time 127.68s : 18832.22 words/s : L.r. 2.7440e-04
+[2020-05-14 19:42:39] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 19:42:41] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 19:42:43] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 19:44:31] Ep. 17 : Up. 8600 : Sen. 221,804 : Cost 2.99761939 : Time 112.42s : 19551.23 words/s : L.r. 2.7280e-04
+[2020-05-14 19:44:31] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 19:44:34] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 19:44:36] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 19:46:29] Ep. 17 : Up. 8700 : Sen. 378,584 : Cost 3.00649500 : Time 118.10s : 19552.04 words/s : L.r. 2.7123e-04
+[2020-05-14 19:46:29] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 19:46:32] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 19:46:34] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 19:48:29] Ep. 17 : Up. 8800 : Sen. 538,476 : Cost 3.01179600 : Time 119.73s : 19603.71 words/s : L.r. 2.6968e-04
+[2020-05-14 19:48:29] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 19:48:31] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 19:48:34] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 19:50:28] Ep. 17 : Up. 8900 : Sen. 697,600 : Cost 3.01423407 : Time 119.25s : 19437.68 words/s : L.r. 2.6816e-04
+[2020-05-14 19:50:28] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 19:50:31] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 19:50:33] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 19:52:14] Seen 836180 samples
+[2020-05-14 19:52:14] Starting epoch 18
+[2020-05-14 19:52:14] [data] Shuffling files
+[2020-05-14 19:52:14] [data] Done reading 836180 sentences
+[2020-05-14 19:52:17] [data] Done shuffling 836180 sentences to temp files
+[2020-05-14 19:52:32] Ep. 18 : Up. 9000 : Sen. 21,256 : Cost 3.00956798 : Time 123.85s : 18869.93 words/s : L.r. 2.6667e-04
+[2020-05-14 19:52:32] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 19:52:34] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 19:52:37] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 19:52:41] Translating validation set...
+[2020-05-14 19:52:42] Best translation 0 : То@@ ні .
+[2020-05-14 19:52:42] Best translation 1 : я тебе на@@ в@@ чу !
+[2020-05-14 19:52:42] Best translation 2 : ск@@ ільки ти ва@@ жи@@ ш ?
+[2020-05-14 19:52:42] Best translation 3 : что ?
+[2020-05-14 19:52:42] Best translation 4 : у тебя есть бо@@ м@@ ба или нар@@ ко@@ ти@@ ки ?
+[2020-05-14 19:52:42] Best translation 5 : - Я пер@@ ший ми@@ стер Пар@@ к@@ с ?
+[2020-05-14 19:52:42] Best translation 10 : так , Ан@@ ко ...
+[2020-05-14 19:52:42] Best translation 20 : он от@@ следи@@ л пар@@ ень .
+[2020-05-14 19:52:42] Best translation 40 : ми ви@@ к@@ ин@@ у@@ ли с@@ цен@@ ар@@ і@@ й і за@@ стре@@ ли@@ ли од@@ ного , я@@ кий я на@@ писа@@ в сь@@ о@@ год@@ ні в@@ ран@@ ці .
+[2020-05-14 19:52:42] Best translation 80 : гар@@ нен@@ ь@@ ка ...
+[2020-05-14 19:52:42] Best translation 160 : нет .
+[2020-05-14 19:52:42] Total translation time: 0.83049s
+[2020-05-14 19:52:43] [valid] Ep. 18 : Up. 9000 : lang/bleu-uk : 14.8 : no effect on early stopping
+[2020-05-14 19:52:43] [valid] Ep. 18 : Up. 9000 : translation : 14.8 : stalled 1 times
+[2020-05-14 19:52:43] Saving model weights and runtime parameters to model_en2uk/model.npz.best-ce-mean-words.npz
+[2020-05-14 19:52:45] [valid] Ep. 18 : Up. 9000 : ce-mean-words : 1.9764 : new best
+[2020-05-14 19:54:40] Ep. 18 : Up. 9100 : Sen. 184,196 : Cost 2.97611594 : Time 127.52s : 18824.11 words/s : L.r. 2.6520e-04
+[2020-05-14 19:54:40] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 19:54:42] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 19:54:44] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 19:56:38] Ep. 18 : Up. 9200 : Sen. 340,988 : Cost 2.98536015 : Time 118.08s : 19456.37 words/s : L.r. 2.6375e-04
+[2020-05-14 19:56:38] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 19:56:40] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 19:56:42] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 19:58:35] Ep. 18 : Up. 9300 : Sen. 498,216 : Cost 2.98875022 : Time 117.33s : 19570.37 words/s : L.r. 2.6233e-04
+[2020-05-14 19:58:35] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 19:58:37] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 19:58:40] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 20:00:35] Ep. 18 : Up. 9400 : Sen. 655,368 : Cost 3.00496411 : Time 119.46s : 19591.25 words/s : L.r. 2.6093e-04
+[2020-05-14 20:00:35] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 20:00:37] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 20:00:39] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 20:02:31] Ep. 18 : Up. 9500 : Sen. 810,604 : Cost 2.99309182 : Time 116.20s : 19471.24 words/s : L.r. 2.5955e-04
+[2020-05-14 20:02:31] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 20:02:33] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 20:02:35] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 20:02:56] Seen 836180 samples
+[2020-05-14 20:02:56] Starting epoch 19
+[2020-05-14 20:02:56] [data] Shuffling files
+[2020-05-14 20:02:57] [data] Done reading 836180 sentences
+[2020-05-14 20:03:00] [data] Done shuffling 836180 sentences to temp files
+[2020-05-14 20:04:36] Ep. 19 : Up. 9600 : Sen. 135,504 : Cost 2.96693563 : Time 125.31s : 18974.69 words/s : L.r. 2.5820e-04
+[2020-05-14 20:04:36] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 20:04:38] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 20:04:41] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 20:06:35] Ep. 19 : Up. 9700 : Sen. 295,928 : Cost 2.95347238 : Time 119.18s : 19531.97 words/s : L.r. 2.5686e-04
+[2020-05-14 20:06:35] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 20:06:38] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 20:06:40] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 20:08:33] Ep. 19 : Up. 9800 : Sen. 452,183 : Cost 2.97853518 : Time 117.99s : 19662.48 words/s : L.r. 2.5555e-04
+[2020-05-14 20:08:33] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 20:08:36] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 20:08:38] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 20:10:30] Ep. 19 : Up. 9900 : Sen. 608,000 : Cost 2.97779250 : Time 117.03s : 19479.23 words/s : L.r. 2.5426e-04
+[2020-05-14 20:10:30] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 20:10:33] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 20:10:35] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 20:12:28] Ep. 19 : Up. 10000 : Sen. 766,212 : Cost 2.97735071 : Time 117.33s : 19689.63 words/s : L.r. 2.5298e-04
+[2020-05-14 20:12:28] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 20:12:30] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 20:12:32] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 20:12:36] Translating validation set...
+[2020-05-14 20:12:37] Best translation 0 : То@@ ні .
+[2020-05-14 20:12:37] Best translation 1 : я тебе на@@ в@@ чу !
+[2020-05-14 20:12:37] Best translation 2 : ск@@ ільки ти ва@@ жи@@ ш ?
+[2020-05-14 20:12:37] Best translation 3 : что ?
+[2020-05-14 20:12:37] Best translation 4 : у тебя есть бо@@ м@@ ба или нар@@ ко@@ ти@@ ки ?
+[2020-05-14 20:12:37] Best translation 5 : - Я пер@@ ший ми@@ стер Пар@@ к@@ с ?
+[2020-05-14 20:12:37] Best translation 10 : так , Ан@@ ка ...
+[2020-05-14 20:12:37] Best translation 20 : он от@@ сле@@ жива@@ ет пар@@ ня .
+[2020-05-14 20:12:37] Best translation 40 : ми ви@@ к@@ ин@@ у@@ ли с@@ цен@@ ар@@ і@@ й і за@@ стре@@ ли@@ ли од@@ ного , я@@ кий я на@@ писа@@ в сь@@ о@@ год@@ ні в@@ ран@@ ці .
+[2020-05-14 20:12:37] Best translation 80 : гар@@ нен@@ ь@@ ка ...
+[2020-05-14 20:12:37] Best translation 160 : нет .
+[2020-05-14 20:12:37] Total translation time: 0.88630s
+[2020-05-14 20:12:39] [valid] Ep. 19 : Up. 10000 : lang/bleu-uk : 16.2 : no effect on early stopping
+[2020-05-14 20:12:39] [valid] Ep. 19 : Up. 10000 : translation : 16.2 : stalled 2 times
+[2020-05-14 20:12:39] Saving model weights and runtime parameters to model_en2uk/model.npz.best-ce-mean-words.npz
+[2020-05-14 20:12:40] [valid] Ep. 19 : Up. 10000 : ce-mean-words : 1.9559 : new best
+[2020-05-14 20:13:32] Seen 836180 samples
+[2020-05-14 20:13:32] Starting epoch 20
+[2020-05-14 20:13:32] [data] Shuffling files
+[2020-05-14 20:13:32] [data] Done reading 836180 sentences
+[2020-05-14 20:13:35] [data] Done shuffling 836180 sentences to temp files
+[2020-05-14 20:14:36] Ep. 20 : Up. 10100 : Sen. 85,792 : Cost 2.96034145 : Time 128.17s : 17859.09 words/s : L.r. 2.5173e-04
+[2020-05-14 20:14:36] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 20:14:38] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 20:14:40] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 20:16:37] Ep. 20 : Up. 10200 : Sen. 247,812 : Cost 2.94402218 : Time 120.92s : 19637.94 words/s : L.r. 2.5049e-04
+[2020-05-14 20:16:37] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 20:16:39] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 20:16:41] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 20:18:35] Ep. 20 : Up. 10300 : Sen. 403,200 : Cost 2.95581245 : Time 118.29s : 19363.36 words/s : L.r. 2.4927e-04
+[2020-05-14 20:18:35] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 20:18:37] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 20:18:39] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 20:20:34] Ep. 20 : Up. 10400 : Sen. 563,200 : Cost 2.95976591 : Time 119.45s : 19639.22 words/s : L.r. 2.4807e-04
+[2020-05-14 20:20:34] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 20:20:37] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 20:20:39] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 20:22:40] Ep. 20 : Up. 10500 : Sen. 731,388 : Cost 2.96329236 : Time 125.81s : 19630.66 words/s : L.r. 2.4689e-04
+[2020-05-14 20:22:40] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 20:22:43] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 20:22:45] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 20:24:02] Seen 836180 samples
+[2020-05-14 20:24:02] Starting epoch 21
+[2020-05-14 20:24:02] [data] Shuffling files
+[2020-05-14 20:24:02] [data] Done reading 836180 sentences
+[2020-05-14 20:24:06] [data] Done shuffling 836180 sentences to temp files
+[2020-05-14 20:24:44] Ep. 21 : Up. 10600 : Sen. 54,828 : Cost 2.94028759 : Time 123.66s : 18846.76 words/s : L.r. 2.4572e-04
+[2020-05-14 20:24:44] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 20:24:46] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 20:24:49] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 20:26:41] Ep. 21 : Up. 10700 : Sen. 212,308 : Cost 2.92493439 : Time 117.23s : 19663.55 words/s : L.r. 2.4457e-04
+[2020-05-14 20:26:41] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 20:26:43] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 20:26:46] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 20:28:38] Ep. 21 : Up. 10800 : Sen. 368,992 : Cost 2.93664145 : Time 117.16s : 19545.60 words/s : L.r. 2.4343e-04
+[2020-05-14 20:28:38] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 20:28:41] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 20:28:43] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 20:30:38] Ep. 21 : Up. 10900 : Sen. 527,392 : Cost 2.95214796 : Time 119.30s : 19571.08 words/s : L.r. 2.4231e-04
+[2020-05-14 20:30:38] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 20:30:41] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 20:30:44] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 20:32:36] Ep. 21 : Up. 11000 : Sen. 682,604 : Cost 2.94961548 : Time 118.78s : 19308.49 words/s : L.r. 2.4121e-04
+[2020-05-14 20:32:36] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 20:32:39] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 20:32:41] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 20:32:45] Translating validation set...
+[2020-05-14 20:32:46] Best translation 0 : То@@ ні .
+[2020-05-14 20:32:46] Best translation 1 : я тебе на@@ в@@ чу !
+[2020-05-14 20:32:46] Best translation 2 : ск@@ ільки ти ва@@ жи@@ ш ?
+[2020-05-14 20:32:46] Best translation 3 : что ?
+[2020-05-14 20:32:46] Best translation 4 : у тебя есть бо@@ м@@ ба или нар@@ ко@@ ти@@ ки ?
+[2020-05-14 20:32:46] Best translation 5 : - Я пер@@ ший ми@@ стер Пар@@ к@@ с ?
+[2020-05-14 20:32:46] Best translation 10 : так , Ан@@ ко ...
+[2020-05-14 20:32:46] Best translation 20 : он от@@ сле@@ жива@@ ет пар@@ ня .
+[2020-05-14 20:32:46] Best translation 40 : ми ви@@ к@@ ин@@ у@@ ли с@@ цен@@ а@@ ри@@ й і за@@ стре@@ ли@@ ли од@@ ного , я@@ кий я на@@ писа@@ в сь@@ о@@ год@@ ні в@@ ран@@ ці .
+[2020-05-14 20:32:46] Best translation 80 : гар@@ нен@@ ь@@ ка ...
+[2020-05-14 20:32:46] Best translation 160 : нет .
+[2020-05-14 20:32:46] Total translation time: 0.86018s
+[2020-05-14 20:32:47] [valid] Ep. 21 : Up. 11000 : lang/bleu-uk : 15.5 : no effect on early stopping
+[2020-05-14 20:32:47] [valid] Ep. 21 : Up. 11000 : translation : 15.5 : stalled 3 times
+[2020-05-14 20:32:47] Saving model weights and runtime parameters to model_en2uk/model.npz.best-ce-mean-words.npz
+[2020-05-14 20:32:49] [valid] Ep. 21 : Up. 11000 : ce-mean-words : 1.93661 : new best
+[2020-05-14 20:34:40] Seen 836180 samples
+[2020-05-14 20:34:40] Starting epoch 22
+[2020-05-14 20:34:40] [data] Shuffling files
+[2020-05-14 20:34:40] [data] Done reading 836180 sentences
+[2020-05-14 20:34:43] [data] Done shuffling 836180 sentences to temp files
+[2020-05-14 20:34:46] Ep. 22 : Up. 11100 : Sen. 3,984 : Cost 2.95689511 : Time 130.01s : 17761.43 words/s : L.r. 2.4012e-04
+[2020-05-14 20:34:46] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 20:34:49] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 20:34:51] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 20:36:46] Ep. 22 : Up. 11200 : Sen. 162,088 : Cost 2.90989232 : Time 119.40s : 19524.72 words/s : L.r. 2.3905e-04
+[2020-05-14 20:36:46] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 20:36:48] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 20:36:50] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 20:38:45] Ep. 22 : Up. 11300 : Sen. 322,704 : Cost 2.91942930 : Time 119.15s : 19632.80 words/s : L.r. 2.3799e-04
+[2020-05-14 20:38:45] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 20:38:47] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 20:38:50] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 20:40:41] Ep. 22 : Up. 11400 : Sen. 478,281 : Cost 2.92682838 : Time 116.18s : 19584.00 words/s : L.r. 2.3694e-04
+[2020-05-14 20:40:41] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 20:40:43] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 20:40:46] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 20:42:37] Ep. 22 : Up. 11500 : Sen. 632,904 : Cost 2.93257022 : Time 115.62s : 19653.93 words/s : L.r. 2.3591e-04
+[2020-05-14 20:42:37] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 20:42:39] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 20:42:41] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 20:44:37] Ep. 22 : Up. 11600 : Sen. 793,600 : Cost 2.93922544 : Time 120.74s : 19619.50 words/s : L.r. 2.3489e-04
+[2020-05-14 20:44:37] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 20:44:40] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 20:44:42] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 20:45:15] Seen 836180 samples
+[2020-05-14 20:45:15] Starting epoch 23
+[2020-05-14 20:45:15] [data] Shuffling files
+[2020-05-14 20:45:15] [data] Done reading 836180 sentences
+[2020-05-14 20:45:18] [data] Done shuffling 836180 sentences to temp files
+[2020-05-14 20:46:38] Ep. 23 : Up. 11700 : Sen. 113,412 : Cost 2.90187526 : Time 120.34s : 18938.94 words/s : L.r. 2.3388e-04
+[2020-05-14 20:46:38] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 20:46:40] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 20:46:42] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 20:48:37] Ep. 23 : Up. 11800 : Sen. 272,020 : Cost 2.90764070 : Time 119.31s : 19564.67 words/s : L.r. 2.3289e-04
+[2020-05-14 20:48:37] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 20:48:39] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 20:48:42] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 20:50:35] Ep. 23 : Up. 11900 : Sen. 430,712 : Cost 2.90721560 : Time 117.82s : 19668.27 words/s : L.r. 2.3191e-04
+[2020-05-14 20:50:35] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 20:50:37] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 20:50:39] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 20:52:34] Ep. 23 : Up. 12000 : Sen. 588,800 : Cost 2.92496228 : Time 118.88s : 19619.29 words/s : L.r. 2.3094e-04
+[2020-05-14 20:52:34] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 20:52:36] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 20:52:38] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 20:52:43] Translating validation set...
+[2020-05-14 20:52:43] Best translation 0 : То@@ ні .
+[2020-05-14 20:52:44] Best translation 1 : я тебе на@@ в@@ чу !
+[2020-05-14 20:52:44] Best translation 2 : ск@@ ільки ти ва@@ жи@@ ш ?
+[2020-05-14 20:52:44] Best translation 3 : что ?
+[2020-05-14 20:52:44] Best translation 4 : у тебя есть бо@@ м@@ ба или нар@@ ко@@ ти@@ ки ?
+[2020-05-14 20:52:44] Best translation 5 : - Я пер@@ ший ми@@ стер Пар@@ к@@ с ?
+[2020-05-14 20:52:44] Best translation 10 : так , Ан@@ ко ...
+[2020-05-14 20:52:44] Best translation 20 : він у с@@ ві@@ то@@ ви@@ й х@@ ло@@ пе@@ ц@@ ь .
+[2020-05-14 20:52:44] Best translation 40 : ми ви@@ к@@ ин@@ у@@ ли с@@ цен@@ а@@ ри@@ й і за@@ стре@@ ли@@ ли од@@ ного , я@@ кий я на@@ писа@@ в сь@@ о@@ год@@ ні в@@ ран@@ ці .
+[2020-05-14 20:52:44] Best translation 80 : гар@@ нен@@ ь@@ ка ...
+[2020-05-14 20:52:44] Best translation 160 : нет .
+[2020-05-14 20:52:44] Total translation time: 0.79100s
+[2020-05-14 20:52:45] [valid] Ep. 23 : Up. 12000 : lang/bleu-uk : 15.0 : no effect on early stopping
+[2020-05-14 20:52:45] [valid] Ep. 23 : Up. 12000 : translation : 15 : stalled 4 times
+[2020-05-14 20:52:45] Saving model weights and runtime parameters to model_en2uk/model.npz.best-ce-mean-words.npz
+[2020-05-14 20:52:47] [valid] Ep. 23 : Up. 12000 : ce-mean-words : 1.92124 : new best
+[2020-05-14 20:54:41] Ep. 23 : Up. 12100 : Sen. 749,196 : Cost 2.92369151 : Time 127.23s : 18586.14 words/s : L.r. 2.2998e-04
+[2020-05-14 20:54:41] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 20:54:43] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 20:54:45] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 20:55:50] Seen 836180 samples
+[2020-05-14 20:55:50] Starting epoch 24
+[2020-05-14 20:55:50] [data] Shuffling files
+[2020-05-14 20:55:50] [data] Done reading 836180 sentences
+[2020-05-14 20:55:53] [data] Done shuffling 836180 sentences to temp files
+[2020-05-14 20:56:43] Ep. 24 : Up. 12200 : Sen. 69,772 : Cost 2.91063237 : Time 122.44s : 18728.43 words/s : L.r. 2.2904e-04
+[2020-05-14 20:56:43] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 20:56:46] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 20:56:48] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 20:58:42] Ep. 24 : Up. 12300 : Sen. 226,700 : Cost 2.89456725 : Time 118.01s : 19659.09 words/s : L.r. 2.2811e-04
+[2020-05-14 20:58:42] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 20:58:44] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 20:58:46] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 21:00:44] Ep. 24 : Up. 12400 : Sen. 390,400 : Cost 2.89671111 : Time 122.43s : 19436.83 words/s : L.r. 2.2718e-04
+[2020-05-14 21:00:44] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 21:00:46] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 21:00:48] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 21:02:41] Ep. 24 : Up. 12500 : Sen. 547,508 : Cost 2.89831638 : Time 117.09s : 19559.13 words/s : L.r. 2.2627e-04
+[2020-05-14 21:02:41] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 21:02:43] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 21:02:46] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 21:04:40] Ep. 24 : Up. 12600 : Sen. 704,000 : Cost 2.91294622 : Time 118.60s : 19547.12 words/s : L.r. 2.2537e-04
+[2020-05-14 21:04:40] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 21:04:42] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 21:04:44] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 21:06:20] Seen 836180 samples
+[2020-05-14 21:06:20] Starting epoch 25
+[2020-05-14 21:06:20] [data] Shuffling files
+[2020-05-14 21:06:20] [data] Done reading 836180 sentences
+[2020-05-14 21:06:23] [data] Done shuffling 836180 sentences to temp files
+[2020-05-14 21:06:41] Ep. 25 : Up. 12700 : Sen. 23,812 : Cost 2.91358662 : Time 121.32s : 18897.44 words/s : L.r. 2.2449e-04
+[2020-05-14 21:06:41] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 21:06:43] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 21:06:45] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 21:08:38] Ep. 25 : Up. 12800 : Sen. 179,828 : Cost 2.87344241 : Time 116.98s : 19558.53 words/s : L.r. 2.2361e-04
+[2020-05-14 21:08:38] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 21:08:40] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 21:08:42] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 21:10:38] Ep. 25 : Up. 12900 : Sen. 341,792 : Cost 2.89116478 : Time 120.09s : 19811.17 words/s : L.r. 2.2274e-04
+[2020-05-14 21:10:38] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 21:10:40] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 21:10:42] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 21:12:40] Ep. 25 : Up. 13000 : Sen. 503,404 : Cost 2.88908887 : Time 121.75s : 19470.83 words/s : L.r. 2.2188e-04
+[2020-05-14 21:12:40] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 21:12:42] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 21:12:44] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 21:12:48] Translating validation set...
+[2020-05-14 21:12:49] Best translation 0 : То@@ ні .
+[2020-05-14 21:12:49] Best translation 1 : я тебе на@@ в@@ чу !
+[2020-05-14 21:12:49] Best translation 2 : ск@@ ільки ти ва@@ жи@@ ш ?
+[2020-05-14 21:12:49] Best translation 3 : что ?
+[2020-05-14 21:12:49] Best translation 4 : у тебя есть бо@@ м@@ ба или нар@@ ко@@ ти@@ ки ?
+[2020-05-14 21:12:49] Best translation 5 : - Я пер@@ ший ми@@ стер Пар@@ к@@ с ?
+[2020-05-14 21:12:49] Best translation 10 : так , Ан@@ ко ...
+[2020-05-14 21:12:49] Best translation 20 : він у с@@ ві@@ то@@ ви@@ й х@@ ло@@ пе@@ ц@@ ь .
+[2020-05-14 21:12:49] Best translation 40 : ми ви@@ к@@ ин@@ у@@ ли с@@ цен@@ а@@ ри@@ й і під@@ стре@@ ли@@ ли од@@ ного , я@@ кий я на@@ писа@@ в сь@@ о@@ год@@ ні в@@ ран@@ ці .
+[2020-05-14 21:12:49] Best translation 80 : гар@@ нен@@ ь@@ ка ...
+[2020-05-14 21:12:49] Best translation 160 : нет .
+[2020-05-14 21:12:49] Total translation time: 0.82668s
+[2020-05-14 21:12:51] [valid] Ep. 25 : Up. 13000 : lang/bleu-uk : 13.9 : no effect on early stopping
+[2020-05-14 21:12:51] [valid] Ep. 25 : Up. 13000 : translation : 13.9 : stalled 5 times
+[2020-05-14 21:12:51] Saving model weights and runtime parameters to model_en2uk/model.npz.best-ce-mean-words.npz
+[2020-05-14 21:12:52] [valid] Ep. 25 : Up. 13000 : ce-mean-words : 1.9103 : new best
+[2020-05-14 21:14:42] Ep. 25 : Up. 13100 : Sen. 661,792 : Cost 2.89708447 : Time 122.47s : 18848.93 words/s : L.r. 2.2103e-04
+[2020-05-14 21:14:42] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 21:14:44] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 21:14:47] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 21:16:42] Ep. 25 : Up. 13200 : Sen. 820,448 : Cost 2.90887332 : Time 119.94s : 19628.08 words/s : L.r. 2.2019e-04
+[2020-05-14 21:16:42] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 21:16:44] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 21:16:47] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 21:17:01] Seen 836180 samples
+[2020-05-14 21:17:01] Starting epoch 26
+[2020-05-14 21:17:01] [data] Shuffling files
+[2020-05-14 21:17:01] [data] Done reading 836180 sentences
+[2020-05-14 21:17:04] [data] Done shuffling 836180 sentences to temp files
+[2020-05-14 21:18:50] Ep. 26 : Up. 13300 : Sen. 149,396 : Cost 2.86104178 : Time 127.40s : 18832.54 words/s : L.r. 2.1936e-04
+[2020-05-14 21:18:50] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 21:18:52] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 21:18:54] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 21:20:48] Ep. 26 : Up. 13400 : Sen. 303,692 : Cost 2.87894464 : Time 118.57s : 19344.34 words/s : L.r. 2.1854e-04
+[2020-05-14 21:20:48] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 21:20:50] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 21:20:53] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 21:22:45] Ep. 26 : Up. 13500 : Sen. 460,800 : Cost 2.88228083 : Time 116.40s : 19663.90 words/s : L.r. 2.1773e-04
+[2020-05-14 21:22:45] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 21:22:47] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 21:22:49] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 21:24:49] Ep. 26 : Up. 13600 : Sen. 627,200 : Cost 2.88897419 : Time 124.78s : 19555.62 words/s : L.r. 2.1693e-04
+[2020-05-14 21:24:49] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 21:24:52] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 21:24:54] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 21:26:50] Ep. 26 : Up. 13700 : Sen. 787,200 : Cost 2.89235449 : Time 120.23s : 19509.85 words/s : L.r. 2.1614e-04
+[2020-05-14 21:26:50] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 21:26:52] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 21:26:54] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 21:27:32] Seen 836180 samples
+[2020-05-14 21:27:32] Starting epoch 27
+[2020-05-14 21:27:32] [data] Shuffling files
+[2020-05-14 21:27:32] [data] Done reading 836180 sentences
+[2020-05-14 21:27:35] [data] Done shuffling 836180 sentences to temp files
+[2020-05-14 21:28:49] Ep. 27 : Up. 13800 : Sen. 105,764 : Cost 2.86212087 : Time 119.50s : 18816.10 words/s : L.r. 2.1535e-04
+[2020-05-14 21:28:49] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 21:28:51] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 21:28:53] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 21:30:48] Ep. 27 : Up. 13900 : Sen. 264,498 : Cost 2.86568904 : Time 118.47s : 19743.10 words/s : L.r. 2.1458e-04
+[2020-05-14 21:30:48] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 21:30:50] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 21:30:52] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 21:32:45] Ep. 27 : Up. 14000 : Sen. 418,724 : Cost 2.87468600 : Time 117.25s : 19373.80 words/s : L.r. 2.1381e-04
+[2020-05-14 21:32:45] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 21:32:47] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 21:32:49] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 21:32:53] Translating validation set...
+[2020-05-14 21:32:54] Best translation 0 : То@@ ні .
+[2020-05-14 21:32:54] Best translation 1 : я тебе на@@ в@@ чу !
+[2020-05-14 21:32:54] Best translation 2 : ск@@ ільки ти ва@@ жи@@ ш ?
+[2020-05-14 21:32:54] Best translation 3 : что ?
+[2020-05-14 21:32:54] Best translation 4 : у тебя есть бо@@ м@@ ба или нар@@ ко@@ ти@@ ки ?
+[2020-05-14 21:32:54] Best translation 5 : - Я пер@@ ший ми@@ стер Пар@@ к@@ с ?
+[2020-05-14 21:32:54] Best translation 10 : так , Ан@@ ко ...
+[2020-05-14 21:32:54] Best translation 20 : він у с@@ ві@@ то@@ ви@@ й х@@ ло@@ пе@@ ц@@ ь .
+[2020-05-14 21:32:54] Best translation 40 : ми ви@@ к@@ ин@@ у@@ ли с@@ цен@@ а@@ ри@@ й і під@@ стре@@ ли@@ ли од@@ ного , я@@ кий я на@@ писа@@ в сь@@ о@@ год@@ ні в@@ ран@@ ці .
+[2020-05-14 21:32:54] Best translation 80 : гар@@ нен@@ ь@@ ка ...
+[2020-05-14 21:32:54] Best translation 160 : нет .
+[2020-05-14 21:32:54] Total translation time: 0.87419s
+[2020-05-14 21:32:55] [valid] Ep. 27 : Up. 14000 : lang/bleu-uk : 14.1 : no effect on early stopping
+[2020-05-14 21:32:55] [valid] Ep. 27 : Up. 14000 : translation : 14.1 : stalled 6 times
+[2020-05-14 21:32:55] Saving model weights and runtime parameters to model_en2uk/model.npz.best-ce-mean-words.npz
+[2020-05-14 21:32:57] [valid] Ep. 27 : Up. 14000 : ce-mean-words : 1.9019 : new best
+[2020-05-14 21:34:50] Ep. 27 : Up. 14100 : Sen. 579,412 : Cost 2.87411308 : Time 124.74s : 18916.57 words/s : L.r. 2.1305e-04
+[2020-05-14 21:34:50] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 21:34:52] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 21:34:54] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 21:36:48] Ep. 27 : Up. 14200 : Sen. 737,788 : Cost 2.88374162 : Time 118.00s : 19660.68 words/s : L.r. 2.1230e-04
+[2020-05-14 21:36:48] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 21:36:50] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 21:36:52] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 21:38:04] Seen 836180 samples
+[2020-05-14 21:38:04] Starting epoch 28
+[2020-05-14 21:38:04] [data] Shuffling files
+[2020-05-14 21:38:05] [data] Done reading 836180 sentences
+[2020-05-14 21:38:08] [data] Done shuffling 836180 sentences to temp files
+[2020-05-14 21:38:49] Ep. 28 : Up. 14300 : Sen. 59,004 : Cost 2.86757040 : Time 121.88s : 19023.83 words/s : L.r. 2.1155e-04
+[2020-05-14 21:38:49] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 21:38:52] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 21:38:54] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 21:40:51] Ep. 28 : Up. 14400 : Sen. 220,324 : Cost 2.85184956 : Time 121.38s : 19523.29 words/s : L.r. 2.1082e-04
+[2020-05-14 21:40:51] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 21:40:53] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 21:40:55] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 21:42:48] Ep. 28 : Up. 14500 : Sen. 377,176 : Cost 2.86132622 : Time 117.34s : 19618.11 words/s : L.r. 2.1009e-04
+[2020-05-14 21:42:48] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 21:42:50] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 21:42:52] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 21:44:50] Ep. 28 : Up. 14600 : Sen. 540,424 : Cost 2.86075926 : Time 121.57s : 19623.95 words/s : L.r. 2.0937e-04
+[2020-05-14 21:44:50] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 21:44:52] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 21:44:54] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 21:46:47] Ep. 28 : Up. 14700 : Sen. 697,600 : Cost 2.87340641 : Time 117.28s : 19714.71 words/s : L.r. 2.0866e-04
+[2020-05-14 21:46:47] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 21:46:49] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 21:46:51] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 21:48:33] Seen 836180 samples
+[2020-05-14 21:48:33] Starting epoch 29
+[2020-05-14 21:48:33] [data] Shuffling files
+[2020-05-14 21:48:34] [data] Done reading 836180 sentences
+[2020-05-14 21:48:37] [data] Done shuffling 836180 sentences to temp files
+[2020-05-14 21:48:50] Ep. 29 : Up. 14800 : Sen. 17,852 : Cost 2.87621307 : Time 123.46s : 18649.06 words/s : L.r. 2.0795e-04
+[2020-05-14 21:48:50] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 21:48:53] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 21:48:55] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 21:50:47] Ep. 29 : Up. 14900 : Sen. 175,572 : Cost 2.83476233 : Time 116.77s : 19813.50 words/s : L.r. 2.0725e-04
+[2020-05-14 21:50:47] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 21:50:49] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 21:50:52] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 21:52:50] Ep. 29 : Up. 15000 : Sen. 339,200 : Cost 2.84897399 : Time 122.63s : 19542.93 words/s : L.r. 2.0656e-04
+[2020-05-14 21:52:50] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 21:52:52] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 21:52:54] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 21:52:58] Translating validation set...
+[2020-05-14 21:52:59] Best translation 0 : То@@ ні .
+[2020-05-14 21:52:59] Best translation 1 : я тебе на@@ в@@ чу !
+[2020-05-14 21:52:59] Best translation 2 : ск@@ ільки ти ва@@ жи@@ ш ?
+[2020-05-14 21:52:59] Best translation 3 : что ?
+[2020-05-14 21:52:59] Best translation 4 : у тебя есть бо@@ м@@ ба или нар@@ ко@@ ти@@ ки ?
+[2020-05-14 21:52:59] Best translation 5 : - Я пер@@ ший мі@@ стер Пар@@ к@@ с ?
+[2020-05-14 21:52:59] Best translation 10 : так , Ан@@ ко ...
+[2020-05-14 21:52:59] Best translation 20 : він с@@ ві@@ то@@ ви@@ й х@@ ло@@ пе@@ ц@@ ь .
+[2020-05-14 21:52:59] Best translation 40 : ми ви@@ к@@ ин@@ у@@ ли с@@ цен@@ а@@ ри@@ й і під@@ стре@@ ли@@ ли од@@ ного , я@@ кий я на@@ писа@@ в сь@@ о@@ год@@ ні в@@ ран@@ ці .
+[2020-05-14 21:52:59] Best translation 80 : гар@@ нен@@ ь@@ ка ...
+[2020-05-14 21:52:59] Best translation 160 : нет .
+[2020-05-14 21:52:59] Total translation time: 0.78650s
+[2020-05-14 21:53:00] [valid] Ep. 29 : Up. 15000 : lang/bleu-uk : 14.6 : no effect on early stopping
+[2020-05-14 21:53:00] [valid] Ep. 29 : Up. 15000 : translation : 14.6 : stalled 7 times
+[2020-05-14 21:53:01] Saving model weights and runtime parameters to model_en2uk/model.npz.best-ce-mean-words.npz
+[2020-05-14 21:53:02] [valid] Ep. 29 : Up. 15000 : ce-mean-words : 1.89312 : new best
+[2020-05-14 21:54:57] Ep. 29 : Up. 15100 : Sen. 502,132 : Cost 2.85519886 : Time 126.99s : 18749.20 words/s : L.r. 2.0587e-04
+[2020-05-14 21:54:57] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 21:54:59] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 21:55:01] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 21:56:55] Ep. 29 : Up. 15200 : Sen. 659,200 : Cost 2.86098647 : Time 117.92s : 19589.62 words/s : L.r. 2.0520e-04
+[2020-05-14 21:56:55] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 21:56:57] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 21:56:59] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 21:58:48] Ep. 29 : Up. 15300 : Sen. 808,992 : Cost 2.86924815 : Time 113.30s : 19325.09 words/s : L.r. 2.0452e-04
+[2020-05-14 21:58:48] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 21:58:50] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 21:58:52] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 21:59:16] Seen 836180 samples
+[2020-05-14 21:59:16] Starting epoch 30
+[2020-05-14 21:59:16] [data] Shuffling files
+[2020-05-14 21:59:17] [data] Done reading 836180 sentences
+[2020-05-14 21:59:20] [data] Done shuffling 836180 sentences to temp files
+[2020-05-14 22:00:49] Ep. 30 : Up. 15400 : Sen. 128,000 : Cost 2.83566284 : Time 121.15s : 18847.13 words/s : L.r. 2.0386e-04
+[2020-05-14 22:00:49] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 22:00:51] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 22:00:54] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 22:02:44] Ep. 30 : Up. 15500 : Sen. 281,600 : Cost 2.83994699 : Time 114.50s : 19686.81 words/s : L.r. 2.0320e-04
+[2020-05-14 22:02:44] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 22:02:46] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 22:02:48] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 22:04:41] Ep. 30 : Up. 15600 : Sen. 437,792 : Cost 2.85485363 : Time 117.46s : 19702.10 words/s : L.r. 2.0255e-04
+[2020-05-14 22:04:41] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 22:04:43] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 22:04:46] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 22:06:39] Ep. 30 : Up. 15700 : Sen. 595,200 : Cost 2.84865117 : Time 118.30s : 19392.37 words/s : L.r. 2.0190e-04
+[2020-05-14 22:06:39] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 22:06:42] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 22:06:44] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 22:08:43] Ep. 30 : Up. 15800 : Sen. 761,600 : Cost 2.85704684 : Time 123.77s : 19690.33 words/s : L.r. 2.0126e-04
+[2020-05-14 22:08:43] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 22:08:45] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 22:08:48] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 22:09:44] Seen 836180 samples
+[2020-05-14 22:09:44] Starting epoch 31
+[2020-05-14 22:09:44] [data] Shuffling files
+[2020-05-14 22:09:44] [data] Done reading 836180 sentences
+[2020-05-14 22:09:48] [data] Done shuffling 836180 sentences to temp files
+[2020-05-14 22:10:45] Ep. 31 : Up. 15900 : Sen. 79,888 : Cost 2.84171367 : Time 121.42s : 18832.41 words/s : L.r. 2.0063e-04
+[2020-05-14 22:10:45] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 22:10:47] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 22:10:49] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 22:12:46] Ep. 31 : Up. 16000 : Sen. 244,512 : Cost 2.82203507 : Time 121.47s : 19707.56 words/s : L.r. 2.0000e-04
+[2020-05-14 22:12:46] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 22:12:48] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 22:12:50] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 22:12:55] Translating validation set...
+[2020-05-14 22:12:55] Best translation 0 : То@@ ні .
+[2020-05-14 22:12:55] Best translation 1 : я тебе на@@ в@@ чу !
+[2020-05-14 22:12:55] Best translation 2 : ск@@ ільки ти ва@@ жи@@ ш ?
+[2020-05-14 22:12:55] Best translation 3 : что ?
+[2020-05-14 22:12:55] Best translation 4 : у тебя есть бо@@ м@@ ба или нар@@ ко@@ ти@@ ки ?
+[2020-05-14 22:12:55] Best translation 5 : - Я пер@@ ший мі@@ стер Пар@@ к@@ с ?
+[2020-05-14 22:12:55] Best translation 10 : так , Ан@@ ко ...
+[2020-05-14 22:12:55] Best translation 20 : він с@@ ві@@ то@@ ви@@ й х@@ ло@@ пе@@ ц@@ ь .
+[2020-05-14 22:12:55] Best translation 40 : ми ви@@ к@@ ин@@ у@@ ли с@@ цен@@ а@@ ри@@ й і під@@ стре@@ ли@@ ли од@@ ного , я@@ кий я на@@ писа@@ в сь@@ о@@ год@@ ні в@@ ран@@ ці .
+[2020-05-14 22:12:55] Best translation 80 : гар@@ нен@@ ь@@ ка ...
+[2020-05-14 22:12:55] Best translation 160 : нет .
+[2020-05-14 22:12:55] Total translation time: 0.75871s
+[2020-05-14 22:12:57] [valid] Ep. 31 : Up. 16000 : lang/bleu-uk : 13.8 : no effect on early stopping
+[2020-05-14 22:12:57] [valid] Ep. 31 : Up. 16000 : translation : 13.8 : stalled 8 times
+[2020-05-14 22:12:57] Saving model weights and runtime parameters to model_en2uk/model.npz.best-ce-mean-words.npz
+[2020-05-14 22:12:58] [valid] Ep. 31 : Up. 16000 : ce-mean-words : 1.88759 : new best
+[2020-05-14 22:14:54] Ep. 31 : Up. 16100 : Sen. 407,008 : Cost 2.84320045 : Time 127.78s : 18798.59 words/s : L.r. 1.9938e-04
+[2020-05-14 22:14:54] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 22:14:56] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 22:14:58] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 22:16:54] Ep. 31 : Up. 16200 : Sen. 571,559 : Cost 2.83928609 : Time 120.56s : 19847.31 words/s : L.r. 1.9876e-04
+[2020-05-14 22:16:54] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 22:16:57] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 22:16:59] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 22:18:52] Ep. 31 : Up. 16300 : Sen. 725,960 : Cost 2.85121322 : Time 117.11s : 19459.87 words/s : L.r. 1.9815e-04
+[2020-05-14 22:18:52] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 22:18:54] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 22:18:56] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 22:20:17] Seen 836180 samples
+[2020-05-14 22:20:17] Starting epoch 32
+[2020-05-14 22:20:17] [data] Shuffling files
+[2020-05-14 22:20:17] [data] Done reading 836180 sentences
+[2020-05-14 22:20:21] [data] Done shuffling 836180 sentences to temp files
+[2020-05-14 22:20:51] Ep. 32 : Up. 16400 : Sen. 42,396 : Cost 2.84210873 : Time 119.01s : 18869.21 words/s : L.r. 1.9755e-04
+[2020-05-14 22:20:51] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 22:20:53] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 22:20:55] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 22:22:49] Ep. 32 : Up. 16500 : Sen. 200,992 : Cost 2.81778908 : Time 118.75s : 19505.23 words/s : L.r. 1.9695e-04
+[2020-05-14 22:22:49] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 22:22:52] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 22:22:54] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 22:24:47] Ep. 32 : Up. 16600 : Sen. 359,384 : Cost 2.82327938 : Time 117.52s : 19737.05 words/s : L.r. 1.9635e-04
+[2020-05-14 22:24:47] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 22:24:49] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 22:24:51] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 22:26:45] Ep. 32 : Up. 16700 : Sen. 518,400 : Cost 2.83616161 : Time 118.64s : 19709.55 words/s : L.r. 1.9576e-04
+[2020-05-14 22:26:45] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 22:26:48] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 22:26:50] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 22:28:46] Ep. 32 : Up. 16800 : Sen. 677,676 : Cost 2.84499574 : Time 120.08s : 19523.08 words/s : L.r. 1.9518e-04
+[2020-05-14 22:28:46] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 22:28:48] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 22:28:50] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 22:30:42] Ep. 32 : Up. 16900 : Sen. 834,254 : Cost 2.84332943 : Time 116.00s : 19754.29 words/s : L.r. 1.9460e-04
+[2020-05-14 22:30:42] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 22:30:44] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 22:30:46] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 22:30:51] Seen 836180 samples
+[2020-05-14 22:30:51] Starting epoch 33
+[2020-05-14 22:30:51] [data] Shuffling files
+[2020-05-14 22:30:52] [data] Done reading 836180 sentences
+[2020-05-14 22:30:55] [data] Done shuffling 836180 sentences to temp files
+[2020-05-14 22:32:45] Ep. 33 : Up. 17000 : Sen. 154,584 : Cost 2.81023645 : Time 123.36s : 18792.48 words/s : L.r. 1.9403e-04
+[2020-05-14 22:32:45] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 22:32:47] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 22:32:49] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 22:32:54] Translating validation set...
+[2020-05-14 22:32:54] Best translation 0 : То@@ ні .
+[2020-05-14 22:32:54] Best translation 1 : я тебе на@@ в@@ чу !
+[2020-05-14 22:32:54] Best translation 2 : ск@@ ільки ти ва@@ жи@@ ш ?
+[2020-05-14 22:32:54] Best translation 3 : что ?
+[2020-05-14 22:32:54] Best translation 4 : у тебя есть бо@@ м@@ ба или нар@@ ко@@ ти@@ ки ?
+[2020-05-14 22:32:54] Best translation 5 : - Я пер@@ ший мі@@ стер Пар@@ к@@ с ?
+[2020-05-14 22:32:54] Best translation 10 : так , Ан@@ ко ...
+[2020-05-14 22:32:54] Best translation 20 : він с@@ ві@@ то@@ ви@@ й х@@ ло@@ пе@@ ц@@ ь .
+[2020-05-14 22:32:54] Best translation 40 : ми ви@@ к@@ ин@@ у@@ ли с@@ цен@@ а@@ ри@@ й і с@@ цен@@ ар@@ і@@ й , я@@ кий я на@@ писа@@ в сь@@ о@@ год@@ ні в@@ ран@@ ці .
+[2020-05-14 22:32:54] Best translation 80 : гар@@ нен@@ ь@@ ка ...
+[2020-05-14 22:32:54] Best translation 160 : нет .
+[2020-05-14 22:32:54] Total translation time: 0.79973s
+[2020-05-14 22:32:56] [valid] Ep. 33 : Up. 17000 : lang/bleu-uk : 13.9 : no effect on early stopping
+[2020-05-14 22:32:56] [valid] Ep. 33 : Up. 17000 : translation : 13.9 : stalled 9 times
+[2020-05-14 22:32:56] Saving model weights and runtime parameters to model_en2uk/model.npz.best-ce-mean-words.npz
+[2020-05-14 22:32:57] [valid] Ep. 33 : Up. 17000 : ce-mean-words : 1.88451 : new best
+[2020-05-14 22:34:50] Ep. 33 : Up. 17100 : Sen. 313,600 : Cost 2.81299257 : Time 124.84s : 18536.60 words/s : L.r. 1.9346e-04
+[2020-05-14 22:34:50] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 22:34:52] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 22:34:54] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 22:36:46] Ep. 33 : Up. 17200 : Sen. 469,460 : Cost 2.82149911 : Time 116.60s : 19496.98 words/s : L.r. 1.9290e-04
+[2020-05-14 22:36:46] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 22:36:49] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 22:36:51] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 22:38:43] Ep. 33 : Up. 17300 : Sen. 626,216 : Cost 2.82969308 : Time 116.62s : 19686.91 words/s : L.r. 1.9234e-04
+[2020-05-14 22:38:43] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 22:38:45] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 22:38:48] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 22:40:43] Ep. 33 : Up. 17400 : Sen. 787,200 : Cost 2.83833122 : Time 120.02s : 19816.85 words/s : L.r. 1.9179e-04
+[2020-05-14 22:40:43] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 22:40:45] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 22:40:48] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 22:41:26] Seen 836180 samples
+[2020-05-14 22:41:26] Starting epoch 34
+[2020-05-14 22:41:26] [data] Shuffling files
+[2020-05-14 22:41:26] [data] Done reading 836180 sentences
+[2020-05-14 22:41:29] [data] Done shuffling 836180 sentences to temp files
+[2020-05-14 22:42:47] Ep. 34 : Up. 17500 : Sen. 111,392 : Cost 2.81262612 : Time 123.97s : 18923.65 words/s : L.r. 1.9124e-04
+[2020-05-14 22:42:47] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 22:42:49] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 22:42:52] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 22:44:46] Ep. 34 : Up. 17600 : Sen. 270,996 : Cost 2.80872655 : Time 119.22s : 19693.68 words/s : L.r. 1.9069e-04
+[2020-05-14 22:44:46] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 22:44:48] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 22:44:51] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 22:46:51] Ep. 34 : Up. 17700 : Sen. 436,604 : Cost 2.81522155 : Time 124.69s : 19593.93 words/s : L.r. 1.9015e-04
+[2020-05-14 22:46:51] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 22:46:53] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 22:46:55] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 22:48:49] Ep. 34 : Up. 17800 : Sen. 597,792 : Cost 2.81748533 : Time 118.55s : 19714.68 words/s : L.r. 1.8962e-04
+[2020-05-14 22:48:49] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 22:48:52] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 22:48:54] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 22:50:52] Ep. 34 : Up. 17900 : Sen. 756,304 : Cost 2.83453369 : Time 122.14s : 19318.87 words/s : L.r. 1.8909e-04
+[2020-05-14 22:50:52] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 22:50:54] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 22:50:56] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 22:51:55] Seen 836180 samples
+[2020-05-14 22:51:55] Starting epoch 35
+[2020-05-14 22:51:55] [data] Shuffling files
+[2020-05-14 22:51:55] [data] Done reading 836180 sentences
+[2020-05-14 22:51:58] [data] Done shuffling 836180 sentences to temp files
+[2020-05-14 22:52:56] Ep. 35 : Up. 18000 : Sen. 83,200 : Cost 2.80663466 : Time 124.12s : 19131.73 words/s : L.r. 1.8856e-04
+[2020-05-14 22:52:56] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 22:52:58] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 22:53:00] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 22:53:05] Translating validation set...
+[2020-05-14 22:53:05] Best translation 0 : То@@ ні .
+[2020-05-14 22:53:05] Best translation 1 : я тебе на@@ в@@ чу !
+[2020-05-14 22:53:05] Best translation 2 : ск@@ ільки ти ва@@ жи@@ ш ?
+[2020-05-14 22:53:05] Best translation 3 : что ?
+[2020-05-14 22:53:05] Best translation 4 : у тебя есть бо@@ м@@ ба или нар@@ ко@@ ти@@ ки ?
+[2020-05-14 22:53:05] Best translation 5 : - Я пер@@ ший мі@@ стер Пар@@ к@@ с ?
+[2020-05-14 22:53:05] Best translation 10 : так , Ан@@ ко ...
+[2020-05-14 22:53:05] Best translation 20 : він с@@ ві@@ то@@ ви@@ й х@@ ло@@ пе@@ ц@@ ь .
+[2020-05-14 22:53:05] Best translation 40 : ми ви@@ к@@ ин@@ у@@ ли с@@ цен@@ а@@ ри@@ й і с@@ цен@@ ар@@ і@@ й , я@@ кий я на@@ писа@@ в сь@@ о@@ год@@ ні в@@ ран@@ ці .
+[2020-05-14 22:53:05] Best translation 80 : гар@@ нен@@ ь@@ ка ...
+[2020-05-14 22:53:05] Best translation 160 : нет .
+[2020-05-14 22:53:05] Total translation time: 0.86755s
+[2020-05-14 22:53:07] [valid] Ep. 35 : Up. 18000 : lang/bleu-uk : 15.0 : no effect on early stopping
+[2020-05-14 22:53:07] [valid] Ep. 35 : Up. 18000 : translation : 15 : stalled 10 times
+[2020-05-14 22:53:07] Saving model weights and runtime parameters to model_en2uk/model.npz.best-ce-mean-words.npz
+[2020-05-14 22:53:08] [valid] Ep. 35 : Up. 18000 : ce-mean-words : 1.87929 : new best
+[2020-05-14 22:54:57] Ep. 35 : Up. 18100 : Sen. 239,392 : Cost 2.79613447 : Time 121.47s : 18836.56 words/s : L.r. 1.8804e-04
+[2020-05-14 22:54:57] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 22:54:59] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 22:55:02] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 22:56:57] Ep. 35 : Up. 18200 : Sen. 396,800 : Cost 2.81401587 : Time 119.44s : 19420.91 words/s : L.r. 1.8752e-04
+[2020-05-14 22:56:57] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 22:56:59] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 22:57:01] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 22:58:54] Ep. 35 : Up. 18300 : Sen. 551,984 : Cost 2.81783175 : Time 117.15s : 19366.86 words/s : L.r. 1.8701e-04
+[2020-05-14 22:58:54] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 22:58:56] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 22:58:58] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 23:00:54] Ep. 35 : Up. 18400 : Sen. 710,400 : Cost 2.82729220 : Time 120.12s : 19407.03 words/s : L.r. 1.8650e-04
+[2020-05-14 23:00:54] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 23:00:56] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 23:00:58] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 23:02:30] Seen 836180 samples
+[2020-05-14 23:02:30] Starting epoch 36
+[2020-05-14 23:02:30] [data] Shuffling files
+[2020-05-14 23:02:30] [data] Done reading 836180 sentences
+[2020-05-14 23:02:34] [data] Done shuffling 836180 sentences to temp files
+[2020-05-14 23:02:58] Ep. 36 : Up. 18500 : Sen. 33,788 : Cost 2.81728625 : Time 124.26s : 18885.54 words/s : L.r. 1.8600e-04
+[2020-05-14 23:02:58] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 23:03:00] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 23:03:03] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 23:04:53] Ep. 36 : Up. 18600 : Sen. 185,600 : Cost 2.78893924 : Time 114.64s : 19430.02 words/s : L.r. 1.8550e-04
+[2020-05-14 23:04:53] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 23:04:55] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 23:04:57] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 23:06:54] Ep. 36 : Up. 18700 : Sen. 345,600 : Cost 2.80100012 : Time 121.56s : 19291.57 words/s : L.r. 1.8500e-04
+[2020-05-14 23:06:54] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 23:06:57] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 23:06:59] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 23:08:53] Ep. 36 : Up. 18800 : Sen. 505,600 : Cost 2.81036925 : Time 118.68s : 19763.17 words/s : L.r. 1.8451e-04
+[2020-05-14 23:08:53] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 23:08:55] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 23:08:58] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 23:10:55] Ep. 36 : Up. 18900 : Sen. 668,820 : Cost 2.81192446 : Time 122.09s : 19576.00 words/s : L.r. 1.8402e-04
+[2020-05-14 23:10:55] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 23:10:57] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 23:11:00] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 23:12:51] Ep. 36 : Up. 19000 : Sen. 824,496 : Cost 2.81481171 : Time 115.51s : 19683.19 words/s : L.r. 1.8353e-04
+[2020-05-14 23:12:51] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 23:12:53] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 23:12:55] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 23:12:59] Translating validation set...
+[2020-05-14 23:13:00] Best translation 0 : То@@ ні .
+[2020-05-14 23:13:00] Best translation 1 : я тебе на@@ в@@ чу !
+[2020-05-14 23:13:00] Best translation 2 : ск@@ ільки ти ва@@ жи@@ ш ?
+[2020-05-14 23:13:00] Best translation 3 : что ?
+[2020-05-14 23:13:00] Best translation 4 : у тебя есть бо@@ м@@ ба или нар@@ ко@@ ти@@ ки ?
+[2020-05-14 23:13:00] Best translation 5 : - Я пер@@ ший мі@@ стер Пар@@ к@@ с ?
+[2020-05-14 23:13:00] Best translation 10 : так , Ан@@ ко ...
+[2020-05-14 23:13:00] Best translation 20 : він с@@ ві@@ то@@ ви@@ й х@@ ло@@ пе@@ ц@@ ь .
+[2020-05-14 23:13:00] Best translation 40 : ми ви@@ к@@ ин@@ у@@ ли с@@ цен@@ а@@ ри@@ й і с@@ цен@@ ар@@ і@@ й , я@@ кий я на@@ писа@@ в сь@@ о@@ год@@ ні в@@ ран@@ ці .
+[2020-05-14 23:13:00] Best translation 80 : гар@@ нен@@ ь@@ ка ...
+[2020-05-14 23:13:00] Best translation 160 : нет .
+[2020-05-14 23:13:00] Total translation time: 0.83890s
+[2020-05-14 23:13:02] [valid] Ep. 36 : Up. 19000 : lang/bleu-uk : 14.8 : no effect on early stopping
+[2020-05-14 23:13:02] [valid] Ep. 36 : Up. 19000 : translation : 14.8 : stalled 11 times
+[2020-05-14 23:13:02] Saving model weights and runtime parameters to model_en2uk/model.npz.best-ce-mean-words.npz
+[2020-05-14 23:13:03] [valid] Ep. 36 : Up. 19000 : ce-mean-words : 1.87449 : new best
+[2020-05-14 23:13:13] Seen 836180 samples
+[2020-05-14 23:13:13] Starting epoch 37
+[2020-05-14 23:13:13] [data] Shuffling files
+[2020-05-14 23:13:13] [data] Done reading 836180 sentences
+[2020-05-14 23:13:17] [data] Done shuffling 836180 sentences to temp files
+[2020-05-14 23:14:59] Ep. 37 : Up. 19100 : Sen. 143,452 : Cost 2.78959846 : Time 127.93s : 17963.44 words/s : L.r. 1.8305e-04
+[2020-05-14 23:14:59] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 23:15:01] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 23:15:03] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 23:16:56] Ep. 37 : Up. 19200 : Sen. 300,800 : Cost 2.79379654 : Time 117.30s : 19657.02 words/s : L.r. 1.8257e-04
+[2020-05-14 23:16:56] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 23:16:58] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 23:17:01] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 23:18:54] Ep. 37 : Up. 19300 : Sen. 456,596 : Cost 2.80452561 : Time 117.96s : 19439.64 words/s : L.r. 1.8210e-04
+[2020-05-14 23:18:54] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 23:18:56] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 23:18:58] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 23:20:55] Ep. 37 : Up. 19400 : Sen. 617,712 : Cost 2.80030417 : Time 121.44s : 19319.88 words/s : L.r. 1.8163e-04
+[2020-05-14 23:20:55] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 23:20:58] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 23:21:00] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 23:22:57] Ep. 37 : Up. 19500 : Sen. 779,396 : Cost 2.81268525 : Time 121.92s : 19402.20 words/s : L.r. 1.8116e-04
+[2020-05-14 23:22:57] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 23:22:59] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 23:23:02] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 23:23:46] Seen 836180 samples
+[2020-05-14 23:23:46] Starting epoch 38
+[2020-05-14 23:23:46] [data] Shuffling files
+[2020-05-14 23:23:46] [data] Done reading 836180 sentences
+[2020-05-14 23:23:50] [data] Done shuffling 836180 sentences to temp files
+[2020-05-14 23:24:57] Ep. 38 : Up. 19600 : Sen. 96,000 : Cost 2.79018164 : Time 119.88s : 18830.46 words/s : L.r. 1.8070e-04
+[2020-05-14 23:24:57] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 23:24:59] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 23:25:02] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 23:26:55] Ep. 38 : Up. 19700 : Sen. 253,804 : Cost 2.78487563 : Time 118.05s : 19660.18 words/s : L.r. 1.8024e-04
+[2020-05-14 23:26:55] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 23:26:57] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 23:27:00] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 23:28:50] Ep. 38 : Up. 19800 : Sen. 408,976 : Cost 2.79933834 : Time 114.89s : 19661.53 words/s : L.r. 1.7979e-04
+[2020-05-14 23:28:50] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 23:28:52] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 23:28:54] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 23:30:50] Ep. 38 : Up. 19900 : Sen. 567,920 : Cost 2.79992986 : Time 119.79s : 19448.89 words/s : L.r. 1.7933e-04
+[2020-05-14 23:30:50] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 23:30:52] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 23:30:54] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 23:32:48] Ep. 38 : Up. 20000 : Sen. 725,396 : Cost 2.80404902 : Time 118.40s : 19565.92 words/s : L.r. 1.7889e-04
+[2020-05-14 23:32:48] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 23:32:50] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 23:32:53] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 23:32:57] Translating validation set...
+[2020-05-14 23:32:57] Best translation 0 : То@@ ні .
+[2020-05-14 23:32:58] Best translation 1 : я тебе на@@ в@@ чу !
+[2020-05-14 23:32:58] Best translation 2 : ск@@ ільки ти ва@@ жи@@ ш ?
+[2020-05-14 23:32:58] Best translation 3 : что ?
+[2020-05-14 23:32:58] Best translation 4 : у тебя есть бо@@ м@@ ба или нар@@ ко@@ ти@@ ки ?
+[2020-05-14 23:32:58] Best translation 5 : - Я пер@@ ший мі@@ стер Пар@@ к@@ с ?
+[2020-05-14 23:32:58] Best translation 10 : так , Ан@@ ко ...
+[2020-05-14 23:32:58] Best translation 20 : він с@@ ві@@ то@@ ви@@ й х@@ ло@@ пе@@ ц@@ ь .
+[2020-05-14 23:32:58] Best translation 40 : ми ви@@ к@@ ин@@ у@@ ли с@@ цен@@ а@@ ри@@ й і с@@ цен@@ ар@@ і@@ й , я@@ кий я на@@ писа@@ в сь@@ о@@ год@@ ні в@@ ран@@ ці .
+[2020-05-14 23:32:58] Best translation 80 : гар@@ нен@@ ь@@ ка ...
+[2020-05-14 23:32:58] Best translation 160 : нет .
+[2020-05-14 23:32:58] Total translation time: 0.92081s
+[2020-05-14 23:32:59] [valid] Ep. 38 : Up. 20000 : lang/bleu-uk : 14.3 : no effect on early stopping
+[2020-05-14 23:32:59] [valid] Ep. 38 : Up. 20000 : translation : 14.3 : stalled 12 times
+[2020-05-14 23:32:59] Saving model weights and runtime parameters to model_en2uk/model.npz.best-ce-mean-words.npz
+[2020-05-14 23:33:01] [valid] Ep. 38 : Up. 20000 : ce-mean-words : 1.87317 : new best
+[2020-05-14 23:34:19] Seen 836180 samples
+[2020-05-14 23:34:19] Starting epoch 39
+[2020-05-14 23:34:19] [data] Shuffling files
+[2020-05-14 23:34:19] [data] Done reading 836180 sentences
+[2020-05-14 23:34:22] [data] Done shuffling 836180 sentences to temp files
+[2020-05-14 23:34:54] Ep. 39 : Up. 20100 : Sen. 45,632 : Cost 2.79107165 : Time 125.95s : 18281.64 words/s : L.r. 1.7844e-04
+[2020-05-14 23:34:54] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 23:34:56] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 23:34:59] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 23:36:51] Ep. 39 : Up. 20200 : Sen. 199,384 : Cost 2.78237867 : Time 117.12s : 19429.02 words/s : L.r. 1.7800e-04
+[2020-05-14 23:36:51] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 23:36:53] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 23:36:56] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 23:38:51] Ep. 39 : Up. 20300 : Sen. 361,712 : Cost 2.78145289 : Time 120.23s : 19513.44 words/s : L.r. 1.7756e-04
+[2020-05-14 23:38:51] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 23:38:54] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 23:38:56] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 23:40:45] Ep. 39 : Up. 20400 : Sen. 510,752 : Cost 2.79659128 : Time 113.33s : 19417.60 words/s : L.r. 1.7712e-04
+[2020-05-14 23:40:45] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 23:40:47] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 23:40:49] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 23:42:43] Ep. 39 : Up. 20500 : Sen. 666,816 : Cost 2.79538369 : Time 117.83s : 19591.86 words/s : L.r. 1.7669e-04
+[2020-05-14 23:42:43] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 23:42:45] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 23:42:47] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 23:44:46] Ep. 39 : Up. 20600 : Sen. 834,261 : Cost 2.80322146 : Time 123.61s : 19744.88 words/s : L.r. 1.7626e-04
+[2020-05-14 23:44:46] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 23:44:48] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 23:44:51] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 23:44:56] Seen 836180 samples
+[2020-05-14 23:44:56] Starting epoch 40
+[2020-05-14 23:44:56] [data] Shuffling files
+[2020-05-14 23:44:56] [data] Done reading 836180 sentences
+[2020-05-14 23:45:00] [data] Done shuffling 836180 sentences to temp files
+[2020-05-14 23:46:50] Ep. 40 : Up. 20700 : Sen. 158,896 : Cost 2.76480484 : Time 123.98s : 19040.18 words/s : L.r. 1.7583e-04
+[2020-05-14 23:46:50] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 23:46:52] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 23:46:55] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 23:48:47] Ep. 40 : Up. 20800 : Sen. 316,192 : Cost 2.77714062 : Time 117.22s : 19629.14 words/s : L.r. 1.7541e-04
+[2020-05-14 23:48:47] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 23:48:50] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 23:48:52] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 23:50:46] Ep. 40 : Up. 20900 : Sen. 470,500 : Cost 2.79240727 : Time 118.41s : 19326.27 words/s : L.r. 1.7499e-04
+[2020-05-14 23:50:46] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 23:50:48] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 23:50:50] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 23:52:43] Ep. 40 : Up. 21000 : Sen. 625,147 : Cost 2.78908992 : Time 116.85s : 19274.70 words/s : L.r. 1.7457e-04
+[2020-05-14 23:52:43] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 23:52:45] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 23:52:47] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 23:52:51] Translating validation set...
+[2020-05-14 23:52:52] Best translation 0 : То@@ ні .
+[2020-05-14 23:52:52] Best translation 1 : я тебе на@@ в@@ чу !
+[2020-05-14 23:52:52] Best translation 2 : ск@@ ільки ти ва@@ жи@@ ш ?
+[2020-05-14 23:52:52] Best translation 3 : что ?
+[2020-05-14 23:52:52] Best translation 4 : у тебя есть бо@@ м@@ ба или нар@@ ко@@ ти@@ ки ?
+[2020-05-14 23:52:52] Best translation 5 : - Я пер@@ ший мі@@ стер Пар@@ к@@ с ?
+[2020-05-14 23:52:52] Best translation 10 : так , Ан@@ ко ...
+[2020-05-14 23:52:52] Best translation 20 : він с@@ ві@@ то@@ ви@@ й х@@ ло@@ пе@@ ц@@ ь .
+[2020-05-14 23:52:52] Best translation 40 : ми ви@@ к@@ ин@@ у@@ ли с@@ цен@@ а@@ ри@@ й і с@@ цен@@ ар@@ і@@ й я на@@ писа@@ в сь@@ о@@ год@@ ні в@@ ран@@ ці я на@@ писа@@ в сь@@ о@@ год@@ ні в@@ ран@@ ці .
+[2020-05-14 23:52:52] Best translation 80 : гар@@ нен@@ ь@@ ка ...
+[2020-05-14 23:52:52] Best translation 160 : нет .
+[2020-05-14 23:52:52] Total translation time: 0.85065s
+[2020-05-14 23:52:54] [valid] Ep. 40 : Up. 21000 : lang/bleu-uk : 14.5 : no effect on early stopping
+[2020-05-14 23:52:54] [valid] Ep. 40 : Up. 21000 : translation : 14.5 : stalled 13 times
+[2020-05-14 23:52:54] Saving model weights and runtime parameters to model_en2uk/model.npz.best-ce-mean-words.npz
+[2020-05-14 23:52:55] [valid] Ep. 40 : Up. 21000 : ce-mean-words : 1.87009 : new best
+[2020-05-14 23:54:45] Ep. 40 : Up. 21100 : Sen. 781,364 : Cost 2.80035877 : Time 122.11s : 18909.95 words/s : L.r. 1.7416e-04
+[2020-05-14 23:54:45] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 23:54:47] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 23:54:49] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 23:55:31] Seen 836180 samples
+[2020-05-14 23:55:31] Starting epoch 41
+[2020-05-14 23:55:31] [data] Shuffling files
+[2020-05-14 23:55:31] [data] Done reading 836180 sentences
+[2020-05-14 23:55:34] [data] Done shuffling 836180 sentences to temp files
+[2020-05-14 23:56:47] Ep. 41 : Up. 21200 : Sen. 104,188 : Cost 2.77322245 : Time 121.92s : 19072.32 words/s : L.r. 1.7375e-04
+[2020-05-14 23:56:47] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 23:56:49] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 23:56:51] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-14 23:58:40] Ep. 41 : Up. 21300 : Sen. 255,264 : Cost 2.77351332 : Time 113.52s : 19539.99 words/s : L.r. 1.7334e-04
+[2020-05-14 23:58:40] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-14 23:58:43] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-14 23:58:45] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-15 00:00:40] Ep. 41 : Up. 21400 : Sen. 414,896 : Cost 2.77548432 : Time 119.61s : 19414.79 words/s : L.r. 1.7294e-04
+[2020-05-15 00:00:40] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-15 00:00:42] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-15 00:00:44] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-15 00:02:41] Ep. 41 : Up. 21500 : Sen. 574,200 : Cost 2.78286338 : Time 120.63s : 19358.80 words/s : L.r. 1.7253e-04
+[2020-05-15 00:02:41] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-15 00:02:43] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-15 00:02:45] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-15 00:04:39] Ep. 41 : Up. 21600 : Sen. 730,584 : Cost 2.79626250 : Time 118.17s : 19713.71 words/s : L.r. 1.7213e-04
+[2020-05-15 00:04:39] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-15 00:04:41] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-15 00:04:43] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-15 00:06:02] Seen 836180 samples
+[2020-05-15 00:06:02] Starting epoch 42
+[2020-05-15 00:06:02] [data] Shuffling files
+[2020-05-15 00:06:02] [data] Done reading 836180 sentences
+[2020-05-15 00:06:05] [data] Done shuffling 836180 sentences to temp files
+[2020-05-15 00:06:43] Ep. 42 : Up. 21700 : Sen. 54,708 : Cost 2.78254938 : Time 124.00s : 18820.72 words/s : L.r. 1.7174e-04
+[2020-05-15 00:06:43] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-15 00:06:45] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-15 00:06:47] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-15 00:08:42] Ep. 42 : Up. 21800 : Sen. 214,408 : Cost 2.76565266 : Time 119.60s : 19668.36 words/s : L.r. 1.7134e-04
+[2020-05-15 00:08:42] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-15 00:08:45] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-15 00:08:47] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-15 00:10:44] Ep. 42 : Up. 21900 : Sen. 375,404 : Cost 2.77213383 : Time 122.01s : 19393.08 words/s : L.r. 1.7095e-04
+[2020-05-15 00:10:44] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-15 00:10:47] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-15 00:10:49] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-15 00:12:43] Ep. 42 : Up. 22000 : Sen. 535,008 : Cost 2.77561641 : Time 119.00s : 19689.37 words/s : L.r. 1.7056e-04
+[2020-05-15 00:12:43] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-15 00:12:46] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-15 00:12:48] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-15 00:12:52] Translating validation set...
+[2020-05-15 00:12:52] Best translation 0 : То@@ ні .
+[2020-05-15 00:12:53] Best translation 1 : я тебе на@@ в@@ чу !
+[2020-05-15 00:12:53] Best translation 2 : ск@@ ільки ти ва@@ жи@@ ш ?
+[2020-05-15 00:12:53] Best translation 3 : что ?
+[2020-05-15 00:12:53] Best translation 4 : у тебя есть бо@@ м@@ ба или нар@@ ко@@ ти@@ ки ?
+[2020-05-15 00:12:53] Best translation 5 : - Я пер@@ ший мі@@ стер Пар@@ к@@ с ?
+[2020-05-15 00:12:53] Best translation 10 : так , Ан@@ ко ...
+[2020-05-15 00:12:53] Best translation 20 : він с@@ ві@@ то@@ ви@@ й х@@ ло@@ пе@@ ц@@ ь .
+[2020-05-15 00:12:53] Best translation 40 : ми ви@@ к@@ ин@@ у@@ ли с@@ цен@@ а@@ ри@@ й і с@@ цен@@ ар@@ і@@ й я на@@ писа@@ в сь@@ о@@ год@@ ні в@@ ран@@ ці я на@@ писа@@ в сь@@ о@@ год@@ ні в@@ ран@@ ці .
+[2020-05-15 00:12:53] Best translation 80 : гар@@ нен@@ ь@@ ка ...
+[2020-05-15 00:12:53] Best translation 160 : нет .
+[2020-05-15 00:12:53] Total translation time: 0.83578s
+[2020-05-15 00:12:54] [valid] Ep. 42 : Up. 22000 : lang/bleu-uk : 14.7 : no effect on early stopping
+[2020-05-15 00:12:54] [valid] Ep. 42 : Up. 22000 : translation : 14.7 : stalled 14 times
+[2020-05-15 00:12:54] Saving model weights and runtime parameters to model_en2uk/model.npz.best-ce-mean-words.npz
+[2020-05-15 00:12:56] [valid] Ep. 42 : Up. 22000 : ce-mean-words : 1.86677 : new best
+[2020-05-15 00:14:47] Ep. 42 : Up. 22100 : Sen. 691,200 : Cost 2.78688622 : Time 123.28s : 18539.50 words/s : L.r. 1.7017e-04
+[2020-05-15 00:14:47] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-15 00:14:49] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-15 00:14:51] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-15 00:16:36] Seen 836180 samples
+[2020-05-15 00:16:36] Starting epoch 43
+[2020-05-15 00:16:36] [data] Shuffling files
+[2020-05-15 00:16:36] [data] Done reading 836180 sentences
+[2020-05-15 00:16:40] [data] Done shuffling 836180 sentences to temp files
+[2020-05-15 00:16:50] Ep. 43 : Up. 22200 : Sen. 14,588 : Cost 2.78428793 : Time 123.36s : 18985.88 words/s : L.r. 1.6979e-04
+[2020-05-15 00:16:50] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-15 00:16:52] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-15 00:16:54] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-15 00:18:50] Ep. 43 : Up. 22300 : Sen. 175,392 : Cost 2.75437975 : Time 119.81s : 19506.26 words/s : L.r. 1.6941e-04
+[2020-05-15 00:18:50] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-15 00:18:52] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-15 00:18:54] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-15 00:20:48] Ep. 43 : Up. 22400 : Sen. 332,800 : Cost 2.76353908 : Time 118.70s : 19534.59 words/s : L.r. 1.6903e-04
+[2020-05-15 00:20:48] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-15 00:20:51] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-15 00:20:53] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-15 00:22:47] Ep. 43 : Up. 22500 : Sen. 492,184 : Cost 2.77680039 : Time 118.46s : 19771.61 words/s : L.r. 1.6865e-04
+[2020-05-15 00:22:47] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-15 00:22:49] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-15 00:22:51] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-15 00:24:44] Ep. 43 : Up. 22600 : Sen. 646,908 : Cost 2.77926612 : Time 117.09s : 19449.94 words/s : L.r. 1.6828e-04
+[2020-05-15 00:24:44] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-15 00:24:46] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-15 00:24:49] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-15 00:26:44] Ep. 43 : Up. 22700 : Sen. 806,400 : Cost 2.78310990 : Time 120.18s : 19473.16 words/s : L.r. 1.6791e-04
+[2020-05-15 00:26:44] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-15 00:26:46] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-15 00:26:49] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-15 00:27:14] Seen 836180 samples
+[2020-05-15 00:27:14] Starting epoch 44
+[2020-05-15 00:27:14] [data] Shuffling files
+[2020-05-15 00:27:14] [data] Done reading 836180 sentences
+[2020-05-15 00:27:18] [data] Done shuffling 836180 sentences to temp files
+[2020-05-15 00:28:47] Ep. 44 : Up. 22800 : Sen. 125,408 : Cost 2.75597692 : Time 123.19s : 18623.27 words/s : L.r. 1.6754e-04
+[2020-05-15 00:28:47] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-15 00:28:50] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-15 00:28:52] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-15 00:30:52] Ep. 44 : Up. 22900 : Sen. 289,104 : Cost 2.75828242 : Time 124.41s : 19312.58 words/s : L.r. 1.6718e-04
+[2020-05-15 00:30:52] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-15 00:30:54] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-15 00:30:56] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-15 00:32:52] Ep. 44 : Up. 23000 : Sen. 450,008 : Cost 2.76300359 : Time 120.11s : 19563.77 words/s : L.r. 1.6681e-04
+[2020-05-15 00:32:52] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-15 00:32:54] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-15 00:32:56] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
+[2020-05-15 00:33:01] Translating validation set...
+[2020-05-15 00:33:01] Best translation 0 : То@@ ні .
+[2020-05-15 00:33:01] Best translation 1 : я тебе на@@ в@@ чу !
+[2020-05-15 00:33:01] Best translation 2 : ск@@ ільки ти ва@@ жи@@ ш ?
+[2020-05-15 00:33:01] Best translation 3 : что ?
+[2020-05-15 00:33:01] Best translation 4 : у тебя есть бо@@ м@@ ба или нар@@ ко@@ ти@@ ки ?
+[2020-05-15 00:33:01] Best translation 5 : - Я пер@@ ший мі@@ стер Пар@@ к@@ с ?
+[2020-05-15 00:33:01] Best translation 10 : так , Ан@@ ко ...
+[2020-05-15 00:33:01] Best translation 20 : він с@@ ві@@ то@@ ви@@ й х@@ ло@@ пе@@ ц@@ ь .
+[2020-05-15 00:33:01] Best translation 40 : ми ви@@ к@@ ин@@ у@@ ли с@@ цен@@ а@@ ри@@ й і с@@ цен@@ ар@@ і@@ й , я@@ кий я на@@ писа@@ в сь@@ о@@ год@@ ні в@@ ран@@ ці я на@@ писа@@ в сь@@ о@@ год@@ ні в@@ ран@@ ці .
+[2020-05-15 00:33:01] Best translation 80 : гар@@ нен@@ ь@@ ка ...
+[2020-05-15 00:33:01] Best translation 160 : ні .
+[2020-05-15 00:33:01] Total translation time: 0.82729s
+[2020-05-15 00:33:03] [valid] Ep. 44 : Up. 23000 : lang/bleu-uk : 15.1 : no effect on early stopping
+[2020-05-15 00:33:03] [valid] Ep. 44 : Up. 23000 : translation : 15.1 : stalled 15 times
+[2020-05-15 00:33:03] Saving model weights and runtime parameters to model_en2uk/model.npz.best-ce-mean-words.npz
+[2020-05-15 00:33:04] [valid] Ep. 44 : Up. 23000 : ce-mean-words : 1.86467 : new best
+[2020-05-15 00:33:05] Training finished
+[2020-05-15 00:33:06] Saving model weights and runtime parameters to model_en2uk/model.npz.orig.npz
+[2020-05-15 00:33:09] Saving model weights and runtime parameters to model_en2uk/model.npz
+[2020-05-15 00:33:12] Saving Adam parameters to model_en2uk/model.npz.optimizer.npz
