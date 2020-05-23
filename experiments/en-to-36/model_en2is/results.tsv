@@ -1,0 +1,8 @@
+model_en2is	is	ce-mean-words	data/raw/test/en2is/OpenSubtitles/v2018	22.90
+model_en2is	is	ce-mean-words	data/raw/test/en2is/OpenSubtitles/v2016	25.20
+model_en2is	is	ce-mean-words	data/raw/test/en2is/GNOME/v1	2.10
+model_en2is	is	ce-mean-words	data/raw/test/en2is/KDE4/v2	3.70
+model_en2is	is	translation	data/raw/test/en2is/OpenSubtitles/v2018	23.10
+model_en2is	is	translation	data/raw/test/en2is/OpenSubtitles/v2016	24.30
+model_en2is	is	translation	data/raw/test/en2is/GNOME/v1	2.40
+model_en2is	is	translation	data/raw/test/en2is/KDE4/v2	4.20
