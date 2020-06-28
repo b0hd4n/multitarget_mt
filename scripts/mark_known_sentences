@@ -1,0 +1,225 @@
+#!/usr/bin/env perl
+# Author: Ondrej Bojar https://github.com/obo
+# given a few test sets, it will remember all sentences in them (verbatim and
+# simplified) and filter the stdin, marking the overlap
+
+use strict;
+use Digest::MD5 qw(md5);
+use strict;
+use Getopt::Long;
+use Carp;
+use File::Path;
+use File::Basename;
+use Encode;
+
+binmode(STDIN, ":utf8");
+binmode(STDOUT, ":utf8");
+binmode(STDERR, ":utf8");
+
+
+my $doccol = undef;
+my $datacols = "1";
+my $docdelim = " ";
+my $preproc = "droptags,tok,lc,digits,stem4";
+GetOptions(
+  "datacols=s" => \$datacols, # consider these text columns (default: 1)
+  "doccol=i" => \$doccol, # document names are in this column
+    # the same columns are expected for the training as well as test files
+  "docdelim=s" => \$docdelim, # in doccol, multiple documents can be mentioned
+  "preproc=s" => \$preproc, # preprocess the line for similarity check
+                            # allows:
+                            #   droptags .... remove <[^>]*>
+                            #   digits .... ignore specific digits
+                            #   dropnums .. drop all numbers
+                            #   tok ... tokenize
+                            #   lc  ... lowercase
+                            #   stemX . take only X chars from each token
+                            #   factX . take only factor X from factored input
+) or exit 1;
+
+$doccol-- if defined $doccol;
+my @datacols = map {$_-1} split /,/, $datacols;
+
+my @testfns = @ARGV;
+@ARGV=();
+
+die "usage: $0 dev.gz test.gz held.gz < inputcorp | gzip > train.gz"
+  if 0 == scalar @testfns;
+
+$preproc = interpret_preproc($preproc);
+
+my $known;
+my $doc_covered;
+
+# load all test sets
+for my $testfn (@testfns) {
+  print STDERR "Loading $testfn...\n";
+  my $hdl = my_open($testfn);
+  my $nr = 0;
+  while (<$hdl>) {
+    chomp;
+    $nr++;
+    my @line = split /\t/;
+    if (defined $doccol) {
+      foreach my $docname (split /$docdelim/o, $line[$doccol]) {
+        $doc_covered->{$docname}->{$testfn} ++;
+      }
+    }
+    my $str = join(" ", map {$line[$_]} @datacols);
+    $str = trim($str);
+    my $here = "$testfn:$nr";
+    $known->{"e"}->{$str}->{$here} = 1; # exact match
+    my $simpstr = preprocess($preproc, $str);
+    $known->{"s"}->{$simpstr}->{$here} = 1; # similar match
+  }
+  close $hdl;
+}
+
+print STDERR "Marking stdin.";
+my $nr = 0;
+while (<>) {
+  $nr++;
+  print STDERR "." if $nr % 100000 == 0;
+  print STDERR "($nr)" if $nr % 1000000 == 0;
+  chomp;
+  my @line = split /\t/;
+  my %msgs = ();
+  if (defined $doccol) {
+    foreach my $docname (split /$docdelim/o, $line[$doccol]) {
+      if (defined $doc_covered->{$docname}) {
+        foreach my $src (keys %{$doc_covered->{$docname}}) {
+          $msgs{"d($src)"} = 1; # same document as that other line
+        }
+      }
+    }
+  }
+  my $str = join(" ", map {$line[$_]} @datacols);
+  $str = trim($str);
+  my $type = "e";
+  my $match = $known->{"e"}->{$str};
+  if (!defined $match) {
+    $type = "s";
+    $match = $known->{"s"}->{preprocess($preproc, $str)};
+  }
+  if (defined $match) {
+    foreach my $src (keys %$match) {
+      $msgs{"$type($src)"} = 1;
+    }
+  }
+  print join(" ", sort {$a cmp $b} keys %msgs);
+  print "\t", $_, "\n";
+}
+print STDERR "Done.\n";
+
+
+
+sub trim {
+  my $s = shift;
+  $s =~ s/^\h+//;
+  $s =~ s/\h+$//;
+  $s =~ s/\h+/ /g;
+  return $s;
+}
+
+sub interpret_preproc {
+  my $s = shift;
+  return undef if !defined $s;
+  my @steps = split /,/, $s;
+  foreach my $s (@steps) {
+    die "Unrecognized preprocessing step: $s"
+      if $s !~ /^(droptags|tok|lc|droppunct|dropnums|digits|stem\d+|fact\d+)$/;
+  }
+  return [ @steps ];
+}
+
+
+sub preprocess {
+  my $steps = shift;
+  my $s = shift;
+  return $s if !defined $steps;
+  foreach my $step (@$steps) {
+    if ($step eq "digits") {
+      $s =~ tr/0123456789/5555555555/;
+      next;
+    }
+    if ($step eq "lc") {
+      $s = lc($s);
+      next;
+    }
+    if ($step eq "tok") {
+      $s =~ s/\b/ /g;
+      $s =~ s/\h+/ /g;
+      $s = trim($s);
+      next;
+    }
+    if ($step eq "droptags") {
+      $s =~ s/<[^>]*>/ /g;
+      $s = trim($s);
+      next;
+    }
+    if ($step eq "droppunct") {
+      $s =~ s/[[:punct:]]+/ /g;
+      $s = trim($s);
+      next;
+    }
+    if ($step eq "dropnums") {
+      $s =~ s/\d+//g;
+      $s = trim($s);
+      next;
+    }
+    if ($step =~ /^stem(\d+)$/) {
+      my $stemsize = $1;
+      $s = join(" ", map { substr($_, 0, $stemsize) } split /\h+/, $s);
+      next;
+    }
+    if ($step =~ /^fact(\d+)$/) {
+      my $factno = $1;
+      $s = join(" ", map { my @f = split /\|/, $_; $f[$factno] } split /\h+/, $s);
+      next;
+    }
+    die "Unrecognized preprocessing step: $step";
+  }
+  return $s;
+}
+sub my_open {
+  my $f = shift;
+  die "Not found: $f" if ! -e $f;
+
+  my $opn;
+  my $hdl;
+  my $ft = `file $f`;
+  # file might not recognize some files!
+  if ($f =~ /\.gz$/ || $ft =~ /gzip compressed data/) {
+    $opn = "zcat $f |";
+  } elsif ($f =~ /\.bz2$/ || $ft =~ /bzip2 compressed data/) {
+    $opn = "bzcat $f |";
+  } else {
+    $opn = "$f";
+  }
+  open $hdl, $opn or die "Can't open '$opn': $!";
+  binmode $hdl, ":utf8";
+  return $hdl;
+}
+
+sub my_save {
+  my $f = shift;
+  if ($f eq "-") {
+    binmode(STDOUT, ":utf8");
+    return *STDOUT;
+  }
+
+  my $opn;
+  my $hdl;
+  # file might not recognize some files!
+  if ($f =~ /\.gz$/) {
+    $opn = "| gzip -c > '$f'";
+  } elsif ($f =~ /\.bz2$/) {
+    $opn = "| bzip2 > '$f'";
+  } else {
+    $opn = ">$f";
+  }
+  mkpath( dirname($f) );
+  open $hdl, $opn or confess "Can't write to '$opn': $!";
+  binmode $hdl, ":utf8";
+  return $hdl;
+}
